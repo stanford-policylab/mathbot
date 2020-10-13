@@ -1,0 +1,26 @@
+{
+  "bye": [
+    "I am convinced you are a prophet now!",
+    "--- in terms of predicting next term.",
+    "Great to talk to you today!",
+    "See you later and let's explore more math!👋"
+  ],
+  "concept-pattern": [
+    "It seems you have understand the concept of <span class=\"def\">term</span> pretty well!",
+    "Did you notice there are three dots at the end of those sequence?",
+    "Actually, it indicate that the sequence can be extended, even though we only see a few terms."
+  ],
+  "concept-term": [
+    "💪 We might need some terminologies before heading into more sequences:",
+    "Ordered lists of numbers like these are called <span class=\"def\">sequences</span>. Each number in a sequence is called a <span class=\"def\">term</span>.",
+    "<img src=\"resources/image/1-1.png\" alt=\"sequence1-1\">",
+    "Sequences usually have  <span class=\"def\">patterns</span> that allow us to predict what the next term might be.",
+    "With these concept in mind, we can revisit our previous example."
+  ],
+  "welcome": [
+    "Hi, this is Ada, I'm a chatbot.",
+    "I\"m going to help you understand mathematical concept called \"sequences\".",
+    "Why don't we start from an example?",
+    "By the way, feel free to ask for a hint if you need some help!"
+  ]
+}

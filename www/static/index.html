@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <title>MathBot - Ada</title>
+    <meta charset="utf-8">
+
+    <!-- for mobile screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- grid css -->
+    <link rel="stylesheet" media="all" href="resources/css/skeleton.css">
+    <link rel="stylesheet" media="all" href="resources/css/normalize.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" media="all" href="resources/css/home.css">
+
+    <!-- stylesheets for bubbles -->
+    <link rel="stylesheet" media="all" href="resources/css/setup.css">
+    <link rel="stylesheet" media="all" href="resources/css/says.css">
+    <link rel="stylesheet" media="all" href="resources/css/reply.css">
+    <link rel="stylesheet" media="all" href="resources/css/typing.css">
+    <link rel="stylesheet" media="all" href="resources/css/input.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/mathquill.css">
+</head>
+
+
+<body>
+
+<div class="colorbar-container">
+    <div class="colorbar colorbar-blue"></div>
+    <div class="colorbar colorbar-green"></div>
+    <div class="colorbar colorbar-yellow"></div>
+</div>
+
+<header class="u-full-width">
+
+    <div class="">
+        <div class="row">
+            <div class="one column spacer"></div>
+
+            <div class="nine columns relative">
+
+                <h5><img id="logo" src="resources/image/mb_logo.png"> <strong>MATHBOT</strong></h5>
+
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<div class="container" style="height: 100%;">
+
+    <div class="row" style="height: 100%;">
+
+        <div class="one column spacer"></div>
+
+        <!-- placeholder for where the chatbox is going to be rendered -->
+        <div id="chat" class="ten columns"></div>
+
+    </div>
+</div>
+
+<footer class="u-full-width">
+    <div class="container">
+        <div class="row full-height">
+            <div class="eleven columns v-align">
+                <p>Copyright © 2018 Mathbot</p>
+                <p><a href="#">About Mathbot</a> | <a href="mailto:haosheng@cs.stanford.edu">Contact us</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- the script -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="resources/js/mathquill.js"></script>
+<script type="text/javascript" src="resources/js/math.min.js"></script>
+<script type="text/javascript" src="resources/js/mathbot.js"></script>
+<script type="text/javascript" src="resources/json/algebra-3a1.js"></script>
+
+<script>
+    //force to always load the latest json
+    $.getJSON("resources/json/mathbot_progress.json?_=", function (mathbotProgressCheckpoints) {
+        $.getJSON("resources/json/question_bank.json?_=", function (conv) {
+            $.getJSON("resources/json/random_says.json?_=", function (randomSaysJson) {
+                bubble = new Bubbles(
+                    document.getElementById('chat'),
+                    "giveMeBubbles",
+                    {
+                        randomDict: randomSaysJson,
+                        mathbotProgressCheckpoints: mathbotProgressCheckpoints,
+                        typeSpeed: 50
+                    });
+                console.log(randomSaysJson);
+                bubble.startConversation(conv, "welcome");
+            })
+        })
+    });
+</script>
+</body>
+</html>

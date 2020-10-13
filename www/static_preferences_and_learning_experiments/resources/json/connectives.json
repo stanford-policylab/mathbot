@@ -1,0 +1,13 @@
+{
+    "retry": [
+        "Cool. Let's retry this question:"
+    ],
+    "recurse": [
+        "It seems you get some trouble."
+    ],
+    "next": [
+        "Good job! How about this one?",
+        "Great! You are a predictor now!",
+        "We have more exercise for you to make sure you did not hit it by luck. 👿"
+    ]
+}

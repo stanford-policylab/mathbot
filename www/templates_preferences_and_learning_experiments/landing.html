@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Mathbot Survey</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+          crossorigin="anonymous">
+</head>
+
+<body>
+
+<div class="container">
+    <br>
+    <div class="jumbotron" style="margin: auto;">
+        {% if error_msg %}
+            <b>{{ error_msg }}</b>
+        {% else %}
+            <h3>HIT Description</h3>
+            <p class="lead">You are invited to participate in a research study on learning math.  
+                <ul>
+                    <li>You will receive <b>$0.10</b> for completing the first eligibility quiz. 
+                    </li>
+                    <li>If you pass the first eligiblity quiz, you will receive an additional <b>$0.25</b> for completing the second eligiblity quiz.
+                    </li>
+                    <li>If eligible for the full study, a bonus payment of up to <b>$6</b> will be awarded proportionally to your performance.
+                    </li>
+                    <li>The first eligibility quiz should take less than 2 minutes. The brief survey and second eligibility quiz should take less than 8 minutes. If you are eligible for the full study, your participation should take an additional 45 minutes.   
+                    </li>
+                </ul>
+            </p>
+            <b>Please do not redo this HIT if you have already completed it. You will not be paid for additional attempts.</b>
+        {% endif %}
+    </div>
+</div>
+
+
+</body>
+
+</html>

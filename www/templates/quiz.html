@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+{% for question in questionList %}
+<div class="row">
+    <div class="card w-75 text quiz-{{session}}" id="quiz-{{session}}-{{question.id}}">
+        <div class="card-header" id="{{session}}Head">
+            Question {{question.id}}
+        </div>
+        <div class="card-block">
+            <div class="card-body">
+                <div class="container-fluid">
+                    <!-- {{session}} {{question.id}} -->
+                    <!-- problem description -->
+                    <p class="card-text"> {{question.description|safe}} </p>
+                    <!-- inputs -->
+                    {% for input in question.inputs %}
+                    {% if loop.index != 1 %}
+                    <br>
+                    {% endif %}
+                    {% if not input.label %}
+                    <div class="row container-fluid">
+                        <p>{{input.prompt}}</p>
+                        <div class="col-2">
+                            <input class="form-control" id="quiz-{{session}}-{{question.id}}-{{loop.index}}"
+                                   name="quiz-{{session}}-{{question.id}}-{{loop.index}}" required=""
+                                   type="text"
+                                   placeholder="{{input.placeholder}}"/>
+                        </div>
+                    </div>
+
+                    <!-- radio buttons -->
+                    {% else %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz-{{session}}-{{question.id}}"
+                               id="quiz-{{session}}-{{question.id}}-{{loop.index}}" value="{{loop.index}}">
+                        <label class="form-check-label" for="quiz-{{session}}-{{question.id}}-{{loop.index}}">
+                            {{input.label}}
+                        </label>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="center-content">
+            <a href="#" class="btn btn-primary" onclick="nextQuiz(0, {{session}})">Submit</a>
+        </div>
+        <br>
+    </div>
+</div>
+{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,2524 @@
+{
+    "welcome": {
+        "says": [
+            "Hi, this is Ada. I'm a chatbot."
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {},
+        "skip": "welcome-1-zt5wn7"
+    },
+    "welcome-1-zt5wn7": {
+        "says": [
+            "Let's learn some math together! To start, here's a simple question:"
+        ],
+        "branch": [],
+        "skip": "q-intro",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "new"
+        }
+    },
+    "q-intro": {
+        "says": [
+            "\u270d\ufe0f What's the next number in this list: <span>&#8203;</span>2, 4, 6, 8, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 2)', 'q-intro')"
+                ],
+                "next": "q-intro-1-jtgev5"
+            },
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 6)', 'q-intro', 'hint')"
+                ],
+                "next": "q-intro-2-0gw2un"
+            },
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 10)', 'q-intro', 'correct')"
+                ],
+                "next": "q-intro-3-0538qd"
+            },
+            {
+                "next": "q-intro-4-0afza6"
+            }
+        ],
+        "isRoot": true,
+        "prop": {}
+    },
+    "q-intro-1-jtgev5": {
+        "says": [
+            "Hint: The list doesn't repeat!"
+        ],
+        "branch": [],
+        "skip": "q-intro",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "self"
+        }
+    },
+    "q-intro-2-0gw2un": {
+        "says": [
+            "Hint: The list is always increasing!"
+        ],
+        "branch": [],
+        "skip": "q-intro",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "self"
+        }
+    },
+    "q-intro-3-0538qd": {
+        "says": [
+            "What number should be after <span>&#8203;</span>10<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 12)', 'q-intro-1', 'correct')"
+                ],
+                "next": "",
+                "nextProp": {
+                    "forward": true,
+                    "no_transition": true,
+                    "banditId": "sequence",
+                    "actions": [
+                        "1-1",
+                        "sequence"
+                    ],
+                    "nextType": "bandit",
+                    "bandit_sequence_1-1_sequence": true
+                }
+            },
+            {
+                "next": "sequence",
+                "nextProp": {
+                    "wrong": true,
+                    "nextType": "new"
+                }
+            }
+        ]
+    },
+    "q-intro-4-0afza6": {
+        "says": [
+            "Hmm... let\u2019s think about it differently."
+        ],
+        "branch": [],
+        "skip": "q-intro-5-vpuemo"
+    },
+    "q-intro-5-vpuemo": {
+        "says": [
+            "It looks like each number in <span>&#8203;</span>2, 4, 6, 8, ...<span>&#8203;</span> equals the previous number plus <span>&#8203;</span>2<span>&#8203;</span>. ",
+            "So, what number comes after <span>&#8203;</span>8 <span>&#8203;</span>in <span>&#8203;</span>2, 4, 6, 8, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 10)', 'q-intro-2', 'correct')"
+                ],
+                "next": "q-intro-6-pj93ff"
+            },
+            {
+                "next": "sequence",
+                "nextProp": {
+                    "wrong": true,
+                    "nextType": "new"
+                }
+            }
+        ]
+    },
+    "q-intro-6-pj93ff": {
+        "says": [
+            "What number should be after <span>&#8203;</span>10<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 12)', 'q-intro-3', 'correct')"
+                ],
+                "next": "",
+                "nextProp": {
+                    "no_transition": true,
+                    "banditId": "sequence",
+                    "actions": [
+                        "1-1",
+                        "sequence"
+                    ],
+                    "nextType": "bandit",
+                    "bandit_sequence_1-1_sequence": true
+                }
+            },
+            {
+                "next": "sequence",
+                "nextProp": {
+                    "wrong": true,
+                    "nextType": "new"
+                }
+            }
+        ]
+    },
+    "sequence": {
+        "says": [
+            "\ud83d\udca1Ordered lists of numbers like <span>&#8203;</span>2, 4, 6, ...<span>&#8203;</span> are called <b>sequences</b>."
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {
+            "concept": true
+        },
+        "skip": "sequence-1-sh0v9n"
+    },
+    "sequence-1-sh0v9n": {
+        "says": [
+            "\ud83d\udca1 Each number in a sequence is called a <b>term</b>.\ufe0f",
+            "<span><img src=resources/json/img/82b72dfc76c05d863b5f3b92d8097716693ac6a57ced555622a852486c827da2.png></span>"
+        ],
+        "branch": [],
+        "skip": "1-1",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "new"
+        }
+    },
+    "1-1": {
+        "says": [
+            "\u270d\ufe0f What's the <span>&#8203;</span>2<span>&#8203;</span><sup>nd</sup> term in the sequence <span>&#8203;</span>1, 3, 5, 7, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 3)', '1-1', 'correct')"
+                ],
+                "next": "",
+                "nextProp": {
+                    "forward": true,
+                    "reward": {
+                        "banditId": "sequence",
+                        "amount": "1"
+                    },
+                    "reward_sequence_1": true,
+                    "banditId": "pattern",
+                    "actions": [
+                        "1-2",
+                        "pattern"
+                    ],
+                    "nextType": "bandit",
+                    "bandit_pattern_1-2_pattern": true
+                }
+            },
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 9)', '1-1', 'hint')"
+                ],
+                "next": "1-1-1-pslmlc"
+            },
+            {
+                "next": "1-1-2-q5efij"
+            }
+        ],
+        "isRoot": true,
+        "prop": {}
+    },
+    "1-1-1-pslmlc": {
+        "says": [
+            "Make sure to re<span>&#8203;</span>-<span>&#8203;</span>read the question!"
+        ],
+        "branch": [],
+        "skip": "1-1",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "self"
+        }
+    },
+    "1-1-2-q5efij": {
+        "says": [
+            "Here\u2019s a hint: the <b><span>&#8203;</span>1<span>&#8203;</span><sup>st</sup> term</b> of <b><span>&#8203;</span>2<span>&#8203;</span></b>, <span>&#8203;</span>4, 6, 8, ...<span>&#8203;</span> is <b><span>&#8203;</span>2<span>&#8203;</span></b>.",
+            "The <b><span>&#8203;</span>2<span>&#8203;</span><sup>nd</sup> term</b> of <span>&#8203;</span>2, <span>&#8203;</span><b><span>&#8203;</span>4<span>&#8203;</span></b>, <span>&#8203;</span>6, 8, ...<span>&#8203;</span> is <b><span>&#8203;</span>4<span>&#8203;</span></b>.",
+            "So, what's the <span>&#8203;</span>2<span>&#8203;</span><sup>nd</sup> term of <span>&#8203;</span>1, 3, 5, 7, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 3)', '1-1-1', 'correct')"
+                ],
+                "next": "",
+                "nextProp": {
+                    "reward": {
+                        "banditId": "sequence",
+                        "amount": "0"
+                    },
+                    "reward_sequence_0": true,
+                    "banditId": "pattern",
+                    "actions": [
+                        "1-2",
+                        "pattern"
+                    ],
+                    "nextType": "bandit",
+                    "bandit_pattern_1-2_pattern": true
+                }
+            },
+            {
+                "next": "sequence",
+                "nextProp": {
+                    "wrong": true,
+                    "reward": {
+                        "banditId": "sequence",
+                        "amount": "-1"
+                    },
+                    "reward_sequence_-1": true,
+                    "nextType": "review"
+                }
+            }
+        ]
+    },
+    "pattern": {
+        "says": [
+            "Sequences usually have patterns that allow us to predict what the next term might be."
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {
+            "concept": true
+        },
+        "skip": "pattern-1-8pn1r3"
+    },
+    "pattern-1-8pn1r3": {
+        "says": [
+            "For example, in the sequence <span>&#8203;</span>3, 5, 7, 9, 11, ...<span>&#8203;</span>, you always add <span>&#8203;</span>2 <span>&#8203;</span>to get the next term:",
+            "<span><img src=resources/json/img/2fdkmrvcn43ntni72od9dk68ap.png></span>"
+        ],
+        "branch": [],
+        "skip": "1-2",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "new"
+        }
+    },
+    "1-2": {
+        "says": [
+            "\ufe0f\ufe0f\ufe0f\u270d\ufe0f What's the next number in the sequence <span>&#8203;</span>1, 3, 5, 7, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 9)', '1-2', 'correct')"
+                ],
+                "next": "end1",
+                "nextProp": {
+                    "forward": true,
+                    "no_transition": true,
+                    "reward": {
+                        "banditId": "pattern",
+                        "amount": "1"
+                    },
+                    "reward_pattern_1": true,
+                    "nextType": "new"
+                }
+            },
+            {
+                "next": "1-2-1-vmpbrh"
+            }
+        ],
+        "isRoot": true,
+        "prop": {}
+    },
+    "1-2-1-vmpbrh": {
+        "says": [
+            "Hmm... what\u2019s the last term we know in <span>&#8203;</span>1, 3, 5, 7, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 7)', '1-2-1', 'correct')"
+                ],
+                "next": "1-2-2-oxkv2d"
+            },
+            {
+                "next": "sequence",
+                "nextProp": {
+                    "wrong": true,
+                    "reward": {
+                        "banditId": "pattern",
+                        "amount": "-1"
+                    },
+                    "reward_pattern_-1": true,
+                    "nextType": "review"
+                }
+            }
+        ]
+    },
+    "1-2-2-oxkv2d": {
+        "says": [
+            "So, if we follow the pattern \u201cadd <span>&#8203;</span>2 <span>&#8203;</span>to the previous term,\" what's the next term in <span>&#8203;</span>1, 3, 5, 7, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 9)', '1-2-2', 'correct')"
+                ],
+                "next": "end1",
+                "nextProp": {
+                    "no_transition": true,
+                    "reward": {
+                        "banditId": "pattern",
+                        "amount": "0"
+                    },
+                    "reward_pattern_0": true,
+                    "nextType": "new"
+                }
+            },
+            {
+                "next": "1-2-3-gjoc9e"
+            }
+        ]
+    },
+    "1-2-3-gjoc9e": {
+        "says": [
+            "Here's a sequence with the pattern \u201cadd <span>&#8203;</span>2 <span>&#8203;</span>to the previous term.\u201d"
+        ],
+        "branch": [],
+        "skip": "1-2-4-bhmhzf"
+    },
+    "1-2-4-bhmhzf": {
+        "says": [
+            "If the first term is <b><span>&#8203;</span>3<span>&#8203;</span></b>, the next term is <b><span>&#8203;</span>3 + 2<span>&#8203;</span></b>.",
+            "The next term is <b><span>&#8203;</span>5<span>&#8203;</span></b>, so the following term is <b><span>&#8203;</span>5 + 2<span>&#8203;</span></b>.",
+            "<span><img src=resources/json/img/f64faf7016410fae647da24f45ff3710b08d1cfeafdcc60667095ea1cc6fca48.png></span>"
+        ],
+        "branch": [],
+        "skip": "1-2",
+        "nextProp": {
+            "wrong": true,
+            "no_grade": true,
+            "nextType": "self"
+        }
+    },
+    "end1": {
+        "says": [
+            "Next up: <b><span>&#8203;</span>2<span>&#8203;</span>. Defining arithmetic sequences<b>"
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {},
+        "skip": "no_skip_bandit",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "banditId": "arithmetic",
+            "actions": [
+                "2-1",
+                "arithmetic"
+            ],
+            "nextType": "bandit",
+            "bandit_arithmetic_2-1_arithmetic": true
+        }
+    },
+    "arithmetic": {
+        "says": [
+            "\ud83d\udca1 All of the patterns we have seen so far involve adding a number to each term to get the next term. Sequences with such patterns are called <b>arithmetic sequences</b>."
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {
+            "concept": true
+        },
+        "skip": "arithmetic-1-2gqeoe"
+    },
+    "arithmetic-1-2gqeoe": {
+        "says": [
+            "For example, the sequence <span>&#8203;</span>10, 21, 32, 43, ...<span>&#8203;</span> is arithmetic because the difference between consecutive terms is always <span>&#8203;</span>11<span>&#8203;</span>.",
+            "<span><img src=resources/json/img/59huvr2hjqa9incdb2pljnr13i.png></span>"
+        ],
+        "branch": [],
+        "skip": "arithmetic-2-tw2ld7"
+    },
+    "arithmetic-2-tw2ld7": {
+        "says": [
+            "Let me know when you're ready to see an example sequence that is not arithmetic."
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "onlyNumberMatch(response, 0)"
+                ],
+                "next": "arithmetic-2",
+                "nextProp": {
+                    "no_grade": true,
+                    "no_transition": true,
+                    "nextType": "new"
+                }
+            },
+            {
+                "next": "arithmetic-2",
+                "nextProp": {
+                    "no_grade": true,
+                    "no_transition": true,
+                    "nextType": "new"
+                }
+            }
+        ]
+    },
+    "arithmetic-2": {
+        "says": [
+            "The sequence <span>&#8203;</span>1, 2, 4, 8, ...<span>&#8203;</span> is not arithmetic because the difference between consecutive terms is not the same.",
+            "<span><img src=resources/json/img/0ibci79hh6qis00sf7g3j172uo.png></span>"
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {
+            "concept": true
+        },
+        "skip": "2-1",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "new"
+        }
+    },
+    "2-1": {
+        "says": [
+            "\u270d\ufe0f Is <span>&#8203;</span>0, 1, 3, 6, ...<span>&#8203;</span> an arithmetic sequence?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('typedResponseMatch(response, \"no\")', '2-1', 'correct')"
+                ],
+                "next": "2-1-1-kv8qh3"
+            },
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 10)', '2-1', 'hint')"
+                ],
+                "next": "2-1-3-wyqj0a"
+            },
+            {
+                "next": "2-1-4-4fvc9r"
+            }
+        ],
+        "isRoot": true,
+        "prop": {}
+    },
+    "2-1-1-kv8qh3": {
+        "random": "correct_answer",
+        "branch": [],
+        "skip": "2-1-2-la517t"
+    },
+    "2-1-2-la517t": {
+        "says": [
+            "The difference between consecutive terms of <span>&#8203;</span>0, 1, 3, 6, ...<span>&#8203;</span> is not the same, so <span>&#8203;</span>0, 1, 3, 6, ...<span>&#8203;</span> is not an arithmetic sequence."
+        ],
+        "branch": [],
+        "skip": "end2",
+        "nextProp": {
+            "forward": true,
+            "no_grade": true,
+            "no_transition": true,
+            "reward": {
+                "banditId": "arithmetic",
+                "amount": "1"
+            },
+            "reward_arithmetic_1": true,
+            "nextType": "new"
+        }
+    },
+    "2-1-3-wyqj0a": {
+        "says": [
+            "Make sure to re<span>&#8203;</span>-<span>&#8203;</span>read the question!"
+        ],
+        "branch": [],
+        "skip": "2-1",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "self"
+        }
+    },
+    "2-1-4-4fvc9r": {
+        "says": [
+            "Let's take a step back: what's the difference between the <span>&#8203;</span>1<span>&#8203;</span><sup>st</sup> term and the <span>&#8203;</span>2<span>&#8203;</span><sup>nd</sup> term in <span>&#8203;</span>0, 1, 3, 6, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 1)', '2-1-1', 'correct')"
+                ],
+                "next": "2-1-5-ip5wsw"
+            },
+            {
+                "next": "1-1",
+                "nextProp": {
+                    "wrong": true,
+                    "reward": {
+                        "banditId": "arithmetic",
+                        "amount": "-1"
+                    },
+                    "reward_arithmetic_-1": true,
+                    "nextType": "review"
+                }
+            }
+        ]
+    },
+    "2-1-5-ip5wsw": {
+        "says": [
+            "How about the difference between the <span>&#8203;</span>2<span>&#8203;</span><sup>nd</sup> term and the <span>&#8203;</span>3<span>&#8203;</span><sup>rd</sup> term in <span>&#8203;</span>0, 1, 3, 6, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 2)', '2-1-2', 'correct')"
+                ],
+                "next": "2-1-6-ity1fa"
+            },
+            {
+                "next": "1-1",
+                "nextProp": {
+                    "wrong": true,
+                    "reward": {
+                        "banditId": "arithmetic",
+                        "amount": "-1"
+                    },
+                    "reward_arithmetic_-1": true,
+                    "nextType": "review"
+                }
+            }
+        ]
+    },
+    "2-1-6-ity1fa": {
+        "says": [
+            "It looks like the difference between consecutive terms in <span>&#8203;</span>0, 1, 3, 6, ...<span>&#8203;</span> is not the same. ",
+            "So, is <span>&#8203;</span>0, 1, 3, 6, ...<span>&#8203;</span> an arithmetic sequence?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('typedResponseMatch(response, \"no\")', '2-1-3', 'correct')"
+                ],
+                "next": "end2",
+                "nextProp": {
+                    "no_transition": true,
+                    "reward": {
+                        "banditId": "arithmetic",
+                        "amount": "0"
+                    },
+                    "reward_arithmetic_0": true,
+                    "nextType": "new"
+                }
+            },
+            {
+                "next": [
+                    "arithmetic",
+                    "arithmetic-2"
+                ],
+                "nextProp": {
+                    "wrong": true,
+                    "reward": {
+                        "banditId": "arithmetic",
+                        "amount": "-1"
+                    },
+                    "reward_arithmetic_-1": true,
+                    "nextType": "review"
+                }
+            }
+        ]
+    },
+    "end2": {
+        "says": [
+            "Next up: <b><span>&#8203;</span>3<span>&#8203;</span>. Common difference<b>"
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {},
+        "skip": "no_skip_bandit",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "banditId": "difference",
+            "actions": [
+                "2-2",
+                "difference"
+            ],
+            "nextType": "bandit",
+            "bandit_difference_2-2_difference": true
+        }
+    },
+    "difference": {
+        "says": [
+            "\ud83d\udca1 The <b>common difference</b> of an arithmetic sequence is the constant difference between consecutive terms."
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {
+            "concept": true
+        },
+        "skip": "difference-1-k3eqk3"
+    },
+    "difference-1-k3eqk3": {
+        "says": [
+            "For example, the common difference of <span>&#8203;</span>10, 21, 32, 43, ...<span>&#8203;</span> is <span>&#8203;</span>11<span>&#8203;</span>.",
+            "<span><img src=resources/json/img/6o1n3djt2mrofvbd37ve99vj77.png></span>"
+        ],
+        "branch": [],
+        "skip": "difference-2-860ac6"
+    },
+    "difference-2-860ac6": {
+        "says": [
+            "Let me know when you're ready to hear more."
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "onlyNumberMatch(response, 0)"
+                ],
+                "next": "difference-2",
+                "nextProp": {
+                    "no_grade": true,
+                    "no_transition": true,
+                    "nextType": "new"
+                }
+            },
+            {
+                "next": "difference-2",
+                "nextProp": {
+                    "no_grade": true,
+                    "no_transition": true,
+                    "nextType": "new"
+                }
+            }
+        ]
+    },
+    "difference-2": {
+        "says": [
+            "The common difference of an arithmetic sequence will be negative if the terms in the sequence are always decreasing.",
+            "For example, the common difference of <span>&#8203;</span>-2, -5, -8, -11, ...<span>&#8203;</span> is <span>&#8203;</span>-3<span>&#8203;</span>.",
+            "<span><img src=resources/json/img/4uacegaa52e65jp7v5ohh2q4ip.png></span>"
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {
+            "concept": true
+        },
+        "skip": "2-2",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "new"
+        }
+    },
+    "2-2": {
+        "says": [
+            "\u270d\ufe0f What's the common difference of <span>&#8203;</span>2, 8, 14, 20, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 6)', '2-2', 'correct')"
+                ],
+                "next": "2-3",
+                "nextProp": {
+                    "forward": true,
+                    "reward": {
+                        "banditId": "difference",
+                        "amount": "1"
+                    },
+                    "reward_difference_1": true,
+                    "nextType": "new"
+                }
+            },
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, -6)', '2-2', 'hint')"
+                ],
+                "next": "2-2-1-uanaa8"
+            },
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 26)', '2-2', 'hint')"
+                ],
+                "next": "2-2-2-gmhmtr"
+            },
+            {
+                "next": "2-2-3-lg5zfb"
+            }
+        ],
+        "isRoot": true,
+        "prop": {}
+    },
+    "2-2-1-uanaa8": {
+        "says": [
+            "Almost! The common difference will only be negative if the terms in the sequence are always decreasing."
+        ],
+        "branch": [],
+        "skip": "2-2",
+        "nextProp": {
+            "wrong": true,
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "self"
+        }
+    },
+    "2-2-2-gmhmtr": {
+        "says": [
+            "Make sure to re<span>&#8203;</span>-<span>&#8203;</span>read the question!"
+        ],
+        "branch": [],
+        "skip": "2-2",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "self"
+        }
+    },
+    "2-2-3-lg5zfb": {
+        "says": [
+            "Let's take a step back: what's the difference between the <span>&#8203;</span>1<span>&#8203;</span><sup>st</sup> term and the <span>&#8203;</span>2<span>&#8203;</span><sup>nd</sup> term in <span>&#8203;</span>2, 8, 14, 20, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 6) || onlyNumberMatch(response, -6)', '2-2-1', 'correct')"
+                ],
+                "next": "2-2-4-r3hqi8"
+            },
+            {
+                "next": "1-1",
+                "nextProp": {
+                    "wrong": true,
+                    "reward": {
+                        "banditId": "difference",
+                        "amount": "-1"
+                    },
+                    "reward_difference_-1": true,
+                    "nextType": "review"
+                }
+            }
+        ]
+    },
+    "2-2-4-r3hqi8": {
+        "says": [
+            "How about the difference between the <span>&#8203;</span>2<span>&#8203;</span><sup>nd</sup> term and the <span>&#8203;</span>3<span>&#8203;</span><sup>rd</sup> term in <span>&#8203;</span>2, 8, 14, 20, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 6) || onlyNumberMatch(response, -6)', '2-2-2', 'correct')"
+                ],
+                "next": "2-2",
+                "nextProp": {
+                    "reward": {
+                        "banditId": "difference",
+                        "amount": "0"
+                    },
+                    "reward_difference_0": true,
+                    "nextType": "self"
+                }
+            },
+            {
+                "next": "1-1",
+                "nextProp": {
+                    "wrong": true,
+                    "reward": {
+                        "banditId": "difference",
+                        "amount": "-1"
+                    },
+                    "reward_difference_-1": true,
+                    "nextType": "review"
+                }
+            }
+        ]
+    },
+    "2-3": {
+        "says": [
+            "\u270d\ufe0f Is <span>&#8203;</span>5, 2, -1, -4, ...<span>&#8203;</span> an arithmetic sequence?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('typedResponseMatch(response, \"yes\")', '2-3', 'correct')"
+                ],
+                "next": "2-3-1-cnq0ux"
+            },
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 3) || onlyNumberMatch(response, -3) || onlyNumberMatch(response, -7)', '2-3', 'hint')"
+                ],
+                "next": "2-3-5-vccrkj"
+            },
+            {
+                "next": "difference-2",
+                "nextProp": {
+                    "wrong": true,
+                    "nextType": "review"
+                }
+            }
+        ],
+        "isRoot": true,
+        "prop": {}
+    },
+    "2-3-1-cnq0ux": {
+        "says": [
+            "What\u2019s the common difference of <span>&#8203;</span>5, 2, -1, -4, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, -3)', '2-3-1', 'correct')"
+                ],
+                "next": "end3",
+                "nextProp": {
+                    "forward": true,
+                    "no_transition": true,
+                    "nextType": "new"
+                }
+            },
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 3)', '2-3-1', 'hint')"
+                ],
+                "next": "2-3-2-c642x9"
+            },
+            {
+                "next": "difference-2",
+                "nextProp": {
+                    "wrong": true,
+                    "nextType": "review"
+                }
+            }
+        ]
+    },
+    "2-3-2-c642x9": {
+        "says": [
+            "Almost! Remember: The common difference of an arithmetic sequence will be negative if the terms in the sequence are always decreasing. ",
+            "Try taking any term in <span>&#8203;</span>5, 2, -1, -4, ...<span>&#8203;</span> and subtracting the previous term. What do you get?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, -3)', '2-3-2', 'correct')"
+                ],
+                "next": "end3",
+                "nextProp": {
+                    "no_transition": true,
+                    "nextType": "new"
+                }
+            },
+            {
+                "next": "2-3-3-lnysai"
+            }
+        ]
+    },
+    "2-3-3-lnysai": {
+        "random": "wrong_answer",
+        "branch": [],
+        "skip": "2-3-4-jrvvxf"
+    },
+    "2-3-4-jrvvxf": {
+        "says": [
+            "<span>&#8203;</span>2 <span>&#8203;</span>is the <span>&#8203;</span>2<span>&#8203;</span><sup>nd</sup> term in <span>&#8203;</span>5, 2, -1, -4, ...<span>&#8203;</span>. ",
+            "<span>&#8203;</span>5 <span>&#8203;</span>is the <span>&#8203;</span>1<span>&#8203;</span><sup>st</sup> term in <span>&#8203;</span>5, 2, -1, -4, ...<span>&#8203;</span>. ",
+            "So, the common difference is <span>&#8203;</span>2 - 5<span>&#8203;</span>, which is <b><span>&#8203;</span>-3<span>&#8203;</span></b>!"
+        ],
+        "branch": [],
+        "skip": "end3",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "new"
+        }
+    },
+    "2-3-5-vccrkj": {
+        "says": [
+            "Make sure to re<span>&#8203;</span>-<span>&#8203;</span>read the question!"
+        ],
+        "branch": [],
+        "skip": "2-3",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "self"
+        }
+    },
+    "end3": {
+        "says": [
+            "Next up: <b><span>&#8203;</span>4<span>&#8203;</span>. Recursive formulas<b>"
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {},
+        "skip": "no_skip_bandit",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "banditId": "formula",
+            "actions": [
+                "4-1",
+                "formula"
+            ],
+            "nextType": "bandit",
+            "bandit_formula_4-1_formula": true
+        }
+    },
+    "formula": {
+        "says": [
+            "We can also use <b>formulas</b> to describe arithmetic sequences."
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {
+            "concept": true
+        },
+        "skip": "formula-1-8etzvt"
+    },
+    "formula-1-8etzvt": {
+        "says": [
+            "\ud83d\udca1 Formulas use <b><span>&#8203;</span>a(n)<span>&#8203;</span></b> or <b>a<sub>n</sub></b> to mean the n<sup>th</sup> term of a sequence. ",
+            "<span>&#8203;</span>a(1)<span>&#8203;</span> and a<sub><span>&#8203;</span>1<span>&#8203;</span></sub> mean the <span>&#8203;</span>1<span>&#8203;</span><sup>st</sup> term in a sequence. ",
+            "<span>&#8203;</span>a(2)<span>&#8203;</span> and a<sub><span>&#8203;</span>2<span>&#8203;</span></sub> mean the <span>&#8203;</span>2<span>&#8203;</span><sup>nd</sup> term in a sequence.",
+            "And so on."
+        ],
+        "branch": [],
+        "skip": "formula-2-1gg055"
+    },
+    "formula-2-1gg055": {
+        "says": [
+            "Let me know when you're ready to hear more!"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "onlyNumberMatch(response, 0)"
+                ],
+                "next": "formula-2",
+                "nextProp": {
+                    "no_grade": true,
+                    "no_transition": true,
+                    "nextType": "new"
+                }
+            },
+            {
+                "next": "formula-2",
+                "nextProp": {
+                    "no_grade": true,
+                    "no_transition": true,
+                    "nextType": "new"
+                }
+            }
+        ]
+    },
+    "formula-2": {
+        "says": [
+            "We can also use other letters to represent sequences. ",
+            "For example, we can use <span>&#8203;</span>b(n)<span>&#8203;</span>, <span>&#8203;</span>c(n)<span>&#8203;</span>, or <span>&#8203;</span>d(n)<span>&#8203;</span> instead of <span>&#8203;</span>a(n)<span>&#8203;</span>.",
+            "Similarly, we can use b<sub>n</sub>, c<sub>n</sub>, or d<sub>n</sub> instead of a<sub>n</sub>."
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {
+            "concept": true
+        },
+        "skip": "4-1",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "new"
+        }
+    },
+    "4-1": {
+        "says": [
+            "\u270d\ufe0f Find <span>&#8203;</span>a(4)<span>&#8203;</span> in the sequence <span>&#8203;</span>3, 5, 7, ...<span>&#8203;</span>"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 9)', '4-1', 'correct')"
+                ],
+                "next": "end",
+                "nextProp": {
+                    "forward": true,
+                    "no_grade": true,
+                    "no_transition": true,
+                    "reward": {
+                        "banditId": "formula",
+                        "amount": "1"
+                    },
+                    "reward_formula_1": true,
+                    "nextType": "new"
+                }
+            },
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 4)', '4-1', 'hint')"
+                ],
+                "next": "4-1-1-yfefmo"
+            },
+            {
+                "next": "4-1-2-dyagz0"
+            }
+        ],
+        "isRoot": true,
+        "prop": {}
+    },
+    "4-1-1-yfefmo": {
+        "says": [
+            "<span>&#8203;</span>a(4)<span>&#8203;</span> is indeed the <span>&#8203;</span>4<span>&#8203;</span><sup>th</sup> term, but the <span>&#8203;</span>4<span>&#8203;</span><sup>th</sup> term of <span>&#8203;</span>3, 5, 7, ...<span>&#8203;</span> isn't <span>&#8203;</span>4<span>&#8203;</span>! Try the question one more time."
+        ],
+        "branch": [],
+        "skip": "4-1",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "self"
+        }
+    },
+    "4-1-2-dyagz0": {
+        "says": [
+            "Here\u2019s a hint: <b><span>&#8203;</span>a(n)<span>&#8203;</span></b> means the <b>n<sup>th</sup> term</b> of a sequence. ",
+            "For example, <b><span>&#8203;</span>a(3)<span>&#8203;</span></b> would be the <b><span>&#8203;</span>3<span>&#8203;</span><sup>rd</sup> term</b> of the sequence. ",
+            "What\u2019s <span>&#8203;</span>a(3)<span>&#8203;</span> of the sequence <span>&#8203;</span>3, 5, 7, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 7)', '4-1-1', 'correct')"
+                ],
+                "next": "4-1-3-8s36n2"
+            },
+            {
+                "next": "formula",
+                "nextProp": {
+                    "wrong": true,
+                    "reward": {
+                        "banditId": "formula",
+                        "amount": "-1"
+                    },
+                    "reward_formula_-1": true,
+                    "nextType": "review"
+                }
+            }
+        ]
+    },
+    "4-1-3-8s36n2": {
+        "says": [
+            "What's the common difference of <span>&#8203;</span>3, 5, 7, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 2)', '4-1-2', 'correct')"
+                ],
+                "next": "4-1-4-fxoqk2"
+            },
+            {
+                "next": "difference",
+                "nextProp": {
+                    "wrong": true,
+                    "reward": {
+                        "banditId": "formula",
+                        "amount": "-1"
+                    },
+                    "reward_formula_-1": true,
+                    "nextType": "review"
+                }
+            }
+        ]
+    },
+    "4-1-4-fxoqk2": {
+        "says": [
+            "To get <span>&#8203;</span>a(4)<span>&#8203;</span>, we should add the common difference to <span>&#8203;</span>a(3)<span>&#8203;</span>."
+        ],
+        "branch": [],
+        "skip": "4-1",
+        "nextProp": {
+            "wrong": true,
+            "no_grade": true,
+            "nextType": "self"
+        }
+    },
+    "end": {
+        "says": [
+            "Correct \ud83d\ude04"
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {},
+        "skip": "end-1-3mh6zq"
+    },
+    "end-1-3mh6zq": {
+        "random": "good_bye",
+        "branch": []
+    },
+    "recursive-1": {
+        "says": [
+            "\ud83d\udca1<b>Recursive formulas</b> have two parts:",
+            "1\ufe0f\u20e3 The first term of the sequence",
+            "2\ufe0f\u20e3 A pattern rule to get any term in the sequence from the term that comes before it"
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {
+            "concept": true
+        },
+        "skip": "recursive-1-1-4yx9jg"
+    },
+    "recursive-1-1-4yx9jg": {
+        "says": [
+            "Here's the recursive formula for <span>&#8203;</span>3, 5, 7, ...<span>&#8203;</span> along with the interpretation for each part:",
+            "<span><img src=resources/json/img/2oiofs1es9pjqmu34u5jvl48k7.png></span>"
+        ],
+        "branch": [],
+        "skip": "recursive-1-2-6jz286"
+    },
+    "recursive-1-2-6jz286": {
+        "says": [
+            "Helpful hint: <span>&#8203;</span>a(n-1)<span>&#8203;</span> is always the term that comes before <span>&#8203;</span>a(n)<span>&#8203;</span>."
+        ],
+        "branch": [],
+        "skip": "recursive-1-3-u66m9o"
+    },
+    "recursive-1-3-u66m9o": {
+        "says": [
+            "Let me know when you're ready to learn how to use the formula."
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "onlyNumberMatch(response, 0)"
+                ],
+                "next": "recursive-1b",
+                "nextProp": {
+                    "no_grade": true,
+                    "no_transition": true,
+                    "nextType": "new"
+                }
+            },
+            {
+                "next": "recursive-1b",
+                "nextProp": {
+                    "no_grade": true,
+                    "no_transition": true,
+                    "nextType": "new"
+                }
+            }
+        ]
+    },
+    "recursive-1b": {
+        "says": [
+            "To find <span>&#8203;</span>a(2)<span>&#8203;</span>, plug in <b>n = <span>&#8203;</span>2<span>&#8203;</span></b> to <b><span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>a(n - 1)<span>&#8203;</span> <span>&#8203;</span>+ 2<span>&#8203;</span></b>, and remember that <b><span>&#8203;</span>a(1)<span>&#8203;</span> = <span>&#8203;</span>3<span>&#8203;</span></b>: ",
+            "<span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>a(n - 1)<span>&#8203;</span> <span>&#8203;</span>+ 2",
+            "<span>&#8203;</span><span>&#8203;</span>a(2)<span>&#8203;</span> = <span>&#8203;</span>a(2 - 1)<span>&#8203;</span> <span>&#8203;</span>+ 2 ",
+            "<span>&#8203;</span><span>&#8203;</span>a(2)<span>&#8203;</span> = <span>&#8203;</span>a(1)<span>&#8203;</span> <span>&#8203;</span>+ 2 ",
+            "<span>&#8203;</span><span>&#8203;</span>a(2)<span>&#8203;</span> = <span>&#8203;</span>3 + 2 ",
+            "<span>&#8203;</span><span>&#8203;</span>a(2)<span>&#8203;</span> = <span>&#8203;</span>5<span>&#8203;</span>"
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {
+            "concept": true
+        },
+        "skip": "recursive-1b-1-jqjys5"
+    },
+    "recursive-1b-1-jqjys5": {
+        "says": [
+            "Let me know when you're ready to move forward!"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "onlyNumberMatch(response, 0)"
+                ],
+                "next": "recursive-1c",
+                "nextProp": {
+                    "no_grade": true,
+                    "no_transition": true,
+                    "nextType": "new"
+                }
+            },
+            {
+                "next": "recursive-1c",
+                "nextProp": {
+                    "no_grade": true,
+                    "no_transition": true,
+                    "nextType": "new"
+                }
+            }
+        ]
+    },
+    "recursive-1c": {
+        "says": [
+            "Let's try to find <span>&#8203;</span>a(5)<span>&#8203;</span> the same way:",
+            "<span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>a(n - 1)<span>&#8203;</span> <span>&#8203;</span>+ 2",
+            "<span>&#8203;</span><span>&#8203;</span>a(5)<span>&#8203;</span> = <span>&#8203;</span>a(5 - 1)<span>&#8203;</span> <span>&#8203;</span>+ 2",
+            "<span>&#8203;</span><span>&#8203;</span>a(5)<span>&#8203;</span> = <span>&#8203;</span>a(4)<span>&#8203;</span> <span>&#8203;</span>+ 2",
+            "<span>&#8203;</span>But, we can't solve for <span>&#8203;</span>a(5)<span>&#8203;</span> yet because we don't have <span>&#8203;</span>a(4)<span>&#8203;</span>!"
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {
+            "concept": true
+        },
+        "skip": "recursive-1c-1-icta3v"
+    },
+    "recursive-1c-1-icta3v": {
+        "says": [
+            "Let me know when you're ready to hear more."
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "onlyNumberMatch(response, 0)"
+                ],
+                "next": "recursive-1d",
+                "nextProp": {
+                    "no_grade": true,
+                    "no_transition": true,
+                    "nextType": "new"
+                }
+            },
+            {
+                "next": "recursive-1d",
+                "nextProp": {
+                    "no_grade": true,
+                    "no_transition": true,
+                    "nextType": "new"
+                }
+            }
+        ]
+    },
+    "recursive-1d": {
+        "says": [
+            "To find <span>&#8203;</span>a(5)<span>&#8203;</span>, we have to use <span>&#8203;</span>a(4)<span>&#8203;</span>, <span>&#8203;</span>a(3)<span>&#8203;</span>, <span>&#8203;</span>a(2)<span>&#8203;</span>, and <span>&#8203;</span>a(1)<span>&#8203;</span>:",
+            "<span><img src=resources/json/img/2d39is05urpuvu8opu1oi1p6qm.png></span>"
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {
+            "concept": true
+        },
+        "skip": "recursive-1d-1-87cf8e"
+    },
+    "recursive-1d-1-87cf8e": {
+        "says": [
+            "So, <span>&#8203;</span>a(5)<span>&#8203;</span> = <span>&#8203;</span>11<span>&#8203;</span>."
+        ],
+        "branch": [],
+        "skip": "4-2",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "new"
+        }
+    },
+    "4-2": {
+        "says": [
+            "\u270d\ufe0f Given <span>&#8203;</span>a(1)<span>&#8203;</span> = <span>&#8203;</span>10 <span>&#8203;</span>and <span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>a(n - 1)<span>&#8203;</span> <span>&#8203;</span>+ 5<span>&#8203;</span>, what is <span>&#8203;</span>a(4)<span>&#8203;</span>? Scratch paper recommended!"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 25)', '4-2', 'correct')"
+                ],
+                "next": "recursive-2",
+                "nextProp": {
+                    "forward": true,
+                    "nextType": "new"
+                }
+            },
+            {
+                "next": "4-2-1-yobalt"
+            }
+        ],
+        "isRoot": true,
+        "prop": {}
+    },
+    "4-2-1-yobalt": {
+        "says": [
+            "Remember, to find <span>&#8203;</span>a(4)<span>&#8203;</span>, we need <span>&#8203;</span>a(3)<span>&#8203;</span>, <span>&#8203;</span>a(2)<span>&#8203;</span>, and <span>&#8203;</span>a(1)<span>&#8203;</span>. ",
+            "Try solving for <span>&#8203;</span>a(2)<span>&#8203;</span>, then <span>&#8203;</span>a(3)<span>&#8203;</span>, then <span>&#8203;</span>a(4)<span>&#8203;</span>. ",
+            "If <span>&#8203;</span>a(1)<span>&#8203;</span> = <span>&#8203;</span>10 <span>&#8203;</span>and <span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>a(n - 1)<span>&#8203;</span> <span>&#8203;</span>+ 5<span>&#8203;</span>, what is <span>&#8203;</span>a(4)<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 25)', '4-2-1', 'correct')"
+                ],
+                "next": "recursive-2",
+                "nextProp": {
+                    "nextType": "new"
+                }
+            },
+            {
+                "next": "4-2-2-7qve6q"
+            }
+        ]
+    },
+    "4-2-2-7qve6q": {
+        "says": [
+            "Let\u2019s work it out step<span>&#8203;</span>-<span>&#8203;</span>by<span>&#8203;</span>-<span>&#8203;</span>step. What is <span>&#8203;</span>a(2)<span>&#8203;</span> if <span>&#8203;</span>a(1)<span>&#8203;</span> = <span>&#8203;</span>10 <span>&#8203;</span>and <span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>a(n - 1)<span>&#8203;</span> <span>&#8203;</span>+ 5<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 15)', '4-2-2', 'correct')"
+                ],
+                "next": "4-2-3-t1yydk"
+            },
+            {
+                "next": "4-2-7-dg5jbc"
+            }
+        ]
+    },
+    "4-2-3-t1yydk": {
+        "says": [
+            "How about <span>&#8203;</span>a(3)<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 20)', '4-2-2', 'correct')"
+                ],
+                "next": "4-2",
+                "nextProp": {
+                    "nextType": "self"
+                }
+            },
+            {
+                "next": "4-2-4-ipsvdc"
+            }
+        ]
+    },
+    "4-2-4-ipsvdc": {
+        "says": [
+            "Here\u2019s a hint: <span>&#8203;</span>a(3)<span>&#8203;</span> is the <span>&#8203;</span>3<span>&#8203;</span>rd term, so n = <span>&#8203;</span>3<span>&#8203;</span>. Therefore:",
+            "<span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>a(n - 1)<span>&#8203;</span> <span>&#8203;</span>+ 5",
+            "<span>&#8203;</span><span>&#8203;</span>a(3)<span>&#8203;</span> = <span>&#8203;</span>a(3 - 1)<span>&#8203;</span> <span>&#8203;</span>+ 5",
+            "<span>&#8203;</span><span>&#8203;</span>a(3)<span>&#8203;</span> = <span>&#8203;</span>a(2)<span>&#8203;</span> <span>&#8203;</span>+ 5",
+            "<span>&#8203;</span>Since we know that <span>&#8203;</span>a(2)<span>&#8203;</span> = <span>&#8203;</span>15, <span>&#8203;</span>what is <span>&#8203;</span>a(3)<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 20)', '4-2-3', 'correct')"
+                ],
+                "next": "4-2",
+                "nextProp": {
+                    "nextType": "self"
+                }
+            }
+        ],
+        "skip": "4-2-5-51j6fj"
+    },
+    "4-2-5-51j6fj": {
+        "random": "wrong_answer",
+        "branch": [],
+        "skip": "4-2-6-w1c4y4"
+    },
+    "4-2-6-w1c4y4": {
+        "says": [
+            "Consider this new example:",
+            "If we have <b><span>&#8203;</span>a(1)<span>&#8203;</span> = <span>&#8203;</span>1<span>&#8203;</span></b> and <b><span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>a(n-1)<span>&#8203;</span> <span>&#8203;</span>+ 2<span>&#8203;</span></b>, then we will have an arithmetic sequence that <b>starts with <span>&#8203;</span>1<span>&#8203;</span></b> and has the pattern <b>\u201cadd <span>&#8203;</span>2 <span>&#8203;</span>to the previous term\u201d</b>. ",
+            "So, the sequence would be <span>&#8203;</span>1, 3, 5, 7, 9, ...<span>&#8203;</span>",
+            "Now, if we have <span>&#8203;</span>a(1)<span>&#8203;</span> = <span>&#8203;</span>10 <span>&#8203;</span>and <span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>a(n-1)<span>&#8203;</span> <span>&#8203;</span>+ 5<span>&#8203;</span>, what\u2019s <span>&#8203;</span>a(4)<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 25)', '4-2-4', 'correct')"
+                ],
+                "next": "recursive-2",
+                "nextProp": {
+                    "nextType": "new"
+                }
+            },
+            {
+                "next": [
+                    "recursive-1",
+                    "recursive-1b",
+                    "recursive-1c",
+                    "recursive-1d"
+                ],
+                "nextProp": {
+                    "wrong": true,
+                    "nextType": "review"
+                }
+            }
+        ]
+    },
+    "4-2-7-dg5jbc": {
+        "says": [
+            "Here\u2019s a hint: <span>&#8203;</span>a(2)<span>&#8203;</span> is the <span>&#8203;</span>2<span>&#8203;</span>nd term, so n = <span>&#8203;</span>2<span>&#8203;</span>. Therefore:",
+            "<span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>a(n - 1)<span>&#8203;</span> <span>&#8203;</span>+ 5",
+            "<span>&#8203;</span><span>&#8203;</span>a(2)<span>&#8203;</span> = <span>&#8203;</span>a(2 - 1)<span>&#8203;</span> <span>&#8203;</span>+ 5",
+            "<span>&#8203;</span><span>&#8203;</span>a(2)<span>&#8203;</span> = <span>&#8203;</span>a(1)<span>&#8203;</span> <span>&#8203;</span>+ 5",
+            "<span>&#8203;</span>Since we know that <span>&#8203;</span>a(1)<span>&#8203;</span> = <span>&#8203;</span>10, <span>&#8203;</span>what is <span>&#8203;</span>a(2)<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 15)', '4-2-5', 'correct')"
+                ],
+                "next": "4-2-8-iug0wm"
+            },
+            {
+                "next": "4-2-13-6qb8no"
+            }
+        ]
+    },
+    "4-2-8-iug0wm": {
+        "random": "correct_answer",
+        "branch": [],
+        "skip": "4-2-9-y6hd4v"
+    },
+    "4-2-9-y6hd4v": {
+        "says": [
+            "How about <span>&#8203;</span>a(3)<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 20)', '4-2-6', 'correct')"
+                ],
+                "next": "4-2",
+                "nextProp": {
+                    "nextType": "self"
+                }
+            },
+            {
+                "next": "4-2-10-hsiysh"
+            }
+        ]
+    },
+    "4-2-10-hsiysh": {
+        "says": [
+            "Here\u2019s a hint: <span>&#8203;</span>a(3)<span>&#8203;</span> is the <span>&#8203;</span>3<span>&#8203;</span>rd term, so n = <span>&#8203;</span>3<span>&#8203;</span>. Therefore:",
+            "<span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>a(n - 1)<span>&#8203;</span> <span>&#8203;</span>+ 5",
+            "<span>&#8203;</span><span>&#8203;</span>a(3)<span>&#8203;</span> = <span>&#8203;</span>a(3 - 1)<span>&#8203;</span> <span>&#8203;</span>+ 5",
+            "<span>&#8203;</span><span>&#8203;</span>a(3)<span>&#8203;</span> = <span>&#8203;</span>a(2)<span>&#8203;</span> <span>&#8203;</span>+ 5",
+            "<span>&#8203;</span>Since we know that <span>&#8203;</span>a(2)<span>&#8203;</span> = <span>&#8203;</span>15, <span>&#8203;</span>what is <span>&#8203;</span>a(3)<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 20)', '4-2-7', 'correct')"
+                ],
+                "next": "4-2",
+                "nextProp": {
+                    "nextType": "self"
+                }
+            }
+        ],
+        "skip": "4-2-11-8mcz3x"
+    },
+    "4-2-11-8mcz3x": {
+        "random": "wrong_answer",
+        "branch": [],
+        "skip": "4-2-12-m4wecc"
+    },
+    "4-2-12-m4wecc": {
+        "says": [
+            "Consider this new example:",
+            "If we have <b><span>&#8203;</span>a(1)<span>&#8203;</span> = <span>&#8203;</span>1<span>&#8203;</span></b> and <b><span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>a(n-1)<span>&#8203;</span> <span>&#8203;</span>+ 2<span>&#8203;</span></b>, then we will have an arithmetic sequence that <b>starts with <span>&#8203;</span>1<span>&#8203;</span></b> and has the pattern <b>\u201cadd <span>&#8203;</span>2 <span>&#8203;</span>to the previous term\u201d</b>. ",
+            "So, the sequence would be <span>&#8203;</span>1, 3, 5, 7, 9, ...<span>&#8203;</span>",
+            "Now, if we have <span>&#8203;</span>a(1)<span>&#8203;</span> = <span>&#8203;</span>10 <span>&#8203;</span>and <span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>a(n-1)<span>&#8203;</span> <span>&#8203;</span>+ 5<span>&#8203;</span>, what\u2019s <span>&#8203;</span>a(4)<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 25)', '4-2-8', 'correct')"
+                ],
+                "next": "recursive-2",
+                "nextProp": {
+                    "nextType": "new"
+                }
+            },
+            {
+                "next": [
+                    "recursive-1",
+                    "recursive-1b",
+                    "recursive-1c",
+                    "recursive-1d"
+                ],
+                "nextProp": {
+                    "wrong": true,
+                    "nextType": "review"
+                }
+            }
+        ]
+    },
+    "4-2-13-6qb8no": {
+        "random": "wrong_answer",
+        "branch": [],
+        "skip": "4-2-14-f7817t"
+    },
+    "4-2-14-f7817t": {
+        "says": [
+            "Consider this new example:",
+            "If we have <b><span>&#8203;</span>a(1)<span>&#8203;</span> = <span>&#8203;</span>1<span>&#8203;</span></b> and <b><span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>a(n-1)<span>&#8203;</span> <span>&#8203;</span>+ 2<span>&#8203;</span></b>, then we will have an arithmetic sequence that <b>starts with <span>&#8203;</span>1<span>&#8203;</span></b> and has the pattern <b>\u201cadd <span>&#8203;</span>2 <span>&#8203;</span>to the previous term\u201d</b>. ",
+            "So, the sequence would be <span>&#8203;</span>1, 3, 5, 7, 9, ...<span>&#8203;</span>",
+            "Now, if we have <span>&#8203;</span>a(1)<span>&#8203;</span> = <span>&#8203;</span>10 <span>&#8203;</span>and <span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>a(n-1)<span>&#8203;</span> <span>&#8203;</span>+ 5<span>&#8203;</span>, what\u2019s <span>&#8203;</span>a(4)<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 25)', '4-2-9', 'correct')"
+                ],
+                "next": "recursive-2",
+                "nextProp": {
+                    "nextType": "new"
+                }
+            },
+            {
+                "next": [
+                    "recursive-1",
+                    "recursive-1b",
+                    "recursive-1c",
+                    "recursive-1d"
+                ],
+                "nextProp": {
+                    "wrong": true,
+                    "nextType": "review"
+                }
+            }
+        ]
+    },
+    "recursive-2": {
+        "says": [
+            "\ud83d\udca1Recursive formulas for arithmetic sequences have two parts:",
+            "1\ufe0f\u20e3 <span>&#8203;</span>a(1)<span>&#8203;</span> = A, where A is the <span>&#8203;</span>1<span>&#8203;</span><sup>st</sup> term",
+            "2\ufe0f\u20e3 <span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>a(n - 1)<span>&#8203;</span> <span>&#8203;</span>+ <span>&#8203;</span>B, where B is the common difference"
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {
+            "concept": true
+        },
+        "skip": "recursive-2-1-1eg1jb"
+    },
+    "recursive-2-1-1eg1jb": {
+        "says": [
+            "Let me know when you're ready to hear more."
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "onlyNumberMatch(response, 0)"
+                ],
+                "next": "",
+                "nextProp": {
+                    "no_grade": true,
+                    "no_transition": true,
+                    "banditId": "log-1",
+                    "actions": [
+                        "recursive-2b"
+                    ],
+                    "nextType": "bandit",
+                    "bandit_log-1_recursive-2b": true
+                }
+            },
+            {
+                "next": "",
+                "nextProp": {
+                    "no_grade": true,
+                    "no_transition": true,
+                    "banditId": "log-1",
+                    "actions": [
+                        "recursive-2b"
+                    ],
+                    "nextType": "bandit",
+                    "bandit_log-1_recursive-2b": true
+                }
+            }
+        ]
+    },
+    "recursive-2b": {
+        "says": [
+            "Consider the sequence <span>&#8203;</span>3, 5, 7, ...<span>&#8203;</span>",
+            "The <span>&#8203;</span>1<span>&#8203;</span><sup>st</sup> term is <span>&#8203;</span>3, <span>&#8203;</span>so <b>A = <span>&#8203;</span>3<span>&#8203;</span></b>. ",
+            "The common difference is <span>&#8203;</span>2, <span>&#8203;</span>so <b>B = <span>&#8203;</span>2<span>&#8203;</span></b>. ",
+            "So, our recursive formula looks like this:",
+            "<span><img src=resources/json/img/5gp4k3l6tfhep1pv7ft716b23h.png></span>"
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {
+            "concept": true
+        },
+        "skip": "4-2b",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "reward": {
+                "banditId": "log-1",
+                "amount": "0"
+            },
+            "reward_log-1_0": true,
+            "nextType": "new"
+        }
+    },
+    "4-2b": {
+        "says": [
+            "\u270d\ufe0f Which option is the recursive formula of <span>&#8203;</span>12, 7, 2, ...<span>&#8203;</span>?",
+            "1\ufe0f\u20e3 b<sub><span>&#8203;</span>1<span>&#8203;</span></sub> = <span>&#8203;</span>12, <span>&#8203;</span>b<sub>n</sub> = b<sub>n<span>&#8203;</span>-1<span>&#8203;</span></sub> <span>&#8203;</span>+ 5",
+            "<span>&#8203;</span>2\ufe0f\u20e3 b<sub><span>&#8203;</span>1<span>&#8203;</span></sub> = <span>&#8203;</span>-12, <span>&#8203;</span>b<sub>n</sub> = b<sub>n<span>&#8203;</span>-1<span>&#8203;</span></sub> <span>&#8203;</span>+ 5",
+            "<span>&#8203;</span>3\ufe0f\u20e3 b<sub><span>&#8203;</span>1<span>&#8203;</span></sub> = <span>&#8203;</span>12, <span>&#8203;</span>b<sub>n</sub> = b<sub>n<span>&#8203;</span>-1<span>&#8203;</span></sub> <span>&#8203;</span>- 5",
+            "<span>&#8203;</span>4\ufe0f\u20e3 b<sub><span>&#8203;</span>1<span>&#8203;</span></sub> = <span>&#8203;</span>-12, <span>&#8203;</span>b<sub>n</sub> = b<sub>n<span>&#8203;</span>-1<span>&#8203;</span></sub> <span>&#8203;</span>- 5<span>&#8203;</span>"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 1)', '4-2b', 'hint')"
+                ],
+                "next": "4-2b-1-bwwlao"
+            },
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 3)', '4-2b', 'correct')"
+                ],
+                "next": "4-2b-2-xejnan"
+            },
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 4)', '4-2b', 'hint')"
+                ],
+                "next": "4-2b-4-jl4h5w"
+            },
+            {
+                "next": "4-2b-5-qibnxv"
+            }
+        ],
+        "isRoot": true,
+        "prop": {}
+    },
+    "4-2b-1-bwwlao": {
+        "says": [
+            "Almost! Think about whether we are adding <span>&#8203;</span>5 <span>&#8203;</span>or subtracting <span>&#8203;</span>5 <span>&#8203;</span>to get to the next term."
+        ],
+        "branch": [],
+        "skip": "4-2b",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "self"
+        }
+    },
+    "4-2b-2-xejnan": {
+        "random": "correct_answer",
+        "branch": [],
+        "skip": "4-2b-3-hasxbo"
+    },
+    "4-2b-3-hasxbo": {
+        "says": [
+            "The first term is <span>&#8203;</span>12, <span>&#8203;</span>so b<sub><span>&#8203;</span>1<span>&#8203;</span></sub> = <span>&#8203;</span>12<span>&#8203;</span>. ",
+            "We subtract <span>&#8203;</span>5 <span>&#8203;</span>to get to the next term, so b<sub>n</sub> = b<sub>n<span>&#8203;</span>-1<span>&#8203;</span></sub> <span>&#8203;</span>- 5<span>&#8203;</span>."
+        ],
+        "branch": [],
+        "skip": "end4",
+        "nextProp": {
+            "forward": true,
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "new"
+        }
+    },
+    "4-2b-4-jl4h5w": {
+        "says": [
+            "Almost! Think about whether the <span>&#8203;</span>1<span>&#8203;</span><sup>st</sup> term is positive or negative."
+        ],
+        "branch": [],
+        "skip": "4-2b",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "self"
+        }
+    },
+    "4-2b-5-qibnxv": {
+        "random": "wrong_answer",
+        "branch": [],
+        "skip": "4-2b-6-5ss0ul"
+    },
+    "4-2b-6-5ss0ul": {
+        "says": [
+            "What's the common difference of <span>&#8203;</span>12, 7, 2, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, -5)', '4-2b-1', 'correct')"
+                ],
+                "next": "4-2b-7-fg9tky"
+            },
+            {
+                "next": "difference-2",
+                "nextProp": {
+                    "wrong": true,
+                    "nextType": "review"
+                }
+            }
+        ]
+    },
+    "4-2b-7-fg9tky": {
+        "says": [
+            "If we know that the <span>&#8203;</span>1<span>&#8203;</span><sup>st</sup> term is <span>&#8203;</span>12 <span>&#8203;</span>and the common difference is <span>&#8203;</span>-5, <span>&#8203;</span>which option is the recursive formula of <span>&#8203;</span>12, 7, 2, ...<span>&#8203;</span>?",
+            "1\ufe0f\u20e3 b<sub><span>&#8203;</span>1<span>&#8203;</span></sub> = <span>&#8203;</span>12, <span>&#8203;</span>b<sub>n</sub> = b<sub>n<span>&#8203;</span>-1<span>&#8203;</span></sub> <span>&#8203;</span>+ 5",
+            "<span>&#8203;</span>2\ufe0f\u20e3 b<sub><span>&#8203;</span>1<span>&#8203;</span></sub> = <span>&#8203;</span>-12, <span>&#8203;</span>b<sub>n</sub> = b<sub>n<span>&#8203;</span>-1<span>&#8203;</span></sub> <span>&#8203;</span>+ 5",
+            "<span>&#8203;</span>3\ufe0f\u20e3 b<sub><span>&#8203;</span>1<span>&#8203;</span></sub> = <span>&#8203;</span>12, <span>&#8203;</span>b<sub>n</sub> = b<sub>n<span>&#8203;</span>-1<span>&#8203;</span></sub> <span>&#8203;</span>- 5",
+            "<span>&#8203;</span>4\ufe0f\u20e3 b<sub><span>&#8203;</span>1<span>&#8203;</span></sub> = <span>&#8203;</span>-12, <span>&#8203;</span>b<sub>n</sub> = b<sub>n<span>&#8203;</span>-1<span>&#8203;</span></sub> <span>&#8203;</span>- 5<span>&#8203;</span>"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 3)', '4-2b-2', 'correct')"
+                ],
+                "next": "end4",
+                "nextProp": {
+                    "no_transition": true,
+                    "nextType": "new"
+                }
+            },
+            {
+                "next": [
+                    "recursive-2",
+                    "recursive-2b"
+                ],
+                "nextProp": {
+                    "wrong": true,
+                    "nextType": "review"
+                }
+            }
+        ]
+    },
+    "end4": {
+        "says": [
+            "Next up: <b><span>&#8203;</span>5<span>&#8203;</span>. Explicit formulas<b>"
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {},
+        "skip": "explicit-1",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "new"
+        }
+    },
+    "explicit-1": {
+        "says": [
+            "\ud83d\udca1<b>Explicit formulas</b> allow us to simply plug in the number of the term we are interested in to get the value of that term."
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {
+            "concept": true
+        },
+        "skip": "explicit-1-1-ibzeei"
+    },
+    "explicit-1-1-ibzeei": {
+        "says": [
+            "What's <span>&#8203;</span>a(4)<span>&#8203;</span> in the sequence with the explicit formula <span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>3 + 2<span>&#8203;</span>(n<span>&#8203;</span>-1<span>&#8203;</span>)?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 9)', 'concept_explicit', 'correct')"
+                ],
+                "next": "4-3",
+                "nextProp": {
+                    "nextType": "new"
+                }
+            },
+            {
+                "next": "explicit-1-2-1t01j2"
+            }
+        ]
+    },
+    "explicit-1-2-1t01j2": {
+        "says": [
+            "Hmm... <span>&#8203;</span>a(4)<span>&#8203;</span> is the <span>&#8203;</span>4<span>&#8203;</span>th term of the sequence, so we should plug in n = <span>&#8203;</span>4<span>&#8203;</span>.",
+            "<span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>3 + 2<span>&#8203;</span>(n <span>&#8203;</span>- 1<span>&#8203;</span>)",
+            "<span>&#8203;</span>a(4)<span>&#8203;</span> = <span>&#8203;</span>3 + 2<span>&#8203;</span>(<span>&#8203;</span>4 - 1<span>&#8203;</span>)",
+            "<span>&#8203;</span>a(4)<span>&#8203;</span> = <span>&#8203;</span>3 + 2<span>&#8203;</span>(<span>&#8203;</span>3<span>&#8203;</span>)",
+            "<span>&#8203;</span>a(4)<span>&#8203;</span> = <span>&#8203;</span>3 + 6",
+            "<span>&#8203;</span><span>&#8203;</span>a(4)<span>&#8203;</span> = <span>&#8203;</span>9<span>&#8203;</span>"
+        ],
+        "branch": [],
+        "skip": "4-3",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "new"
+        }
+    },
+    "4-3": {
+        "says": [
+            "\u270d\ufe0f The explicit formula of a sequence is b<sub>n</sub> = <span>&#8203;</span>4 + 3<span>&#8203;</span>(n <span>&#8203;</span>- 1<span>&#8203;</span>). What\u2019s the <span>&#8203;</span>11<span>&#8203;</span><sup>th</sup> term of the sequence?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 34)', '4-3', 'correct')"
+                ],
+                "next": "explicit-2",
+                "nextProp": {
+                    "forward": true,
+                    "nextType": "new"
+                }
+            },
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 11)', '4-3', 'hint')"
+                ],
+                "next": "4-3-1-8dy1a1"
+            },
+            {
+                "evals": [
+                    "_e('typedResponseMatch(response, \"b(11)\")', '4-3', 'hint')"
+                ],
+                "next": "4-3-2-u3nxs5"
+            },
+            {
+                "next": "4-3-3-flgrh0"
+            }
+        ],
+        "isRoot": true,
+        "prop": {}
+    },
+    "4-3-1-8dy1a1": {
+        "says": [
+            "Make sure to re<span>&#8203;</span>-<span>&#8203;</span>read the question!"
+        ],
+        "branch": [],
+        "skip": "4-3",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "self"
+        }
+    },
+    "4-3-2-u3nxs5": {
+        "says": [
+            "That's technically correct, but we're looking for the number value of b<sub><span>&#8203;</span>11<span>&#8203;</span></sub>."
+        ],
+        "branch": [],
+        "skip": "4-3",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "self"
+        }
+    },
+    "4-3-3-flgrh0": {
+        "says": [
+            "Here\u2019s a hint: we should plug in the value of n that corresponds to the <span>&#8203;</span>11<span>&#8203;</span><sup>th</sup> term. ",
+            "Try answering one more time."
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 34)', '4-3-1', 'correct')"
+                ],
+                "next": "explicit-2",
+                "nextProp": {
+                    "nextType": "new"
+                }
+            },
+            {
+                "next": "4-3-4-j3zl12"
+            }
+        ]
+    },
+    "4-3-4-j3zl12": {
+        "random": "wrong_answer",
+        "branch": [],
+        "skip": "4-3-5-lp4v8j"
+    },
+    "4-3-5-lp4v8j": {
+        "says": [
+            "What value of n did you use?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 11)', '4-3-2', 'correct')"
+                ],
+                "next": "4-3-6-w4f5ns"
+            },
+            {
+                "next": "4-3-8-ht9j25"
+            }
+        ]
+    },
+    "4-3-6-w4f5ns": {
+        "random": "correct_answer",
+        "branch": [],
+        "skip": "4-3-7-a34ant"
+    },
+    "4-3-7-a34ant": {
+        "says": [
+            "Let's review how to plug in values of n to explicit formulas."
+        ],
+        "branch": [],
+        "skip": "explicit-1",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "review"
+        }
+    },
+    "4-3-8-ht9j25": {
+        "random": "wrong_answer",
+        "branch": [],
+        "skip": "4-3-9-f6o9zr"
+    },
+    "4-3-9-f6o9zr": {
+        "says": [
+            "Remember: b<sub>n</sub> is the n<sup>th</sup> term of a sequence. ",
+            "For example, b<sub><span>&#8203;</span>2<span>&#8203;</span></sub> is the <span>&#8203;</span>2<span>&#8203;</span><sup>nd</sup> term, so b<sub><span>&#8203;</span>2<span>&#8203;</span></sub> means that n = <span>&#8203;</span>2<span>&#8203;</span>.",
+            "What is the n value of the <span>&#8203;</span>11<span>&#8203;</span><sup>th</sup> term?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 11)', '4-3-2', 'correct')"
+                ],
+                "next": "4-3",
+                "nextProp": {
+                    "nextType": "self"
+                }
+            },
+            {
+                "next": "4-3-10-bhrcaq"
+            }
+        ]
+    },
+    "4-3-10-bhrcaq": {
+        "random": "wrong_answer",
+        "branch": [],
+        "skip": "4-3-11-z8z3gq"
+    },
+    "4-3-11-z8z3gq": {
+        "says": [
+            "The <span>&#8203;</span>11<span>&#8203;</span><sup>th</sup> term means that n = <span>&#8203;</span>11<span>&#8203;</span>."
+        ],
+        "branch": [],
+        "skip": "4-3",
+        "nextProp": {
+            "wrong": true,
+            "no_grade": true,
+            "nextType": "self"
+        }
+    },
+    "explicit-2": {
+        "says": [
+            "\ud83d\udca1The standard way to write an explicit formula for an arithmetic sequences is <span>&#8203;</span>a(n)<span>&#8203;</span> = A <span>&#8203;</span>+ <span>&#8203;</span>B(n<span>&#8203;</span>-1<span>&#8203;</span>). ",
+            "A is the <span>&#8203;</span>1<span>&#8203;</span><sup>st</sup> term.",
+            "B is the common difference."
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {
+            "concept": true
+        },
+        "skip": "explicit-2-1-qt9vh8"
+    },
+    "explicit-2-1-qt9vh8": {
+        "says": [
+            "Let's find the explicit formula for <span>&#8203;</span>2, 9, 16, 23, ...<span>&#8203;</span>",
+            "What's A, the <span>&#8203;</span>1<span>&#8203;</span><sup>st</sup> term of the sequence?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 2)', 'concept_explicit-2', 'correct')"
+                ],
+                "next": "explicit-2-2-pke1ss"
+            },
+            {
+                "next": "explicit-2-4-19zrs3"
+            }
+        ]
+    },
+    "explicit-2-2-pke1ss": {
+        "says": [
+            "What is B, the common difference of the sequence <span>&#8203;</span>2, 9, 16, 23, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 7)', 'concept_explicit-2-1', 'correct')"
+                ],
+                "next": "explicit-2-3-8i8n9g"
+            },
+            {
+                "next": "difference",
+                "nextProp": {
+                    "wrong": true,
+                    "nextType": "review"
+                }
+            }
+        ]
+    },
+    "explicit-2-3-8i8n9g": {
+        "says": [
+            "If <b>A = <span>&#8203;</span>2<span>&#8203;</span></b> and <b>B = <span>&#8203;</span>7<span>&#8203;</span></b>, we can find the explicit formula by plugging in A and B to <b><span>&#8203;</span>a(n)<span>&#8203;</span> = A <span>&#8203;</span>+ <span>&#8203;</span>B(n <span>&#8203;</span>- 1<span>&#8203;</span>)</b>.",
+            "So, the explicit formula for <span>&#8203;</span>2, 9, 16, 23, ...<span>&#8203;</span> is <b><span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>2 + 7<span>&#8203;</span>(n <span>&#8203;</span>- 1<span>&#8203;</span>)</b>."
+        ],
+        "branch": [],
+        "skip": "4-4",
+        "nextProp": {
+            "forward": true,
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "new"
+        }
+    },
+    "explicit-2-4-19zrs3": {
+        "random": "wrong_answer",
+        "branch": [],
+        "skip": "explicit-2-5-xikhhy"
+    },
+    "explicit-2-5-xikhhy": {
+        "says": [
+            "The <span>&#8203;</span>1<span>&#8203;</span><sup>st</sup> term of the sequence is <span>&#8203;</span>2, <span>&#8203;</span>so A = <span>&#8203;</span>2<span>&#8203;</span>."
+        ],
+        "branch": [],
+        "skip": "explicit-2-6-z4i0tw"
+    },
+    "explicit-2-6-z4i0tw": {
+        "says": [
+            "What is B, the common difference of the sequence <span>&#8203;</span>2, 9, 16, 23, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 7)', 'concept_explicit-2-2', 'correct')"
+                ],
+                "next": "explicit-2-7-51n567"
+            },
+            {
+                "next": "difference",
+                "nextProp": {
+                    "wrong": true,
+                    "nextType": "review"
+                }
+            }
+        ]
+    },
+    "explicit-2-7-51n567": {
+        "says": [
+            "If <b>A = <span>&#8203;</span>2<span>&#8203;</span></b> and <b>B = <span>&#8203;</span>7<span>&#8203;</span></b>, we can find the explicit formula by plugging in A and B to <b><span>&#8203;</span>a(n)<span>&#8203;</span> = A <span>&#8203;</span>+ <span>&#8203;</span>B(n <span>&#8203;</span>- 1<span>&#8203;</span>)</b>.",
+            "So, the explicit formula for <span>&#8203;</span>2, 9, 16, 23, ...<span>&#8203;</span> is <b><span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>2 + 7<span>&#8203;</span>(n <span>&#8203;</span>- 1<span>&#8203;</span>)</b>."
+        ],
+        "branch": [],
+        "skip": "4-4",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "new"
+        }
+    },
+    "4-4": {
+        "says": [
+            "\u270d\ufe0f\ufe0f Which of the following is an explicit formula for the sequence <span>&#8203;</span>16, 10, 4, -2, ...<span>&#8203;</span>?",
+            "1\ufe0f\u20e3 <span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>16 + 6<span>&#8203;</span>(n <span>&#8203;</span>- 1<span>&#8203;</span>)",
+            "2\ufe0f\u20e3 <span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>16 - 6<span>&#8203;</span>(n <span>&#8203;</span>- 1<span>&#8203;</span>)",
+            "3\ufe0f\u20e3 <span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>16 - 6<span>&#8203;</span>n"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 2)', '4-4', 'correct')"
+                ],
+                "next": "4-4-1-6dnbw5"
+            },
+            {
+                "next": "4-4-3-axchar"
+            }
+        ],
+        "isRoot": true,
+        "prop": {}
+    },
+    "4-4-1-6dnbw5": {
+        "random": "correct_answer",
+        "branch": [],
+        "skip": "4-4-2-za8efz"
+    },
+    "4-4-2-za8efz": {
+        "says": [
+            "The first term is <span>&#8203;</span>16, <span>&#8203;</span>so <b>A = <span>&#8203;</span>16<span>&#8203;</span></b>.",
+            "The common difference is <span>&#8203;</span>-6, <span>&#8203;</span>so <b>B = <span>&#8203;</span>-6<span>&#8203;</span></b>.",
+            "Therefore, <b><span>&#8203;</span>a(n)<span>&#8203;</span> = A <span>&#8203;</span>+ <span>&#8203;</span>B(n <span>&#8203;</span>- 1<span>&#8203;</span>)</b> becomes <b><span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>16 - 6<span>&#8203;</span>(n <span>&#8203;</span>- 1<span>&#8203;</span>)</b>."
+        ],
+        "branch": [],
+        "skip": "end5",
+        "nextProp": {
+            "forward": true,
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "new"
+        }
+    },
+    "4-4-3-axchar": {
+        "says": [
+            "Hmm... what's A in <span>&#8203;</span>16, 10, 4, -2, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 16)', '4-4-1', 'correct')"
+                ],
+                "next": "4-4-4-sojsmg"
+            },
+            {
+                "next": "explicit-2",
+                "nextProp": {
+                    "wrong": true,
+                    "nextType": "review"
+                }
+            }
+        ]
+    },
+    "4-4-4-sojsmg": {
+        "says": [
+            "What's B in <span>&#8203;</span>16, 10, 4, -2, ...<span>&#8203;</span>?"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, -6)', '4-4-2', 'correct')"
+                ],
+                "next": "4-4-5-24vykv"
+            },
+            {
+                "next": "explicit-2",
+                "nextProp": {
+                    "wrong": true,
+                    "nextType": "review"
+                }
+            }
+        ]
+    },
+    "4-4-5-24vykv": {
+        "says": [
+            "Plug in <b>A = <span>&#8203;</span>16<span>&#8203;</span></b> and <b>B = <span>&#8203;</span>-6<span>&#8203;</span></b> to <b><span>&#8203;</span>a(n)<span>&#8203;</span> = A <span>&#8203;</span>+ <span>&#8203;</span>B(n <span>&#8203;</span>- 1<span>&#8203;</span>)</b> to get the answer!"
+        ],
+        "branch": [],
+        "skip": "4-4",
+        "nextProp": {
+            "wrong": true,
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "self"
+        }
+    },
+    "end5": {
+        "says": [
+            "Last lesson: <b><span>&#8203;</span>6<span>&#8203;</span>. Equivalent formulas<b>"
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {},
+        "skip": "explicit-3",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "new"
+        }
+    },
+    "explicit-3": {
+        "says": [
+            "\ud83d\udca1Different explicit formulas that describe the same sequence are called <b>equivalent formulas</b>."
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {
+            "concept": true
+        },
+        "skip": "explicit-3-1-y26yom"
+    },
+    "explicit-3-1-y26yom": {
+        "says": [
+            "For example, <b><span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>2 + 6<span>&#8203;</span>(n <span>&#8203;</span>- 1<span>&#8203;</span>)</b> is equivalent to <b><span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>6<span>&#8203;</span>n <span>&#8203;</span>- 4<span>&#8203;</span></b>.",
+            "<span>&#8203;</span>a(1)<span>&#8203;</span>, <span>&#8203;</span>a(2)<span>&#8203;</span>, <span>&#8203;</span>a(3)<span>&#8203;</span>, ... should be the same for both formulas."
+        ],
+        "branch": [],
+        "skip": "explicit-3-2-3ndyco"
+    },
+    "explicit-3-2-3ndyco": {
+        "says": [
+            "Let me know when you're ready to plug in n = <span>&#8203;</span>5 <span>&#8203;</span>to the formulas to check that they are equivalent."
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "onlyNumberMatch(response, 0)"
+                ],
+                "next": "explicit-3b",
+                "nextProp": {
+                    "no_grade": true,
+                    "no_transition": true,
+                    "nextType": "new"
+                }
+            },
+            {
+                "next": "explicit-3b",
+                "nextProp": {
+                    "no_grade": true,
+                    "no_transition": true,
+                    "nextType": "new"
+                }
+            }
+        ]
+    },
+    "explicit-3b": {
+        "says": [
+            "For example, let's plug in <b>n = <span>&#8203;</span>5<span>&#8203;</span></b> to <b><span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>2 + 6<span>&#8203;</span>(n <span>&#8203;</span>- 1<span>&#8203;</span>)</b>:",
+            "<span>&#8203;</span>a(5)<span>&#8203;</span> = <span>&#8203;</span>2 + 6<span>&#8203;</span>(<span>&#8203;</span>5 - 1<span>&#8203;</span>)",
+            "<span>&#8203;</span>a(5)<span>&#8203;</span> = <span>&#8203;</span>2 + 6<span>&#8203;</span>(<span>&#8203;</span>4<span>&#8203;</span>)",
+            "<span>&#8203;</span>a(5)<span>&#8203;</span> = <span>&#8203;</span>2 + 24",
+            "<span>&#8203;</span><span>&#8203;</span>a(5)<span>&#8203;</span> = <span>&#8203;</span>26<span>&#8203;</span>"
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {
+            "concept": true
+        },
+        "skip": "explicit-3b-1-tf7sw1"
+    },
+    "explicit-3b-1-tf7sw1": {
+        "says": [
+            "Let me know when you're ready to plug in n = <span>&#8203;</span>5 <span>&#8203;</span>to the other formula."
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "onlyNumberMatch(response, 0)"
+                ],
+                "next": "",
+                "nextProp": {
+                    "no_grade": true,
+                    "no_transition": true,
+                    "banditId": "log-2",
+                    "actions": [
+                        "explicit-3c"
+                    ],
+                    "nextType": "bandit",
+                    "bandit_log-2_explicit-3c": true
+                }
+            },
+            {
+                "next": "",
+                "nextProp": {
+                    "no_grade": true,
+                    "no_transition": true,
+                    "banditId": "log-2",
+                    "actions": [
+                        "explicit-3c"
+                    ],
+                    "nextType": "bandit",
+                    "bandit_log-2_explicit-3c": true
+                }
+            }
+        ]
+    },
+    "explicit-3c": {
+        "says": [
+            "Here's how to find <b><span>&#8203;</span>a(5)<span>&#8203;</span></b> using <b><span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>6<span>&#8203;</span>n <span>&#8203;</span>- 4<span>&#8203;</span></b>:",
+            "<span>&#8203;</span>a(5)<span>&#8203;</span> = <span>&#8203;</span>6<span>&#8203;</span>(<span>&#8203;</span>5<span>&#8203;</span>) <span>&#8203;</span>- 4",
+            "<span>&#8203;</span><span>&#8203;</span>a(5)<span>&#8203;</span> = <span>&#8203;</span>30 - 4",
+            "<span>&#8203;</span><span>&#8203;</span>a(5)<span>&#8203;</span> = <span>&#8203;</span>26",
+            "<span>&#8203;</span>Looks like both formulas tell us that <span>&#8203;</span>a(5)<span>&#8203;</span> = <span>&#8203;</span>26<span>&#8203;</span>."
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {
+            "concept": true
+        },
+        "skip": "4-5",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "reward": {
+                "banditId": "log-2",
+                "amount": "0"
+            },
+            "reward_log-2_0": true,
+            "nextType": "new"
+        }
+    },
+    "4-5": {
+        "says": [
+            "\u270d\ufe0f Which of the following is a correct explicit formula for <span>&#8203;</span>12, 7, 2, ...<span>&#8203;</span>?",
+            "1\ufe0f\u20e3 <span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>12 - 5<span>&#8203;</span>(n <span>&#8203;</span>- 1<span>&#8203;</span>)",
+            "2\ufe0f\u20e3 <span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>17 - 5<span>&#8203;</span>n",
+            "3\ufe0f\u20e3 <span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>12 - 5<span>&#8203;</span>n",
+            "4\ufe0f\u20e3 Both <span>&#8203;</span>1 <span>&#8203;</span>and <span>&#8203;</span>2",
+            "<span>&#8203;</span>5\ufe0f\u20e3 Both <span>&#8203;</span>1 <span>&#8203;</span>and <span>&#8203;</span>3<span>&#8203;</span>"
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 1)', '4-5', 'hint')"
+                ],
+                "next": "4-5-1-ccdkwa"
+            },
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 2)', '4-5', 'hint')"
+                ],
+                "next": "4-5-2-saie2o"
+            },
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 3)', '4-5', 'wrong')"
+                ],
+                "next": "4-5-3-z0o4mv"
+            },
+            {
+                "evals": [
+                    "_e('onlyNumberMatch(response, 4)', '4-5', 'correct')"
+                ],
+                "next": "4-5-5-uqb8cm"
+            },
+            {
+                "next": [
+                    "explicit-3",
+                    "explicit-3b",
+                    "explicit-3c"
+                ],
+                "nextProp": {
+                    "wrong": true,
+                    "nextType": "review"
+                }
+            }
+        ],
+        "isRoot": true,
+        "prop": {}
+    },
+    "4-5-1-ccdkwa": {
+        "says": [
+            "Almost there! Try plugging in a value of n to all three formulas to see which one gives the same result as 1\ufe0f\u20e3."
+        ],
+        "branch": [],
+        "skip": "4-5",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "self"
+        }
+    },
+    "4-5-2-saie2o": {
+        "says": [
+            "Almost there! Try plugging in a value of n to all three formulas to see which one gives the same result as 2\ufe0f\u20e3."
+        ],
+        "branch": [],
+        "skip": "4-5",
+        "nextProp": {
+            "no_grade": true,
+            "no_transition": true,
+            "nextType": "self"
+        }
+    },
+    "4-5-3-z0o4mv": {
+        "random": "wrong_answer",
+        "branch": [],
+        "skip": "4-5-4-gfuu94"
+    },
+    "4-5-4-gfuu94": {
+        "says": [
+            "The <span>&#8203;</span>1<span>&#8203;</span><sup>st</sup> term is <span>&#8203;</span>12 <span>&#8203;</span>and the common difference is <span>&#8203;</span>-5, <span>&#8203;</span>but we can only use those values as A and B if the explicit formula is in this form: <span>&#8203;</span>a(n)<span>&#8203;</span> = A <span>&#8203;</span>+ <span>&#8203;</span>B(n <span>&#8203;</span>- 1<span>&#8203;</span>)."
+        ],
+        "branch": [],
+        "skip": "4-5",
+        "nextProp": {
+            "no_grade": true,
+            "nextType": "self"
+        }
+    },
+    "4-5-5-uqb8cm": {
+        "random": "correct_answer",
+        "branch": [],
+        "skip": "4-5-6-xfn8wm"
+    },
+    "4-5-6-xfn8wm": {
+        "says": [
+            "Since the <span>&#8203;</span>1<span>&#8203;</span><sup>st</sup> term in <span>&#8203;</span>12, 7, 2, ...<span>&#8203;</span> is <span>&#8203;</span>12, <span>&#8203;</span>we should plug in n = <span>&#8203;</span>1 <span>&#8203;</span>to each formula to see which one gives us <span>&#8203;</span>12<span>&#8203;</span>.",
+            "1\ufe0f\u20e3 <span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>12 - 5<span>&#8203;</span>(n <span>&#8203;</span>- 1<span>&#8203;</span>) \u27a1\ufe0f <span>&#8203;</span>a(1)<span>&#8203;</span> = <span>&#8203;</span>12",
+            "<span>&#8203;</span>2\ufe0f\u20e3 <span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>17 - 5<span>&#8203;</span>n \u27a1\ufe0f <span>&#8203;</span>a(1)<span>&#8203;</span> = <span>&#8203;</span>12",
+            "<span>&#8203;</span>3\ufe0f\u20e3 <span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>12 - 5<span>&#8203;</span>n \u27a1\ufe0f <span>&#8203;</span>a(1)<span>&#8203;</span> = <span>&#8203;</span>7",
+            "<span>&#8203;</span>It looks like 1\ufe0f\u20e3 and 2\ufe0f\u20e3 give us <span>&#8203;</span>12 <span>&#8203;</span>when n = <span>&#8203;</span>1<span>&#8203;</span>."
+        ],
+        "branch": [],
+        "skip": "4-5-7-mqtt8y"
+    },
+    "4-5-7-mqtt8y": {
+        "says": [
+            "Let me know when you're ready to hear the rest of the solution."
+        ],
+        "branch": [
+            {
+                "evals": [
+                    "onlyNumberMatch(response, 0)"
+                ],
+                "next": "",
+                "nextProp": {
+                    "forward": true,
+                    "no_grade": true,
+                    "no_transition": true,
+                    "banditId": "log-3",
+                    "actions": [
+                        "4-5b"
+                    ],
+                    "nextType": "bandit",
+                    "bandit_log-3_4-5b": true
+                }
+            },
+            {
+                "next": "",
+                "nextProp": {
+                    "no_grade": true,
+                    "no_transition": true,
+                    "banditId": "log-3",
+                    "actions": [
+                        "4-5b"
+                    ],
+                    "nextType": "bandit",
+                    "bandit_log-3_4-5b": true
+                }
+            }
+        ]
+    },
+    "4-5b": {
+        "says": [
+            "Since the <span>&#8203;</span>2<span>&#8203;</span><sup>nd</sup> term in <span>&#8203;</span>12, 7, 2, ...<span>&#8203;</span> is <span>&#8203;</span>7, <span>&#8203;</span>we should plug in n = <span>&#8203;</span>2 <span>&#8203;</span>to 1\ufe0f\u20e3 and 2\ufe0f\u20e3 to make sure we get <span>&#8203;</span>7<span>&#8203;</span>.",
+            "1\ufe0f\u20e3 <span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>12 - 5<span>&#8203;</span>(n <span>&#8203;</span>- 1<span>&#8203;</span>) \u27a1\ufe0f <span>&#8203;</span>a(2)<span>&#8203;</span> = <span>&#8203;</span>7",
+            "<span>&#8203;</span>2\ufe0f\u20e3 <span>&#8203;</span>a(n)<span>&#8203;</span> = <span>&#8203;</span>17 - 5<span>&#8203;</span>n \u27a1\ufe0f <span>&#8203;</span>a(2)<span>&#8203;</span> = <span>&#8203;</span>7",
+            "<span>&#8203;</span>It looks like 1\ufe0f\u20e3 and 2\ufe0f\u20e3 are both correct explicit formulas."
+        ],
+        "branch": [],
+        "isRoot": true,
+        "prop": {},
+        "skip": "4-5b-1-0ea463"
+    },
+    "4-5b-1-0ea463": {
+        "random": "good_bye",
+        "branch": [],
+        "skip": "none",
+        "nextProp": {
+            "reward": {
+                "banditId": "log-3",
+                "amount": "0"
+            },
+            "reward_log-3_0": true,
+            "nextType": "new"
+        }
+    }
+}

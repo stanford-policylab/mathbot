@@ -1,0 +1,445 @@
+{
+  "title": "Online Learning Experience Study",
+  "pages": {
+    "pre-page-demographics": {
+      "title": "You passed the 2nd eligibility quiz!",
+      "description": "If you do not wish to answer a particular question, select \"Prefer not to disclose\" or enter \"N/A\".",
+      "questions": [
+        {
+          "id": "gender",
+          "type": "radio",
+          "description": "What is your gender?",
+          "choice": [
+            {
+              "id": "f",
+              "description": "Female"
+            },
+            {
+              "id": "m",
+              "description": "Male"
+            },
+            {
+              "id": "o",
+              "description": "Other"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "age",
+          "description": "What is your age?",
+          "type": "input"
+        },
+        {
+          "id": "degree",
+          "description": "What is your highest level of education?",
+          "type": "dropdown",
+          "choice": [
+            {
+              "id": "Less than middle school",
+              "description": "Less than middle school"
+            },
+            {
+              "id": "Middle school",
+              "description": "Middle school"
+            },
+            {
+              "id": "High school",
+              "description": "High school"
+            },
+            {
+              "id": "Associate degree",
+              "description": "Associate's degree"
+            },
+            {
+              "id": "Bachelor degree",
+              "description": "Bachelor's degree"
+            },
+            {
+              "id": "Master degree",
+              "description": "Master's degree"
+            },
+            {
+              "id": "Doctoral degree",
+              "description": "Doctoral degree"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        }
+      ]
+    },
+    "pre-page-math-background": {
+      "title": "Pre-learning survey - Math background",
+      "description": "",
+      "questions": [
+        {
+          "id": "algebra-rating",
+          "description": "In your high school math classes, how well did you perform compared to other students?",
+          "type": "likert",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Far below average"
+            },
+            {
+              "id": "2",
+              "description": "Below average"
+            },
+            {
+              "id": "3",
+              "description": "Somewhat below average"
+            },
+            {
+              "id": "4",
+              "description": "Average"
+            },
+            {
+              "id": "5",
+              "description": "Somewhat above average"
+            },
+            {
+              "id": "6",
+              "description": "Above average"
+            },
+            {
+              "id": "7",
+              "description": "Far above average"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        }
+      ]
+    },
+    "post-page-rate-mathbot": {
+      "title": "Post-learning survey - Overall experience",
+      "description": "",
+      "questions": [
+        {
+          "id": "overall-experience-mathbot",
+          "type": "likert",
+          "description": "Please rate your overall experience with the chatbot.",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very negative"
+            },
+            {
+              "id": "2",
+              "description": "Negative"
+            },
+            {
+              "id": "3",
+              "description": "Somewhat negative"
+            },
+            {
+              "id": "4",
+              "description": "Neutral"
+            },
+            {
+              "id": "5",
+              "description": "Somewhat positive"
+            },
+            {
+              "id": "6",
+              "description": "Positive"
+            },
+            {
+              "id": "7",
+              "description": "Very positive"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "mathbot-like-dislike",
+          "description": "What did you like or dislike about the chatbot?",
+          "type": "text"
+        }
+      ]
+    },
+    "post-page-likert": {
+      "title": "Post-learning survey",
+      "description": "",
+      "questions": [
+        {
+          "id": "mental-demand-mathbot",
+          "type": "likert",
+          "description": "How mentally demanding was the conversation?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very low"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Very high"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "temporal-demand-mathbot",
+          "type": "likert",
+          "description": "How hurried or rushed was the pace of the conversation?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very low"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Very high"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "effort-mathbot",
+          "type": "likert",
+          "description": "How hard did you have to work to complete the conversation?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very low"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Very high"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "frustration-mathbot",
+          "type": "likert",
+          "description": "How insecure, discouraged, irritated, stressed, and annoyed were you during the conversation?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very low"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Very high"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        }
+      ]
+    },
+    "post-page-describe-mathbot": {
+      "title": "Post-learning survey",
+      "description": "",
+      "questions": [
+        {
+          "id": "time-on-concepts",
+          "type": "likert",
+          "description": "Should the chatbot spend more time explaining new concepts or less time explaining new concepts?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "A lot less time"
+            },
+            {
+              "id": "2",
+              "description": "Less time"
+            },
+            {
+              "id": "3",
+              "description": "A little less time"
+            },
+            {
+              "id": "4",
+              "description": "No change"
+            },
+            {
+              "id": "5",
+              "description": "A little more time"
+            },
+            {
+              "id": "6",
+              "description": "More time"
+            },
+            {
+              "id": "7",
+              "description": "A lot more time"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "explain-time-on-concepts",
+          "description": "When should the chatbot spend more time or less time explaining new concepts? Be sure to explain why spending more time or less time would be helpful for you.",
+          "type": "text"
+        },
+        {
+          "id": "time-on-problems",
+          "type": "likert",
+          "description": "Should the chatbot spend more time on practice problems or less time on practice problems?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "A lot less time"
+            },
+            {
+              "id": "2",
+              "description": "Less time"
+            },
+            {
+              "id": "3",
+              "description": "A little less time"
+            },
+            {
+              "id": "4",
+              "description": "No change"
+            },
+            {
+              "id": "5",
+              "description": "A little more time"
+            },
+            {
+              "id": "6",
+              "description": "More time"
+            },
+            {
+              "id": "7",
+              "description": "A lot more time"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "explain-time-on-problems",
+          "description": "When should the chatbot spend more time or less time on practice problems? Be sure to explain why spending more time or less time would be helpful for you.",
+          "type": "text"
+        }
+      ]
+    },
+    "post-page-misc": {
+      "title": "Post-learning survey",
+      "description": "",
+      "questions": [
+        {
+          "id": "mathbot-buggy",
+          "description": "Did anything about the chatbot seem buggy or broken?",
+          "type": "text"
+        },
+        {
+          "id": "misc",
+          "description": "Do you have any comments or questions about the experiment?",
+          "type": "text"
+        }
+      ]
+    }
+  }
+}

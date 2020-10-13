@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>MathBot - Ada</title>
+    <meta charset="utf-8">
+
+    <!-- for mobile screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- grid css -->
+    <link rel="stylesheet" media="all" href="resources/css/skeleton.css">
+    <link rel="stylesheet" media="all" href="resources/css/normalize.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" media="all" href="resources/css/home.css">
+
+    <!-- stylesheets for bubbles -->
+    <link rel="stylesheet" media="all" href="resources/css/setup.css">
+    <link rel="stylesheet" media="all" href="resources/css/says.css">
+    <link rel="stylesheet" media="all" href="resources/css/reply.css">
+    <link rel="stylesheet" media="all" href="resources/css/typing.css">
+    <link rel="stylesheet" media="all" href="resources/css/input.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/mathquill.css">
+</head>
+
+<body>
+
+<!-- placeholder for where the chatbox is going to be rendered -->
+<div id="chat" class="ten columns"></div>
+
+
+</body>
+
+<!-- the script -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/4.0.0/math.js"></script>
+<script type="text/javascript" src="resources/js/mathquill.js"></script>
+<script type="text/javascript" src="resources/js/math.min.js"></script>
+<script type="text/javascript" src="resources/js/mathbot.js"></script>
+<script type="text/javascript" src="resources/json/algebra-3a1.js"></script>
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #chat {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+</style>
+
+<script>
+    //force to always load the latest json
+    $.getJSON("resources/json/mathbot_progress.json?_=", function (mathbotProgressCheckpoints) {
+        $.getJSON("resources/json/question_bank_qualitative.json?_=", function (conv) {
+            $.getJSON("resources/json/random_says.json?_=", function (randomSaysJson) {
+                bubble = new Bubbles(
+                    document.getElementById('chat'),
+                    "giveMeBubbles",
+                    {
+                        randomDict: randomSaysJson,
+                        mathbotProgressCheckpoints: mathbotProgressCheckpoints,
+                        typeSpeed: 50
+                    });
+                console.log(randomSaysJson);
+                bubble.startConversation(conv, "welcome");
+            })
+        })
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+/* The sidebar menu */
+.experiment-sideNav {
+}
+
+.experiment-main {
+}
+
+#video-list{
+    font-size: 14px
+}
+
+.video-main {
+}
+
+.video-row {
+    cursor: pointer;
+}
+
+.text-row {
+    cursor: pointer;
+}
+
+.links {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}

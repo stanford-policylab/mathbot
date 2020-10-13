@@ -1,0 +1,178 @@
+{
+    "round0[hint]": {
+        "says": [
+            "Could you take a look at the difference of two consecutive numbers?",
+            "What would be the next number of 2, 4, 6, 8, ..."
+        ],
+        "reply": [
+            {
+                "question": "10",
+                "answer": "round1"
+            }
+        ]
+    },
+    "round0": {
+        "says": [
+            "Hi, this is Ada, I'm a chatbot.",
+            "I\"m going to help you understand mathematical concept called \"sequences\".",
+            "Why don't we start from an example?",
+            "By the way, feel free to ask for a hint if you need some help!",
+            "What would be the next number of 2, 4, 6, 8, ..."
+        ],
+        "reply": [
+            {
+                "question": "10",
+                "answer": "round1"
+            },
+            {
+                "question": "hint",
+                "answer": "round0[hint]"
+            }
+        ]
+    },
+    "round1": {
+        "says": [
+            "\ud83d\udcaa We might need some terminologies before heading into more sequences:",
+            "Ordered lists of numbers like these are called <span class=\"def\">sequences</span>. Each number in a sequence is called a <span class=\"def\">term</span>.",
+            "<img src=\"resources/image/1-1.pn\" alt=\"sequence1-1\">",
+            "Sequences usually have  <span class=\"def\">patterns</span> that allow us to predict what the next term might be.",
+            "With these concept in mind, we can revisit our previous example.",
+            "What is the 4th term of 2, 4, 6, 8, 10, 12, ..."
+        ],
+        "reply": [
+            {
+                "question": "8",
+                "answer": "round2"
+            },
+            {
+                "question": "hint",
+                "answer": "round0[hint]"
+            }
+        ]
+    },
+    "round2": {
+        "says": [
+            "What is the 5th term of 3, 6, 9, 12, 15, ..."
+        ],
+        "reply": [
+            {
+                "question": "15",
+                "answer": "round3"
+            },
+            {
+                "question": "hint",
+                "answer": "round0[hint]"
+            }
+        ]
+    },
+    "round3": {
+        "says": [
+            "It seems you have understand the concept of <span class=\"def\">term</span> pretty well!",
+            "Did you notice there are three dots at the end of those sequence?",
+            "Actually, it indicate that the sequence can be extended, even though we only see a few terms.",
+            "What is the next term of 3, 6, 9, 12, 15, ..."
+        ],
+        "reply": [
+            {
+                "question": "18",
+                "answer": "round4"
+            },
+            {
+                "question": "hint",
+                "answer": "round0[hint]"
+            }
+        ]
+    },
+    "round4[hint]": {
+        "says": [
+            "Well, I look into the first 3 terms and I think the pattern to generate next term is:",
+            "Add five to the previous term.",
+            "What would be the next term of 3, 8, 13, ?, ..."
+        ],
+        "reply": [
+            {
+                "question": "18",
+                "answer": "round5"
+            }
+        ]
+    },
+    "round4": {
+        "says": [
+            "What would be the next term of 3, 8, 13, ?, ..."
+        ],
+        "reply": [
+            {
+                "question": "18",
+                "answer": "round5"
+            },
+            {
+                "question": "hint",
+                "answer": "round4[hint]"
+            }
+        ]
+    },
+    "round5[hint]": {
+        "says": [
+            "This time the numbers become smaller and smaller!",
+            "20 - 3 = 17, and 17 - 3 = 14. What would be the next?",
+            "What would be the next term of 20, 17, 14, ?, ..."
+        ],
+        "reply": [
+            {
+                "question": "11",
+                "answer": "round6"
+            }
+        ]
+    },
+    "round5": {
+        "says": [
+            "What would be the next term of 20, 17, 14, ?, ..."
+        ],
+        "reply": [
+            {
+                "question": "11",
+                "answer": "round6"
+            },
+            {
+                "question": "hint",
+                "answer": "round5[hint]"
+            }
+        ]
+    },
+    "round6[hint]": {
+        "says": [
+            "On no, the difference between two consecutive terms change.",
+            "But wait.. maybe we can get the next term by multiplying something?",
+            "What would be the next term of 3, 6, 12, ?, ..."
+        ],
+        "reply": [
+            {
+                "question": "24",
+                "answer": "round7"
+            }
+        ]
+    },
+    "round6": {
+        "says": [
+            "What would be the next term of 3, 6, 12, ?, ..."
+        ],
+        "reply": [
+            {
+                "question": "24",
+                "answer": "round7"
+            },
+            {
+                "question": "hint",
+                "answer": "round6[hint]"
+            }
+        ]
+    },
+    "round7": {
+        "says": [
+            "I am convinced you are a prophet now!",
+            "--- in terms of predicting next term.",
+            "Great to talk to you today!",
+            "See you later and let's explore more math!\ud83d\udc4b"
+        ]
+    }
+}

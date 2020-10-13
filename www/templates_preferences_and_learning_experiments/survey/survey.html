@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title> {{ title }}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+<h1 style="text-align: center" id="surveyTitle">
+    {{ title }}
+</h1>
+<br>
+<div class="container">
+    <!-- Progress bar -->
+    <div class="row">
+        <div class="col-12">
+            <div class="progress">
+                <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated"
+                     role="progressbar"
+                     aria-valuenow="75"
+                     aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Beginning of survey page -->
+    <div class="row">
+        <form id="exp-form" class="col-12" action="/api/exp_form" method="post">
+            {% for page in pages %}
+            <!-- Page {{ loop.index }} -->
+            <div class="form-page" style="{{ "" if debug else "display:none" }}">
+            {{ page | safe}}
+    </div>
+    {% endfor %}
+    </form>
+</div>
+<!-- End of survey page -->
+
+</div>
+
+<div class="container">
+    <!-- NavBar -->
+    <div id="navbar" class="raw align-items-end" style="margin-top: 20px">
+        <div class="col">
+            <nav aria-label="Page navigation">
+                <ul class="pagination pagination-lg justify-content-center">
+                    <li class="page-item" id="prev"><a class="page-link" onclick="previousPage()">Previous</a>
+                    </li>
+                    <li class="page-item" id="submit"><a class="page-link" onclick="mySubmit()">Submit</a>
+                    </li>
+                    <li class="page-item" id="next">
+                        <a class="page-link" onclick="nextWithConfirmation()">
+                            Next
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- confirmation -->
+<div class="modal" id="confirmation" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmationModalLabel">Confirmation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                You will not be able to go back to this page once you proceed. Do you want to continue?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="nextPage()" data-dismiss="modal">Continue
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form id="completion-form">
+    <input type="hidden" name="assignmentId" value="{{ user.assignment_id }}"/>
+    <input type="hidden" name="foo" value="bar"/>
+</form>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<!-- Optional JavaScript -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+
+<style type="text/css">
+    /* The sidebar menu */
+.experiment-sideNav {
+}
+
+.experiment-main {
+}
+
+#video-list{
+    font-size: 14px
+}
+
+.video-main {
+}
+
+.video-row {
+    cursor: pointer;
+}
+
+.text-row {
+    cursor: pointer;
+}
+
+.links {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+    html, body {
+    padding: 0;
+    margin: 0;
+}
+
+.center-content {
+    text-align: center;
+}
+
+.wrap {
+    font: 12px Arial, sans-serif; /* san-serif */
+}
+
+h1.likert-header {
+    padding-left: 4.25%;
+    margin: 20px 0 0;
+}
+
+form .statement {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 30px 0 0 4.25%;
+    margin-bottom: 10px;
+}
+
+form .likert {
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 0px;
+    display: block;
+    border-bottom: 2px solid #efefef;
+}
+
+form .likert:last-of-type {
+    border-bottom: 0;
+}
+
+form .likert:before {
+    content: '';
+    position: relative;
+    top: 11px;
+    /*left: 5.5%;*/
+    margin: auto;
+    display: block;
+    background-color: #efefef;
+    height: 4px;
+    width: 100%; /*75*/
+}
+
+form .likert li {
+    display: inline-block;
+    width: 12%;
+    text-align: center;
+    vertical-align: top;
+}
+
+form .likert li input[type=radio] {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-left: -6px;
+
+}
+
+form .likert li label {
+    width: 100%;
+}
+
+form .buttons {
+    margin: 30px 0;
+    padding: 0 4.25%;
+    text-align: right
+}
+
+form .buttons button {
+    padding: 5px 10px;
+    background-color: #67ab49;
+    border: 0;
+    border-radius: 3px;
+}
+
+form .buttons .clear {
+    background-color: #e9e9e9;
+}
+
+form .buttons .submit {
+    background-color: #67ab49;
+}
+
+form .buttons .clear:hover {
+    background-color: #ccc;
+}
+
+form .buttons .submit:hover {
+    background-color: #14892c;
+}
+
+.form-page {
+    margin-top: 20px;
+}
+    .card {
+        margin: 0 auto;
+        float: none;
+        margin-bottom: 10px;
+    }
+
+    #expFrame {
+        border: 1px solid gray;
+    }
+
+    .card-header {
+        /* background-color: inherit; */
+    }
+
+    .form-page {
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    #collapseTrigger {
+        color: #fff;
+    }
+
+    #submitButton {
+        white-space: normal;
+    }
+
+    .panel-body tr td {
+        width: 14%;
+        text-align: center;
+        padding: 4px 15px;
+    }
+
+    .image {
+        margin-bottom: 15px;
+    }
+
+    #navbar {
+        margin-top: 75px;
+    }
+
+    textarea.form-control {
+        height: 200px;
+        /* Fix for textarea overlapping submit button */
+    }
+</style>
+
+
+<script>
+    /***
+     * Helper functions
+     */
+    function findGetParameter(parameterName) {
+        var result = null,
+            tmp = []
+        location.search.substr(1).split('&').forEach(function (item) {
+            tmp = item.split('=')
+            if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1])
+        })
+        return result
+    }
+
+    /* init */
+    var DEBUG = 0;
+    var current_base_url = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port;
+    var currentPage;
+    var userId = '{{ user.session_id }}';
+    var userGroup = '';
+    var assignmentId = '{{ user.assignment_id }}';
+    // by default submit the the sandbox
+    var turkSubmitTo = (findGetParameter('turkSubmitTo') + '/mturk/externalSubmit');
+    $('#completion-form').attr('action', turkSubmitTo);
+    var currentQuizPage = 0;
+    var startPageTime = new Date();
+    var submitButtonClicked = false;
+    //intentionally left global
+    partial_form_content = {};
+    var quizResponse = [[], [], [], []];
+    var quizTimeStamp = [[], [], [], []];
+
+    var watchedIds = [];
+    var watchedTimestamps = [];
+    var readIds = [];
+    var readTimestamps = [];
+
+    //Selector
+    let nextButton = $("#next");
+    let previousButton = $("#prev");
+    let formPages = $(".form-page");
+
+
+    const MAXPAGE = formPages.length;
+
+    //@formatter:off
+    const QUIZPAGE = {{ quiz_page }};
+    const QUESTIONPAGE = {{ question_page }};
+    const CHECKPOINTS =  {{ checkpoint }};
+    const KHANPAGE = {{ khan_page }};
+    const MATHBOTPAGE = {{ mathbot_page }}
+    //@formatter:on
+    /* Helper functions */
+    function getPartialForm() {
+        //var selectedCurrPage = $('.form-page:nth-child(' + currentPage + ')');
+        var selectedCurrPage = $('#exp-form')
+        /* drop down list, text area, and regular response */
+        selectedCurrPage.find('select, textarea, input[type="number"], input[type="text"]').each(function () {
+            partial_form_content[$(this).attr('name')] = $(this).val()
+        })
+        /* radio button or checkbox*/
+        selectedCurrPage.find('input[type="radio"], input[type="checkbox"]').each(function () {
+            if (this.checked) {
+                partial_form_content[$(this).attr('name')] = $(this).val()
+            } else {
+                /* if nothing has been entered, collected the full form*/
+                if (!partial_form_content[$(this).attr('name')]) {
+                    partial_form_content[$(this).attr('name')] = ''
+                }
+            }
+        })
+        partial_form_content['prereq-quiz-response'] = JSON.stringify(quizResponse[0])
+        partial_form_content['prereq-quiz-time-stamp'] = JSON.stringify(quizTimeStamp[0])
+        partial_form_content['pre-quiz-response'] = JSON.stringify(quizResponse[1])
+        partial_form_content['pre-quiz-time-stamp'] = JSON.stringify(quizTimeStamp[1])
+        partial_form_content['post-quiz-1-response'] = JSON.stringify(quizResponse[2])
+        partial_form_content['post-quiz-1-time-stamp'] = JSON.stringify(quizTimeStamp[2])
+        partial_form_content['post-quiz-2-response'] = JSON.stringify(quizResponse[3])
+        partial_form_content['post-quiz-2-time-stamp'] = JSON.stringify(quizTimeStamp[3])
+        partial_form_content['khan-page'] = JSON.stringify(KHANPAGE)
+        partial_form_content['mathbot-page'] = JSON.stringify(MATHBOTPAGE)
+        partial_form_content['khan-read-ids'] = JSON.stringify(readIds)
+        partial_form_content['khan-watched-ids'] = JSON.stringify(watchedIds)
+        partial_form_content['khan-read-timestamps'] = JSON.stringify(readTimestamps)
+        partial_form_content['khan-watched-timestamps'] = JSON.stringify(watchedTimestamps)
+    }
+
+    function getBrowser() {
+        // Opera 8.0+
+        var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0
+        if (isOpera) {
+            return 'Opera'
+        }
+        // Firefox 1.0+
+        var isFirefox = typeof InstallTrigger !== 'undefined'
+        if (isFirefox) {
+            return 'Firefox'
+        }
+        // Safari 3.0+ "[object HTMLElementConstructor]"
+        var isSafari = /constructor/i.test(window.HTMLElement) ||
+            (function (p) {
+                return p.toString() === '[object SafariRemoteNotification]'
+            })(!window['safari'] ||
+                (typeof safari !== 'undefined' && safari.pushNotification))
+        if (isSafari) {
+            return 'Safari'
+        }
+        // Internet Explorer 6-11
+        var isIE = /*@cc_on!@*/false || !!document.documentMode
+        if (isIE) {
+            return 'IE'
+        }
+        // Edge 20+
+        var isEdge = !isIE && !!window.StyleMedia
+        if (isEdge) {
+            return 'Edge'
+        }
+        // Chrome 1+
+        var isChrome = !!window.chrome && !!window.chrome.webstore
+        if (isChrome) {
+            return 'Chrome'
+        }
+    }
+
+    function logPartialForm(churnOnPage, ifSendToServer, callback) {
+        if (DEBUG) { return ;}
+        getPartialForm();
+        /* user info */
+        partial_form_content['user-id'] = userId;
+        partial_form_content['assignment-id'] = assignmentId;
+        partial_form_content['user-group'] = userGroup;
+        partial_form_content['browser'] = getBrowser();
+        partial_form_content['user-agent'] = window.navigator.userAgent;
+        partial_form_content['platform'] = window.navigator.platform;
+        partial_form_content['timestamp-leaving-page-' + currentPage] = (new Date()) * 1;
+        // partial_form_content["seconds-on-page-" + currentPage] = (new Date() - startPageTime) / 1000.;
+        for (var i = 0; i <= MAXPAGE; i++) {
+            if (!partial_form_content['timestamp-leaving-page-' + i]) {
+                partial_form_content['timestamp-leaving-page-' + i] = ''
+            }
+        }
+        if (churnOnPage) {
+            partial_form_content['churn-on-page'] = churnOnPage
+        } else {
+            partial_form_content['churn-on-page'] = ''
+        }
+        startPageTime = new Date()
+        if (ifSendToServer) {
+            // if churn on consent page, do not submit
+            if (partial_form_content['churn-on-page'] !== 1) {
+                $.ajax({
+                    type: 'POST',
+                    async: false,
+                    url: 'api/log_progress',
+                    //url: "api/dump_form",
+                    data: partial_form_content,
+                    complete: function (data) {
+                        callback()
+                    },
+                    dataType: 'json',
+                })
+            }
+        }
+    }
+
+    function moveToPage(page) {
+        logPartialForm(false, false);
+        page = (page < 0) ? 0 : page;
+        page = (page > MAXPAGE) ? MAXPAGE : page;
+        nextButton.show();
+        previousButton.show();
+
+        currentPage = page;
+
+
+        /* show submit at the very end */
+        if (page === formPages.length-1) {
+            $('#submit').show();
+            nextButton.addClass('disabled')
+            //$("#next").css('tabindex', "-1");
+        } else {
+            $('#submit').hide();
+            nextButton.removeClass('disabled')
+        }
+          /* user cannot go back after CHECKPOINTS */
+        if (CHECKPOINTS.indexOf(page) > -1 ) {
+            previousButton.addClass('disabled')
+        } else {
+            previousButton.removeClass('disabled')
+        }
+        if (page > 1) {
+            $('#surveyTitle').hide()
+        }
+
+        if (page === MATHBOTPAGE-1) {
+            $("#expFrame-1").attr('src','/mathbot');
+        }
+
+        formPages.hide();
+        formPages.eq(currentPage).show();
+        console.log('Move to page:' + currentPage)
+
+        /* load the quiz */
+        if (QUIZPAGE.indexOf(page) > -1) {
+            console.log("Start quiz section:" + QUIZPAGE.indexOf(page));
+            nextButton.hide();
+            previousButton.hide();
+            nextQuiz(0, QUIZPAGE.indexOf(page))
+        }
+        /* user cannot go back after CHECKPOINTS */
+        if (CHECKPOINTS.indexOf(page) > -1 ) {
+            previousButton.addClass('disabled')
+        } else {
+            previousButton.removeClass('disabled')
+        }
+
+        $('.progress-bar').css('width', currentPage / (MAXPAGE-1) * 100 + '%')
+
+        /* load experiments
+        if (page === EXPPAGE) {
+            nextButton.hide();
+            previousButton.hide();
+            $.ajax({
+                type: 'GET',
+                async: false,
+                url: 'api/assign_group',
+                success: function (response) {
+                    userGroup = response
+                    loadInstruction(userGroup)
+                },
+            })
+        }
+        */
+    }
+
+    function validateRadioCheck(selector) {
+        let radioCheckList = selector.find('input');
+        let radioCheckListLength = radioCheckList.length;
+        let formValid = false;
+        let i = 0;
+        while (!formValid && i < radioCheckListLength) {
+            if (radioCheckList[i].checked) {
+                formValid = true
+            }
+            i++
+        }
+        return formValid
+    }
+
+    function validateSelect(selector) {
+        if (selector.children('select').val() === '') {
+            return false
+        }
+        return true
+    }
+
+    function validateInputArea(selector) {
+        let input = selector;
+        if (input.length && input.val().trim() === '') {
+            return false
+        }
+        return true
+    }
+
+    function validateTextArea(selector) {
+        let textArea = selector;
+        if (textArea.length && textArea.val().trim() === '') {
+            return false
+        }
+        return true
+    }
+
+    function validatePage(page) {
+        if (DEBUG) {
+            return true
+        }
+        if (QUESTIONPAGE.indexOf(page) > -1) {
+            console.log("In validating page: " + page);
+            let currentFormPage = $('.form-page').eq(page);
+            let radioQuestions = currentFormPage.find('.radio');
+            let likertQuestions = currentFormPage.find('.likert');
+            let inputQuestions = currentFormPage.find('.input');
+            let textQuestions = currentFormPage.find('.text');
+            let dropdownQuestions = currentFormPage.find('.dropdown');
+
+
+            var pageValid = true;
+            var i = 0;
+            while (pageValid && i < radioQuestions.length) {
+                pageValid = validateRadioCheck(radioQuestions.eq(i));
+                if (!pageValid) {
+                    console.log('Radio Question ' + i.toString() + ' is not valid.')
+                }
+                i++
+            }
+            i = 0;
+           while (pageValid && i < likertQuestions.length) {
+                pageValid = validateRadioCheck(likertQuestions.eq(i));
+                if (!pageValid) {
+                    console.log('Radio Question ' + i.toString() + ' is not valid.')
+                }
+                i++
+            }
+            i = 0;
+            while (pageValid && i < textQuestions.length) {
+                pageValid = validateTextArea(textQuestions.eq(i));
+                if (!pageValid) {
+                    console.log('Text Question ' + i.toString() + ' is not valid.')
+                }
+                i++
+            }
+            i = 0;
+            while (pageValid && i < inputQuestions.length) {
+                pageValid = validateInputArea(inputQuestions.eq(i));
+                if (!pageValid) {
+                    console.log('Text Question ' + i.toString() + ' is not valid.')
+                }
+                i++
+            }
+            i = 0;
+            while (pageValid && i < dropdownQuestions.length) {
+                pageValid = validateSelect(dropdownQuestions.eq(i));
+                if (!pageValid) {
+                    console.log('Select Question ' + i.toString() + ' is not valid.')
+                }
+                i++
+            }
+            if (!pageValid) {
+                console.log('Current page is not validated; cannot move to the next page!')
+            }
+            return pageValid
+        } else {
+            return true
+        }
+    }
+
+    function nextWithConfirmation() {
+        if (CHECKPOINTS.indexOf(currentPage + 1) >= 0) {
+            $('#confirmation').modal('show')
+            console.log('show confirmation')
+        } else {
+            nextPage()
+        }
+    }
+
+    function nextPage() {
+
+        $('#confirmation').modal('hide');
+        if (!validatePage(currentPage)) {
+            nextButton.popover('show')
+        }
+        else {
+            nextButton.popover('hide');
+
+            if (currentPage === MATHBOTPAGE-1) {
+                $("#expFrame-1").attr('src','');
+            }
+            if (currentPage === KHANPAGE-1) {
+                $("#expFrame-2").attr('src','');
+
+            }
+            moveToPage(currentPage + 1)
+        }
+        window.scrollTo(0, 0);
+    }
+
+    function previousPage() {
+        moveToPage(currentPage - 1)
+    }
+
+    function nextQuiz(response, section) {
+        if (currentQuizPage > 0) {
+            quizResponse[section].push(response);
+            quizTimeStamp[section].push(new Date() * 1);
+        }
+
+        let currentQuiz = $('.form-page').eq(currentPage).find('.quiz');
+        currentQuiz.hide();
+        if (currentQuizPage === currentQuiz.length) {
+            if (section === 0) {
+                checkPrerequisite(function () {
+                    nextButton.show();
+                    previousButton.show();
+                    currentQuizPage = 0;
+                    nextPage();
+                })
+            } else if (section === 1) {
+               checkPreQuiz(function() {
+                    nextButton.show();
+                    previousButton.show();
+                    currentQuizPage = 0;
+                    nextPage();
+               })
+            } else {
+                nextButton.show();
+                previousButton.show();
+                currentQuizPage = 0;
+                nextPage();
+            }
+        } else {
+            console.log("Quiz " + currentQuizPage);
+            currentQuiz.eq(currentQuizPage).show()
+            currentQuizPage += 1;
+        }
+    }
+
+    function checkPrerequisite(callbackOnEligible) {
+        getPartialForm();
+        console.log('Checking prerequisite');
+        console.log(partial_form_content);
+        var flag = 0;
+        if (// must get first question correct
+        (partial_form_content['quiz-0-1-1'] !== '0.25' &&
+            partial_form_content['quiz-0-1-1'] !== '.25' &&
+            partial_form_content['quiz-0-1-1'] !== '1/4' &&
+            partial_form_content['quiz-0-1-1'] !== '1 / 4') ||
+        // must get second or third question correct
+        (partial_form_content['quiz-0-2-1'] !== '-2' &&
+            partial_form_content['quiz-0-3-1'] !== '-1') ||
+        // cannot get fourth question completely correct
+        (partial_form_content['quiz-0-4-1'] === '3' &&
+            partial_form_content['quiz-0-4-2'] === '2') ||
+        // cannot get fifth question completely correct
+        (partial_form_content['quiz-0-5-1'] === '4' &&
+            partial_form_content['quiz-0-5-2'] === '2')
+        ) {
+            flag = 1
+        }
+        if (flag) {
+            console.log('Skip to submit.')
+            // disable logging as leaving the page
+            window.onbeforeunload = null
+            window.onunload = null
+            logPartialForm(
+                'Ineligible',
+                true,
+                function () {
+                    console.log('submit external!')
+                    // when success, submit the mturk form
+                    submitButtonClicked = true
+                    $('#completion-form').submit()
+                    console.log('submitted external!')
+                }
+            )
+        } else {
+            callbackOnEligible()
+        }
+    }
+
+    function checkPreQuiz(callbackOnEligible) {
+        const answer = {
+            'quiz-1-1-1': '64',
+            'quiz-1-2-1': '-26',
+            'quiz-1-3-1': '0',
+            'quiz-1-3-2': '11',
+            'quiz-1-4-1': '-17',
+            'quiz-1-4-2': '9',
+            'quiz-1-5-1': '29',
+            'quiz-1-6-1': '-22',
+            'quiz-1-7-1': '26',
+            'quiz-1-8-1': '12-7(n-1)',
+            'quiz-1-9-1': '-45+15(n-1)',
+            'quiz-1-10': '3',
+            'quiz-1-11': '1',
+        }
+        const threshold = 7
+        getPartialForm()
+        var dummyAnswer = false
+        var rightAnswer = 0
+        var emptyAnswer = 0
+        for (var q in answer) {
+            var correctAnswer = answer[q]
+            var userAnswer = partial_form_content[q]
+            //remove space
+            userAnswer = userAnswer.replace('\s/g', '')
+            //to lower cases
+            userAnswer = userAnswer.toLowerCase()
+            //replace `+-' with `-'
+            userAnswer = userAnswer.replace('\+-', '')
+            //remove `*'
+            userAnswer = userAnswer.replace('\*', '')
+            console.log(correctAnswer, userAnswer)
+            if (correctAnswer === userAnswer) {
+                rightAnswer += 1
+                if (q === 'quiz-1-7-1') {
+                    dummyAnswer = true
+                }
+            }
+            if (userAnswer === '') {
+                emptyAnswer += 1
+            }
+        }
+
+        // second condition - answer everything blank except dummy question
+        if (rightAnswer > threshold || emptyAnswer === (Object.keys(answer).length - 1) || !dummyAnswer) {
+            console.log('Skip to submit.')
+            // disable logging as leaving the page
+            window.onbeforeunload = null
+            window.onunload = null
+            logPartialForm(
+                'Ineligible',
+                true,
+                function () {
+                    console.log('submit external!')
+                    // when success, submit the mturk form
+                    submitButtonClicked = true
+                    $('#completion-form').submit()
+                    console.log('submitted external!')
+                }
+            )
+        } else {
+            callbackOnEligible()
+        }
+    }
+
+    /* Page event */
+    window.onbeforeunload = function (e) {
+        if (!submitButtonClicked) {
+            return 'Warning: If you close this page, you cannot return to the experiment. Are you sure you want to exit?'
+        }
+    }
+    window.onunload = function () {
+        if (!submitButtonClicked) {
+            // only submit partial form when leaving the page or submit button is clicked
+            logPartialForm(currentPage,
+                true,
+                function () {
+                    // only submit HITs for those who go beyond page 3
+                    if (currentPage >= 3) {
+                        console.log('submit external!')
+                        // when success, submit the mturk form
+                        submitButtonClicked = true
+                        $('#completion-form').submit()
+                        console.log('submitted external!')
+                    }
+                }
+            )
+        }
+        // explicitly unload iframe for the potential mathbot window to trigger conversation logging
+        $('#expFrame').attr('src', 'about:blank')
+    }
+
+    function mySubmit() {
+        if (!validatePage(currentPage)) {
+            $('#submit').popover('show')
+        } else {
+            // only submit partial form when leaving the page or submit button is clicked
+            logPartialForm(
+                'Submitted',
+                true,
+                function () {
+                    console.log('submit external!')
+                    // when success, submit the mturk form
+                    submitButtonClicked = true
+                    $('#completion-form').submit()
+                    console.log('submitted external!')
+                }
+            )
+        }
+    }
+
+    $(document).ready(function () {
+        currentPage = 0;
+        logPartialForm(false, false);
+        moveToPage(currentPage);
+        $('.progress-bar').css('width', currentPage / MAXPAGE * 100 + '%')
+        $('#next').popover({
+            content: 'Please answer each question.',
+            placement: 'right',
+            trigger: 'focus',
+        });
+        $('#submit').popover({
+            content: 'Before submitting, please answer each question.',
+            placement: 'bottom',
+            trigger: 'focus',
+        })
+        //DEBUG = 1;
+        //$('.form-page').show();
+    })
+</script>
+
+</body>
+</html>

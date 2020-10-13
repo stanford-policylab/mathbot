@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Survey question template page: Question </title>
+</head>
+
+
+<body>
+<div class="form-group" >
+    <br>
+    <label for="{{ question.id }}">
+        {{ question.description | safe}}
+    </label>
+    {% if question.type == "radio" %}
+    {% for choice in question.choice %}
+    <div class="form-check">
+        <label>
+            <input type="radio"
+                   name="{{ question.id }}"
+                   value="{{ choice.id }}">
+            {{ choice.description | safe}}
+        </label>
+    </div>
+    {% endfor %}
+
+    {% elif question.type == "likert" %}
+    <div class="likert row" id="{{ question.id }}">
+        <ul class='likert'>
+
+            {% for choice in question.choice %}
+            <li>
+                <input type="radio"
+                       name="{{ question.id }}"
+                       value="{{ choice.id }}">
+                <label>
+                    {{ choice.description | safe}}
+                </label>
+            </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+
+    {% elif question.type == "input" %}
+    <input type="text"
+           class="form-control input"
+           name="{{ question.id }}"
+           id="{{ question.id }}"
+           placeholder="">
+
+    {% elif question.type == "text" %}
+    <textarea class="form-control text"
+              cols=" {{ question.cols }} or 350"
+              id="{{ question.id }}"
+              name="{{ question.id }}"
+              required=""
+              rows="1"
+              placeholder="">
+    </textarea>
+
+    {% elif question.type == "dropdown" %}
+    <select class="form-control dropdown"
+            id="{{ question.id }}"
+            name="{{ question.id }}">
+
+        <option selected="selected" value="">- select one -</option>
+        {% for choice in question.choice %}
+        {% if choice.id is none %}
+        <option> {{ choice.description }}</option>
+        {% else %}
+        <option value="{{ choice.id }}"> {{ choice.description }}</option>
+        {% endif %}
+        {% endfor %}
+
+    </select>
+
+    {% elif question.type == "checkbox" %}
+    <div class="checkbox" id="{{ question.id }}">
+
+        {% for choice in question.choice %}
+        <label>
+            <input type="checkbox"
+                   name="{{ question.id }}"
+                   value="{{ choice.id }}">
+            {{ choice.description }}
+        </label>
+        {% endfor %}
+
+    </div>
+    {% else %}
+    {{ "Unknown question type."/0 }}
+    {% endif %}
+
+</div>
+</body>
+</html>

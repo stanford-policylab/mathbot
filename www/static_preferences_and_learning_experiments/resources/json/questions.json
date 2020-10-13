@@ -1,0 +1,97 @@
+{
+  "q-next-number": {
+    "question": [
+      "What would be the next number of 2, 4, 6, 8, ..."
+    ],
+    "answer": "10",
+    "hint": [
+      "Could you take a look at the difference of two consecutive numbers?"
+    ],
+    "simple": null
+  },
+  "q-nth-term-1": {
+    "question": [
+      "What is the 4th term of 2, 4, 6, 8, 10, 12, ..."
+    ],
+    "answer": "8",
+    "hint": null,
+    "simple": [
+      "q-nth-term-diagram"
+    ]
+  },
+  "q-nth-term-2": {
+    "question": [
+      "What is the 5th term of 3, 6, 9, 12, 15, ..."
+    ],
+    "answer": "15",
+    "hint": null,
+    "simple": [
+      "q-nth-term-diagram"
+    ]
+  },
+  "q-nth-term-diagram": {
+    "question": [
+      "Let's take a look at the following diagram👇: ",
+      "<img src=\"resources/image/1-1.png\" alt=\"sequence1-1\">",
+      "What is the 3rd term?"
+    ],
+    "answer": "6",
+    "hint": null,
+    "simple": null
+  },
+  "e-next-term": {
+    "question": [
+      "What is the next term of 3, 6, 9, 12, 15, ..."
+    ],
+    "answer": "18",
+    "hint": null,
+    "simple": [
+      "example-next-term-diagram"
+    ]
+  },
+  "e-next-term-diagram": {
+    "question": [
+      "Let's go through each term one by one.",
+      "I will draw a picture for you",
+      "<img src=\"resources/image/1-2.png\" alt=\"sequence1-1\">",
+      "This is for our previous example. What is the 4th term (the next term) of 2, 4, 6, ...?",
+      "(You might already know the answer)"
+    ],
+    "answer": "8",
+    "hint": null,
+    "simple": null
+  },
+  "q-next-term-1": {
+    "question": [
+      "What would be the next term of 3, 8, 13, ?, ..."
+    ],
+    "answer": "18",
+    "hint": [
+      "Well, I look into the first 3 terms and I think the pattern to generate next term is:",
+      "Add five to the previous term."
+    ],
+    "simple": null
+  },
+  "q-next-term-2": {
+    "question": [
+      "What would be the next term of 20, 17, 14, ?, ..."
+    ],
+    "answer": "11",
+    "hint": [
+      "This time the numbers become smaller and smaller!",
+      "20 - 3 = 17, and 17 - 3 = 14. What would be the next?"
+    ],
+    "simple": null
+  },
+  "q-next-term-3": {
+    "question": [
+      "What would be the next term of 3, 6, 12, ?, ..."
+    ],
+    "answer": "24",
+    "hint": [
+      "On no, the difference between two consecutive terms change.",
+      "But wait.. maybe we can get the next term by multiplying something?"
+    ],
+    "simple": null
+  }
+}

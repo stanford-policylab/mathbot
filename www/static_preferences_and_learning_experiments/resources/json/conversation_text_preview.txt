@@ -1,0 +1,1758 @@
+===[welcome]===
+[welcome-1-y1cq76]
+Hi there, I'm Ada! 👋 I'm a chatbot designed to help
+people learn math. 🤖 Today, we're going to complete a
+lesson on arithmetic sequences.
+
+ [welcome-1-zt5wn7]
+ Let's learn some math together! To start, check out
+ this question:
+
+
+
+===[welcome-real]===
+[welcome-real-1-isigq9]
+Hi there, I'm Ada! 👋 I'm a chatbot designed to help
+people learn math. 🤖 Today, we're going to complete a
+lesson on arithmetic sequences.  After the lesson is
+finished, you can take a short quiz for a bonus
+payment. 💰 Here's a tip: you can change how fast I send
+messages by moving the slider at the top of the page.
+
+ [welcome-real-1-jtgev5]
+ Let's learn some math together! To start, check out
+ this question:
+
+
+
+===[q-intro-isomorph]===
+[q-intro-isomorph-1-0gw2un]
+✍️ What's the next number in this list: 5, 2, -1, -4,
+...?
+
+  [q-intro-isomorph-1-0538qd]
+  Hint: The list doesn't repeat!
+
+  [q-intro-isomorph-2-0afza6]
+  Hint: The list is always decreasing!
+
+  [q-intro-isomorph-3-vpuemo]
+  That's right. What number should be after -7?
+
+  [q-intro-isomorph-4-pj93ff]
+  Hmm... let’s think about it differently.
+
+   [q-intro-isomorph-5-u76gt0]
+   It looks like each number in 5, 2, -1, -4, ... equals
+   the previous number minus 3.  So, what number comes
+   after -4 in 5, 2, -1, -4, ...?
+
+     [q-intro-isomorph-6-sh0v9n]
+     You got it. What number should be after -7?
+
+
+
+===[q-intro]===
+[q-intro-1-0s3fyu]
+✍️ What's the next number in this list: 2, 4, 6, 8,
+...?
+
+  [q-intro-1-pslmlc]
+  Hint: The list doesn't repeat!
+
+  [q-intro-2-q5efij]
+  Hint: The list is always increasing!
+
+  [q-intro-3-cf9z8r]
+  That's right. What number should be after 10?
+
+  [q-intro-4-8pn1r3]
+  Hmm... let’s think about it differently.
+
+   [q-intro-5-6wfuh6]
+   It looks like each number in 2, 4, 6, 8, ... equals the
+   previous number plus 2.  So, what number comes after 8
+   in 2, 4, 6, 8, ...?
+
+     [q-intro-6-vmpbrh]
+     You got it. What number should be after 10?
+
+
+
+===[sequence]===
+[sequence-1-oxkv2d]
+💡Ordered lists of numbers like 2, 4, 6, ... are called
+<b>sequences</b>.
+
+ [sequence-1-gjoc9e]
+ 💡 Each number in a sequence is called a <b>term</b>.️
+
+
+
+===[1-1-isomorph]===
+[1-1-isomorph-1-bhmhzf]
+✍️ What's the 2nd term in the sequence 1, 3, 5, 7, ...?
+
+  [1-1-isomorph-1-xhcbml]
+  9 is indeed the next term, but make sure to re-read the
+  question!
+
+  [1-1-isomorph-2-h5ndb9]
+  Hmm... here’s a hint: the 1st term of <b>2</b>, 4, 6,
+  8, ... is <b>2</b>. The 2nd term of 2, <b>4</b>, 6, 8,
+  ... is <b>4</b>. So, what's the 2nd term of 1, 3, 5, 7,
+  ...?
+
+
+
+===[1-1]===
+[1-1-1-2gqeoe]
+✍️ What's the 2nd term in the sequence -2, -6, -10,
+-14, ...?
+
+  [1-1-1-tw2ld7]
+  -18 is indeed the next term, but make sure to re-read
+  the question!
+
+  [1-1-2-4cgzmq]
+  Hmm... here’s a hint: the 1st term of <b>2</b>, 4, 6,
+  8, ... is <b>2</b>. The 2nd term of 2, <b>4</b>, 6, 8,
+  ... is <b>4</b>. So, what's the 2nd term of -2, -6,
+  -10, -14, ...?
+
+
+
+===[sequence-reflection]===
+[sequence-reflection-1-w5kndk]
+💭 In your own words, what's a sequence?
+
+  [sequence-reflection-1-kv8qh3]
+  RANDOM FEEDBACK/RESPONSE?
+
+   [sequence-reflection-2-la517t]
+   Here's my take: a sequence is a list of numbers where
+   each number has a particular place in line.
+
+
+
+===[pattern]===
+[pattern-1-wyqj0a]
+Sequences often have patterns that let us predict the
+next term.
+
+ [pattern-1-4fvc9r]
+ For example, in the sequence 3, 5, 7, 9, 11, ..., you
+ always add 2 to get the next term:
+
+
+
+===[1-2-isomorph]===
+[1-2-isomorph-1-ip5wsw]
+️️️✍️ What's the next number in the sequence 1, 3, 5,
+7, ...?
+
+  [1-2-isomorph-1-ity1fa]
+  Hmm... what’s the last term we know in 1, 3, 5, 7, ...?
+
+    [1-2-isomorph-2-mvkpo3]
+    You got it. So, if we follow the pattern “add 2 to the
+    previous term," what's the next term in 1, 3, 5, 7,
+    ...?
+
+      [1-2-isomorph-3-y1cz1c]
+      &wrong_answer&
+
+       [1-2-isomorph-4-k3eqk3]
+       Here's a sequence with the pattern “add 2 to the
+       previous term.”
+
+        [1-2-isomorph-5-860ac6]
+        The last term is <b>7</b>, so the next term is <b>7 +
+        2</b>, which is 9.
+
+  [1-2-isomorph-6-ut4d1m]
+  &wrong_answer&
+
+   [1-2-isomorph-7-0fiaz1]
+   To find the next term, we should add 2 to the last
+   term. 7 + 2 = 9, so the next term is <b>9</b>.
+
+
+
+===[1-2]===
+[1-2-1-uanaa8]
+️️️✍️ What's the next number in the sequence 6, 1, -4,
+-9, ...?
+
+  [1-2-1-gmhmtr]
+  Hmm... what’s the last term we know in 6, 1, -4, -9,
+  ...?
+
+    [1-2-2-lg5zfb]
+    You got it. So, if we follow the pattern “subtract 5
+    from the previous term," what's the next term in 6, 1,
+    -4, -9, ...?
+
+      [1-2-3-r3hqi8]
+      &wrong_answer&
+
+       [1-2-4-whjrbc]
+       Here's a sequence with the pattern “add 2 to the
+       previous term.”
+
+        [1-2-5-cnq0ux]
+        The last term is <b>7</b>, so the next term is <b>7 +
+        2</b>, which is 9.
+
+  [1-2-6-c642x9]
+  &wrong_answer&
+
+   [1-2-7-lnysai]
+   To find the next term, we should subtract 5 from the
+   last term. -9 - 5 = -14, so the next term is
+   <b>-14</b>.
+
+
+
+===[pattern-reflection]===
+[pattern-reflection-1-jrvvxf]
+💭 If you were helping a student, how would you explain
+how to find the next term in a sequence?
+
+  [pattern-reflection-1-vccrkj]
+  RANDOM FEEDBACK/RESPONSE?
+
+   [pattern-reflection-2-sxz0is]
+   Here's one way I'd describe it: Look for a pattern in
+   the sequence, and then apply that pattern to the last
+   term in the sequence.
+
+
+
+===[end1]===
+[end1-1-h5pdtl]
+Next up: <b>2. Defining arithmetic sequences<b>
+
+
+
+===[arithmetic]===
+[arithmetic-1-8etzvt]
+💡 All of the patterns we have seen so far involve
+adding or subtracting a number to get the next term.
+Sequences with these patterns are <b>arithmetic
+sequences</b>.
+
+ [arithmetic-1-1gg055]
+ For example, the sequence 10, 21, 32, 43, ... is
+ arithmetic because the difference between consecutive
+ terms is 11.
+
+  [arithmetic-2-vvh5h6]
+  Let me know when you're ready to see an example
+  sequence that is not arithmetic.
+
+    [arithmetic-3-2ctvjk]
+    The sequence 1, 2, 4, 8, ... is not arithmetic because
+    the difference between consecutive terms is not the
+    same.
+
+
+
+===[2-1-isomorph]===
+[2-1-isomorph-1-yfefmo]
+✍️ Is 10, 7, 4, 1, ... an arithmetic sequence?
+
+  [2-1-isomorph-1-dyagz0]
+  &correct_answer&
+
+   [2-1-isomorph-2-8s36n2]
+   The difference between consecutive terms of 10, 7, 4,
+   1, ... is always 3, so 10, 7, 4, 1, ... is an
+   arithmetic sequence.
+
+  [2-1-isomorph-3-fxoqk2]
+  -2 is indeed the next term, but make sure to re-read
+  the question!
+
+  [2-1-isomorph-4-mwheb8]
+  Hmm... what's the difference between the 1st term and
+  the 2nd term in 10, 7, 4, 1, ...?
+
+    [2-1-isomorph-5-3mh6zq]
+    You got it. How about the difference between the 2nd
+    term and the 3rd term in 10, 7, 4, 1, ...?
+
+      [2-1-isomorph-6-ncnjgm]
+      That's right. It looks like the difference between
+      consecutive terms in 10, 7, 4, 1, ... is always 3.
+
+  [2-1-isomorph-7-4yx9jg]
+  &wrong_answer&
+
+   [2-1-isomorph-8-6jz286]
+   The difference between consecutive terms of 10, 7, 4,
+   1, ... is always 3, so 10, 7, 4, 1, ... is an
+   arithmetic sequence.
+
+
+
+===[2-1]===
+[2-1-1-u66m9o]
+✍️ Is 0, 1, 3, 6, ... an arithmetic sequence?
+
+  [2-1-1-avuuc8]
+  &correct_answer&
+
+   [2-1-2-jqjys5]
+   The difference between consecutive terms of 0, 1, 3, 6,
+   ... is not always the same number, so 0, 1, 3, 6, ...
+   is not an arithmetic sequence.
+
+  [2-1-3-ef8ceo]
+  10 is indeed the next term, but make sure to re-read
+  the question!
+
+  [2-1-4-icta3v]
+  Hmm... what's the difference between the 1st term and
+  the 2nd term in 0, 1, 3, 6, ...?
+
+    [2-1-5-kj4x7y]
+    You got it. How about the difference between the 2nd
+    term and the 3rd term in 0, 1, 3, 6, ...?
+
+      [2-1-6-87cf8e]
+      That's right. It looks like the difference between
+      consecutive terms in 0, 1, 3, 6, ... is not always the
+      same number.
+
+  [2-1-7-2ns915]
+  &wrong_answer&
+
+   [2-1-8-yobalt]
+   The difference between consecutive terms of 0, 1, 3, 6,
+   ... is not always the same number, so 0, 1, 3, 6, ...
+   is not an arithmetic sequence.
+
+
+
+===[arithmetic-reflection]===
+[arithmetic-reflection-1-7qve6q]
+💭 In your own words, what is an arithmetic sequence?
+
+  [arithmetic-reflection-1-t1yydk]
+  RANDOM FEEDBACK/RESPONSE?
+
+   [arithmetic-reflection-2-ipsvdc]
+   Here's my take: An arithmetic sequence is a list of
+   numbers where the difference between each number is
+   always the same.
+
+
+
+===[end2]===
+[end2-1-51j6fj]
+Next up: <b>3. Common difference<b>
+
+
+
+===[difference]===
+[difference-1-w1c4y4]
+💡 The <b>common difference</b> of an arithmetic
+sequence is the number we add to get the next term.
+
+ [difference-1-dg5jbc]
+ For example, the common difference of 10, 21, 32, 43,
+ ... is 11.
+
+  [difference-2-iug0wm]
+  Let me know when you're ready to hear more.
+
+    [difference-3-y6hd4v]
+    The common difference of an arithmetic sequence will be
+    negative if the terms in the sequence are always
+    decreasing.
+
+     [difference-4-hsiysh]
+     For example, the common difference of -2, -5, -8, -11,
+     ... is -3.
+
+
+
+===[2-2-isomorph]===
+[2-2-isomorph-1-8mcz3x]
+✍️ What's the common difference of -10, -5, 0, 5, ...?
+
+  [2-2-isomorph-1-m4wecc]
+  Almost! The common difference will only be negative if
+  the terms in the sequence are decreasing.
+
+  [2-2-isomorph-2-6qb8no]
+  10 is indeed the next term, but make sure to re-read
+  the question!
+
+  [2-2-isomorph-3-f7817t]
+  Hmm... let's take a step back: what's the difference
+  between the 1st term and the 2nd term in -10, -5, 0, 5,
+  ...?
+
+    [2-2-isomorph-4-hj22fg]
+    You got it. How about the difference between the 2nd
+    term and the 3rd term in -10, -5, 0, 5, ...?
+
+  [2-2-isomorph-5-1eg1jb]
+  &wrong_answer&
+
+   [2-2-isomorph-6-321b6u]
+   We always add 5 to get the next term of -10, -5, 0, 5,
+   ... so the common difference is 5.
+
+
+
+===[2-2]===
+[2-2-1-qfwehw]
+✍️ What's the common difference of 2, 8, 14, 20, ...?
+
+  [2-2-1-bwwlao]
+  Almost! The common difference will only be negative if
+  the terms in the sequence are decreasing.
+
+  [2-2-2-xejnan]
+  26 is indeed the next term, but make sure to re-read
+  the question!
+
+  [2-2-3-hasxbo]
+  Hmm... let's take a step back: what's the difference
+  between the 1st term and the 2nd term in 2, 8, 14, 20,
+  ...?
+
+    [2-2-4-jl4h5w]
+    You got it. How about the difference between the 2nd
+    term and the 3rd term in 2, 8, 14, 20, ...?
+
+  [2-2-5-qibnxv]
+  &wrong_answer&
+
+   [2-2-6-5ss0ul]
+   We always add 6 to get the next term of 2, 8, 14, 20,
+   ... so the common difference is 6.
+
+
+
+===[2-3-isomorph]===
+[2-3-isomorph-1-fg9tky]
+✍️ Is -2, -9, -16, -23, ... an arithmetic sequence?
+
+  [2-3-isomorph-1-jiou7p]
+  &correct_answer&
+
+   [2-3-isomorph-2-plsx1c]
+   What’s the common difference of -2, -9, -16, -23, ...?
+
+     [2-3-isomorph-3-ibzeei]
+     Almost! Remember: The common difference of an
+     arithmetic sequence will be negative if the terms in
+     the sequence are always decreasing.  Try taking any
+     term in -2, -9, -16, -23, ... and subtracting the
+     previous term. What do you get?
+
+       [2-3-isomorph-4-1t01j2]
+       &wrong_answer&
+
+        [2-3-isomorph-5-twfp3x]
+        The 2nd term in -2, -9, -16, -23, ... is <b>-9</b>. The
+        1st term in -2, -9, -16, -23 ... is <b>-2</b>. So, the
+        common difference is -9 - (-2) = -9 + 2 = <b>-7</b>.
+        Here's another way to think about it: we always
+        subtract 7 to get the next term of -2, -9, -16, -23 ...
+        so the common difference is -7.
+
+         [2-3-isomorph-6-8dy1a1]
+         Let me know when you're ready to move forward.
+
+  [2-3-isomorph-7-u3nxs5]
+  Make sure to re-read the question!
+
+  [2-3-isomorph-8-flgrh0]
+  The next term is indeed -30, but make sure to re-read
+  the question!
+
+  [2-3-isomorph-9-j3zl12]
+  Hmm... arithmetic sequences can be decreasing as long
+  as the difference between consecutive terms is the
+  same.
+
+
+
+===[2-3]===
+[2-3-1-lp4v8j]
+✍️ Is 5, 2, -1, -4, ... an arithmetic sequence?
+
+  [2-3-1-w4f5ns]
+  &correct_answer&
+
+   [2-3-2-a34ant]
+   What’s the common difference of 5, 2, -1, -4, ...?
+
+     [2-3-3-ht9j25]
+     Almost! Remember: The common difference of an
+     arithmetic sequence will be negative if the terms in
+     the sequence are always decreasing.  Try taking any
+     term in 5, 2, -1, -4, ... and subtracting the previous
+     term. What do you get?
+
+       [2-3-4-f6o9zr]
+       &wrong_answer&
+
+        [2-3-5-bhrcaq]
+        The 2nd term in 5, 2, -1, -4, .... is <b>2</b>. The 1st
+        term in 5, 2, -1, -4, .... is <b>5</b>. So, the common
+        difference is 2 - 5, which is <b>-3</b>! Here's another
+        way to think about it: we always subtract 3 to get the
+        next term of 5, 2, -1, -4, .... so the common
+        difference is -3.
+
+         [2-3-6-z8z3gq]
+         Let me know when you're ready to move forward.
+
+  [2-3-7-wsmfce]
+  Make sure to re-read the question!
+
+  [2-3-8-qt9vh8]
+  The next term is indeed -7, but make sure to re-read
+  the question!
+
+  [2-3-9-pke1ss]
+  Hmm... arithmetic sequences can be decreasing as long
+  as the difference between consecutive terms is the
+  same.
+
+
+
+===[difference-reflection]===
+[difference-reflection-1-8i8n9g]
+💭 How would you define the common difference of an
+arithmetic sequence?
+
+  [difference-reflection-1-19zrs3]
+  RANDOM FEEDBACK/RESPONSE?
+
+   [difference-reflection-2-xikhhy]
+   Here's one way I'd respond: The common difference of an
+   arithmetic sequence is the difference between any term
+   in the sequence and the term before it.
+
+
+
+===[end3]===
+[end3-1-z4i0tw]
+Next up: <b>4. Recursive formulas<b>
+
+
+
+===[formula]===
+[formula-1-51n567]
+We can also use <b>formulas</b> to describe arithmetic
+sequences.
+
+ [formula-1-u6d3tj]
+ 💡 Formulas use <b>a(n)</b> or <b>a<sub>n</sub></b> to
+ mean the n<sup>th</sup> term of a sequence.
+ <b>a(1)</b> and <b>a<sub>1</sub></b> refer to the 1st
+ term in a sequence.  <b>a(2)</b> and
+ <b>a<sub>2</sub></b> refer to the 2nd term in a
+ sequence. And so on.
+
+  [formula-2-6dnbw5]
+  Let me know when you're ready to hear more!
+
+    [formula-3-za8efz]
+    We can also use other letters to represent sequences.
+    For example, we can use b(n), c(n), or d(n) instead of
+    a(n). Similarly, we can use b<sub>n</sub>,
+    c<sub>n</sub>, or d<sub>n</sub> instead of
+    a<sub>n</sub>.
+
+
+
+===[4-1-isomorph]===
+[4-1-isomorph-1-axchar]
+✍️ Find a(5) in the sequence 100, 300, 500 ...
+
+  [4-1-isomorph-1-sojsmg]
+  &wrong_answer&
+
+   [4-1-isomorph-2-24vykv]
+   a(5) is indeed the 5th term, but we're looking for the
+   value of 5th term.
+
+  [4-1-isomorph-3-12j3j8]
+  &wrong_answer&
+
+   [4-1-isomorph-4-uinl3w]
+   700 is the next term of the sequence, but we're looking
+   for a(5).
+
+  [4-1-isomorph-5-y26yom]
+  &wrong_answer&
+
+   [4-1-isomorph-6-3ndyco]
+   Remember: we're looking for a(5), not the common
+   difference.
+
+  [4-1-isomorph-7-flxdlo]
+  Hmm... here’s a hint: a(n) means the n<sup>th</sup>
+  term of a sequence.  For example, a(4) would be the 4th
+  term of the sequence.  What’s a(4) of the sequence 100,
+  300, 500 ...?
+
+    [4-1-isomorph-8-tf7sw1]
+    You got it. What's the common difference of 100, 300,
+    500 ...?
+
+      [4-1-isomorph-9-4d8024]
+      That's right. To get a(5), we should add 200 to a(4).
+
+      [4-1-isomorph-10-6q5nvr]
+      Almost! Since the sequence is increasing, the common
+      difference is 200. To get a(5), we should add 200 to
+      a(4).
+
+  [4-1-isomorph-11-ccdkwa]
+  Hmm... we need to find a(5), the 5th term in the
+  sequence. Each term of 100, 300, 500 ... is equal to
+  the previous term plus 200. We should extend our
+  sequence by adding 200 until we have the 5th term. 100,
+  300, 500 ... ⬅ Start with 3 terms. 100, 300, 500, 700,
+  900, ... ⬅ Extend by 2 more terms. So, the 5th term,
+  a(5), is <b>900</b>.
+
+   [4-1-isomorph-12-saie2o]
+   Let me know when you're ready for the next question.
+
+
+
+===[4-1]===
+[4-1-1-z0o4mv]
+✍️ Find a(6) in the sequence 5, 1, -3, -7, ...
+
+  [4-1-1-gfuu94]
+  &wrong_answer&
+
+   [4-1-2-uqb8cm]
+   a(6) is indeed the 6th term, but we're looking for the
+   value of 6th term.
+
+  [4-1-3-xfn8wm]
+  &wrong_answer&
+
+   [4-1-4-mqtt8y]
+   -11 is the next term of the sequence, but we're looking
+   for a(6).
+
+  [4-1-5-q5wpct]
+  &wrong_answer&
+
+   [4-1-6-0ea463]
+   Remember: we're looking for a(6), not the common
+   difference.
+
+  [4-1-7-d1643h]
+  Hmm... here’s a hint: a(n) means the n<sup>th</sup>
+  term of a sequence.  For example, a(5) would be the 5th
+  term of the sequence.  What’s a(5) of the sequence 5,
+  1, -3, -7, ...?
+
+    [4-1-8-ffpgj1]
+    You got it. What's the common difference of 5, 1, -3,
+    -7, ...?
+
+      [4-1-9-n3e20z]
+      That's right. To get a(6), we should subtract 4 from
+      a(5).
+
+      [4-1-10-clp6oi]
+      Almost! Since the sequence is decreasing, the common
+      difference is -4. To get a(6), we should subtract 4
+      from a(5).
+
+  [4-1-11-rwu2g0]
+  Hmm... we need to find a(6), the 6th term in the
+  sequence. Each term of 5, 1, -3, -7, ... is equal to
+  the previous term minus 4. We should extend our
+  sequence by subtracting 4 until we have the 6th term.
+  5, 1, -3, -7, ... ⬅ Start with 4 terms. 5, 1, -3, -7,
+  -11, -15, ... ⬅ Extend by 2 more terms. So, the 6th
+  term, a(6), is <b>-15</b>.
+
+   [4-1-12-s9ms37]
+   Let me know when you're ready to move forward.
+
+
+
+===[formula-reflection]===
+[formula-reflection-1-49qrob]
+💭 Why do you think it could be useful to have a formula
+of an arithmetic sequence instead of always writing out
+the sequence (e.g. 2, 4, 6, ...)?
+
+  [formula-reflection-1-hgl1pn]
+  RANDOM FEEDBACK/RESPONSE?
+
+   [formula-reflection-2-sa972d]
+   Here's my take: A formula is a much more condensed way
+   to describe an arithmetic sequence. For example, if we
+   wanted to find the 150th term of 2, 4, 6, ... we'd need
+   to write down a lot of numbers!
+
+
+
+===[recursive]===
+[recursive-1-hyrhwo]
+💡<b>Recursive formulas</b> have two parts: 1️⃣ The 1st
+term of the sequence 2️⃣ A pattern rule to get any term
+in the sequence from the term that comes before it
+
+ [recursive-1-9sope8]
+ Here's the recursive formula for 3, 5, 7, 9, ... along
+ with the interpretation for each part of the formula:
+
+  [recursive-2-tuox5s]
+  Helpful hint: a(n - 1) is the "previous term", or the
+  term that comes before a(n).
+
+   [recursive-3-kia07u]
+   Let me know when you're ready to learn how to use the
+   formula.
+
+     [recursive-4-xbizjl]
+     To find terms in the sequence, think about the
+     interpretation of the formula.
+
+      [recursive-5-7ein6n]
+      a(1), the 1st term, is 3. To get any term, all we need
+      to do is add 2 to the previous term. So, 2 is the
+      <b>common difference</b>!
+
+       [recursive-6-pioywi]
+       Let me know when you're ready to write the sequence for
+       this recursive formula.
+
+         [recursive-7-6gb8w6]
+         Let's try to write the sequence. Remember to think
+         about the interpretation of the formula:
+
+          [recursive-8-4tao0k]
+          Since 3 is the 1st term and the common difference is 2,
+          our sequence must be <b>3, 5, 7, 9, ...</b>
+
+           [recursive-9-659ufq]
+           Let me know when you're ready to move forward.
+
+
+
+===[4-2-isomorph]===
+[4-2-isomorph-1-izmusy]
+✍️ Find a(5) for this recursive formula:<br>a(1) =
+25<br>a(n) = a(n - 1) - 10
+
+  [4-2-isomorph-1-dncupv]
+  Hmm... the 1st term and common difference can be
+  determined from the formula.  Use the 1st term and
+  common difference to build up the sequence up to a(5).
+
+  [4-2-isomorph-2-3oqwkt]
+  Hmm... take a look at this example recursive formula:
+
+   [4-2-isomorph-3-bw9djw]
+
+    [4-2-isomorph-4-b6dbpc]
+    For the example formula above, 3 is the first term, and
+    2 is the common difference:
+
+     [4-2-isomorph-5-aouedw]
+     So, the sequence described by the formula is 3, 5, 7,
+     ...
+
+      [4-2-isomorph-6-2in32j]
+      To find a(5), we would just extend the sequence to show
+      the 5th term.
+
+       [4-2-isomorph-7-wtlv1y]
+       3, 5, 7, ...
+
+        [4-2-isomorph-8-a1q994]
+        3, 5, 7, 9, 11, ...
+
+         [4-2-isomorph-9-ch1yka]
+         So, a(5) = 11 for the example formula.
+
+  [4-2-isomorph-10-7i7jfv]
+  &wrong_answer&
+
+   [4-2-isomorph-11-plpbk0]
+   We're looking for a(5), the 5th term of the sequence.
+   To start, what is the 1st term of the sequence? Here's
+   the formula again:<br>a(1) = 25<br>a(n) = a(n - 1) - 10
+
+     [4-2-isomorph-12-kf2g4j]
+     You got it. What's the common difference?
+
+       [4-2-isomorph-13-cqvybc]
+       That's right. So, our sequence starts with 25, and we
+       subtract 10 to get the next term. Here's our sequence:
+       25, 15, 5, ...
+
+       [4-2-isomorph-14-6fwsj4]
+       Almost! Our sequence starts with 25, and we
+       <b>subtract</b> 10 to get the next term. So, the common
+       difference is -10. Here's our sequence: 25, 15, 5, ...
+
+       [4-2-isomorph-15-p7wkzv]
+       Hmm... since a(n) = a(n - 1) - 10, we subtract 10 to
+       get the next term. So, the common difference is -10. If
+       the first term is 25, our sequence must be 25, 15, 5,
+       ...
+
+     [4-2-isomorph-16-r6zat8]
+     Not quite. a(1) = 25, so the 1st term is 25.
+
+      [4-2-isomorph-17-s05c90]
+      What's the common difference of the sequence? Here's
+      the formula again:<br>a(1) = 25<br>a(n) = a(n - 1) - 10
+
+        [4-2-isomorph-18-qc4zhz]
+        That's right. So, our sequence starts with 25, and we
+        subtract 10 to get the next term. Here's our sequence:
+        25, 15, 5, ...
+
+        [4-2-isomorph-19-w6dbrc]
+        Almost! Our sequence starts with 25, and we
+        <b>subtract</b> 10 to get the next term. So, the common
+        difference is -10. Here's our sequence: 25, 15, 5, ...
+
+        [4-2-isomorph-20-qsn88v]
+        Hmm... since a(n) = a(n - 1) - 10, we subtract 10 to
+        get the next term. So, the common difference is -10. If
+        the first term is 25, our sequence must be 25, 15, 5,
+        ...
+
+  [4-2-isomorph-21-yqnhvp]
+  &wrong_answer&
+
+   [4-2-isomorph-22-9wkjva]
+   25 is the first term of the sequence and -10 is the
+   common difference. So, the sequence described by the
+   formula is 25, 15, 5, ... To find a(5), the 5th term,
+   we should extend the sequence by repeatedly subtracting
+   10 from the last term.  25, 15, 5, ... ⬅ Start with 3
+   terms. 25, 15, 5, -5, -15. ⬅ Extend by 2 more terms.
+   So, the 5th term is <b>-15</b>.
+
+    [4-2-isomorph-23-djwxss]
+    Let me know when you're ready for the next question.
+
+
+
+===[4-2]===
+[4-2-1-u6z2ka]
+✍️ Find a(7) for this recursive formula:<br>a(1) =
+10<br>a(n) = a(n - 1) + 5
+
+  [4-2-1-jc3iva]
+  Hmm... the 1st term and common difference can be
+  determined from the formula.  Use the 1st term and
+  common difference to build up the sequence up to a(7).
+
+  [4-2-2-5qme02]
+  Hmm... take a look at this example recursive formula:
+
+   [4-2-3-rl8kek]
+
+    [4-2-4-h79y2r]
+    For the example formula above, 3 is the first term, and
+    2 is the common difference:
+
+     [4-2-5-tsa2rq]
+     So, the sequence described by the formula is 3, 5, 7,
+     9, ...
+
+      [4-2-6-980uvm]
+      To find a(7), we would just extend the sequence to show
+      the 7th term.
+
+       [4-2-7-2ja7jy]
+       3, 5, 7, 9, ...
+
+        [4-2-8-x4c01o]
+        3, 5, 7, 9, 11, 13, 15, ...
+
+         [4-2-9-bx8kmw]
+         So, a(7) = 15 for the example formula.
+
+  [4-2-10-6bpprl]
+  &wrong_answer&
+
+   [4-2-11-1e3p37]
+   We're looking for a(7), the 7th term of the sequence.
+   To start, what is the 1st term of the sequence?
+
+     [4-2-12-gmk3e2]
+     You got it. What's the common difference?
+
+       [4-2-13-zrq2wu]
+       That's right. So, our sequence starts with 10, and we
+       add 5 to get the next term. Here's our sequence: 10,
+       15, 20, 25, ...
+
+       [4-2-14-ftb6aq]
+       Hmm... since a(n) = a(n - 1) + 5, we add 5 to get the
+       next term. So, the common difference is 5. If the first
+       term is 10, our sequence must be 10, 15, 20, 25, ...
+
+     [4-2-15-mzy2yc]
+     Not quite. a(1) = 10, so the 1st term is 10.
+
+      [4-2-16-4wirub]
+      What's the common difference of the sequence? Here's
+      the formula again:<br>a(1) = 10<br>a(n) = a(n - 1) + 5
+
+        [4-2-17-z58icf]
+        That's right. Our sequence starts with 10, and we add 5
+        to get the next term. So, our sequence has to look
+        something like this: 10, 15, 20, 25, ...
+
+        [4-2-18-wxaemh]
+        Hmm... since a(n) = a(n - 1) + 5, we add 5 to get the
+        next term. So, the common difference is 5. If the first
+        term is 10, our sequence must be 10, 15, 20, 25, ...
+
+  [4-2-19-95cubu]
+  &wrong_answer&
+
+   [4-2-20-zir1jj]
+   10 is the first term of the sequence and 5 is the
+   common difference. So, the sequence described by the
+   formula is 10, 15, 20, 25, ...  To find a(7), the 7th
+   term, we should extend the sequence by repeatedly
+   adding 5 to the last term.  10, 15, 20, 25, ... ⬅ Start
+   with 4 terms. 10, 15, 20, 25, 30, 35, 40, ... ⬅ Extend
+   by 3 more terms. So, the 7th term is <b>40</b>.
+
+    [4-2-21-zt7dki]
+    Let me know when you're ready for the next question.
+
+
+
+===[4-2b-isomorph]===
+[4-2b-isomorph-1-i5c8c0]
+✍️ What is the value of A in the recursive formula for
+the sequence 50, 150, 250, ...?<br>d<sub>1</sub> =
+A<br>d<sub>n</sub> = d<sub>n-1</sub> + B
+
+  [4-2b-isomorph-1-ylwff0]
+  &correct_answer&
+
+   [4-2b-isomorph-2-lqmquq]
+   The 1st term is 50, so A = 50.
+
+    [4-2b-isomorph-3-q84j30]
+    What is the value of B?
+
+      [4-2b-isomorph-4-jcl7cu]
+      &correct_answer&
+
+       [4-2b-isomorph-5-em4p48]
+       The common difference is 100, so B = 100.
+
+        [4-2b-isomorph-6-kvi50d]
+        Since A = 50 and B = 100, the recursive formula for 50,
+        150, 250, ... looks like this: d<sub>1</sub> =
+        50<br>d<sub>n</sub> = d<sub>n-1</sub> + 100
+
+         [4-2b-isomorph-7-9f8vaf]
+         Let me know when you're ready to move forward.
+
+      [4-2b-isomorph-8-g2w3vy]
+      &wrong_answer&
+
+       [4-2b-isomorph-9-7xhiub]
+       B is the common difference of the sequence. What is the
+       common difference of 50, 150, 250, ...?
+
+         [4-2b-isomorph-10-libvmc]
+         &correct_answer&
+
+          [4-2b-isomorph-11-1dtydk]
+          The common difference is 100, so B = 100.
+
+           [4-2b-isomorph-12-we1d3w]
+           Since A = 50 and B = 100, the recursive formula for 50,
+           150, 250, ... looks like this: d<sub>1</sub> =
+           50<br>d<sub>n</sub> = d<sub>n-1</sub> + 100
+
+            [4-2b-isomorph-13-qt41lb]
+            Let me know when you're ready to move forward.
+
+  [4-2b-isomorph-14-4qmyew]
+  &wrong_answer&
+
+   [4-2b-isomorph-15-ghbwbl]
+   Remember: d<sub>1</sub> is the 1st term of the
+   sequence.
+
+  [4-2b-isomorph-16-zau406]
+  &wrong_answer&
+
+   [4-2b-isomorph-17-5fd9zq]
+   350 is indeed the next term of the sequence, but
+   d<sub>1</sub> is the 1st term of the sequence.
+
+  [4-2b-isomorph-18-b8gfvw]
+  Hmm... what is d<sub>1</sub>, the 1st term of the
+  sequence?
+
+    [4-2b-isomorph-19-g5cj8s]
+    &correct_answer&
+
+     [4-2b-isomorph-20-cayvk0]
+     Since d<sub>1</sub> = A, the value of A should be the
+     same as the value of d<sub>1</sub>.
+
+
+
+===[4-2b]===
+[4-2b-1-jklkpv]
+✍️ What is the value of A in the recursive formula for
+the sequence 20, -20, -60, -100, ...?<br>c<sub>1</sub>
+= A<br>c<sub>n</sub> = c<sub>n-1</sub> + B
+
+  [4-2b-1-b5zcop]
+  &correct_answer&
+
+   [4-2b-2-svkpwo]
+   The 1st term is 20, so A = 20.
+
+    [4-2b-3-k14xiy]
+    What is the value of B?
+
+      [4-2b-4-akaylj]
+      &correct_answer&
+
+       [4-2b-5-bbu7ac]
+       The common difference is -40, so B = -40.
+
+        [4-2b-6-dhjjyb]
+        Since A = 20 and B = -40, the recursive formula for 20,
+        -20, -60, -100, ... looks like this: c<sub>1</sub> =
+        20<br>c<sub>n</sub> = c<sub>n-1</sub> - 40
+
+         [4-2b-7-12vpix]
+         Let me know when you're ready to move forward.
+
+      [4-2b-8-7n9zei]
+      Almost. We subtract 40 to get the next term, so the
+      common difference is -40. The common difference is -40,
+      so B = -40.
+
+       [4-2b-9-1wg22p]
+       Since A = 20 and B = -40, the recursive formula for 20,
+       -20, -60, -100, ... looks like this: c<sub>1</sub> =
+       20<br>c<sub>n</sub> = c<sub>n-1</sub> - 40
+
+        [4-2b-10-5yozp5]
+        Let me know when you're ready to move forward.
+
+      [4-2b-11-zeqr8x]
+      &wrong_answer&
+
+       [4-2b-12-9b5prc]
+       B is the common difference of the sequence. What is the
+       common difference of 20, -20, -60, -100, ...?
+
+         [4-2b-13-uzg9dj]
+         &correct_answer&
+
+          [4-2b-14-zb1z2g]
+          The common difference is -40, so B = -40.
+
+           [4-2b-15-44kkv5]
+           Since A = 20 and B = -40, the recursive formula for 20,
+           -20, -60, -100, ... looks like this: c<sub>1</sub> =
+           20<br>c<sub>n</sub> = c<sub>n-1</sub> - 40
+
+            [4-2b-16-1ks7hx]
+            Let me know when you're ready to move forward.
+
+         [4-2b-17-wjw58d]
+         Almost. We subtract 40 to get the next term, so the
+         common difference is -40. The common difference is -40,
+         so B = -40.
+
+          [4-2b-18-mqlusy]
+          Since A = 20 and B = -40, the recursive formula for 20,
+          -20, -60, -100, ... looks like this: c<sub>1</sub> =
+          20<br>c<sub>n</sub> = c<sub>n-1</sub> - 40
+
+           [4-2b-19-cs02c1]
+           Let me know when you're ready to move forward.
+
+  [4-2b-20-rynwii]
+  &wrong_answer&
+
+   [4-2b-21-hwkb2z]
+   Remember: c<sub>1</sub> is the 1st term of the
+   sequence.
+
+  [4-2b-22-4ee290]
+  &wrong_answer&
+
+   [4-2b-23-ikjnko]
+   -140 is indeed the next term of the sequence, but
+   c<sub>1</sub> is the 1st term of the sequence.
+
+  [4-2b-24-b8i6ws]
+  Hmm... what is c<sub>1</sub>, the 1st term of the
+  sequence?
+
+    [4-2b-25-vh1qkv]
+    &correct_answer&
+
+     [4-2b-26-7v9jy0]
+     Since c<sub>1</sub> = A, the value of A should be the
+     same as the value of c<sub>1</sub>.
+
+
+
+===[recursive-reflection]===
+[recursive-reflection-1-tpywy5]
+💭 In your own words, how do you use a recursive formula
+of an arithmetic sequence?
+
+  [recursive-reflection-1-7t11gj]
+  RANDOM FEEDBACK/RESPONSE?
+
+   [recursive-reflection-2-ja8gn7]
+   Here's one way I'd describe it: Recursive formulas give
+   us the 1st term of a sequence and the common
+   difference.  If we add the common difference to the 1st
+   term, we get the 2nd term. If we add the common
+   difference to the 2nd term, we get the 3rd term. And so
+   on! If we repeat this process, we can build up the
+   sequence to any term we need.
+
+
+
+===[end4]===
+[end4-1-hrkyfc]
+Next up: <b>5. Explicit formulas<b>
+
+
+
+===[explicit-1]===
+[explicit-1-1-ahx5ug]
+💡<b>Explicit formulas</b> allow us to find any term of
+a sequence by plugging in a value of n.
+
+ [explicit-1-1-3xq6ok]
+ For example, let's find the 4th term of the sequence
+ with the explicit formula <b>a(n) = 3 + 2(n-1)</b>.
+ a(4) is the 4th term of the sequence, so we should plug
+ in n = 4.
+
+  [explicit-1-2-00e7kb]
+  Let me know when you're ready to plug in n = 4 to the
+  a(n) = 3 + 2(n - 1).
+
+    [explicit-1-3-k81n3z]
+    a(n) = 3 + 2(n - 1) a(4) = 3 + 2(4 - 1) ⬅ Plug in 4 for
+    n on both sides. a(4) = 3 + 2(3) a(4) = 3 + 6 a(4) = 9
+    So, the 4th term is 9.
+
+     [explicit-1-4-qbiyk3]
+     Let me know when you're ready to move forward!
+
+
+
+===[4-3-isomorph]===
+[4-3-isomorph-1-dyfzvo]
+✍️ The explicit formula of a sequence is d<sub>n</sub>
+= 20 + 4(n - 1). What is d<sub>8</sub>?
+
+  [4-3-isomorph-1-74c5gr]
+  We are indeed looking for the 8th term, but the 8th
+  term isn't 8!
+
+  [4-3-isomorph-2-760z5q]
+  Hmm... think about the value of n that corresponds to
+  d<sub>8</sub>, the 8th term. Then, plug in that value
+  of n to d<sub>n</sub> = 20 + 4(n - 1).
+
+  [4-3-isomorph-3-lo9xkt]
+  Hmm... what value of n corresponds to the 8th term?
+
+    [4-3-isomorph-4-j4ee5z]
+    &correct_answer&
+
+     [4-3-isomorph-5-10fq5o]
+     Try plugging in in n = 8 to d<sub>n</sub> = 20 + 4(n -
+     1). What do you get for d<sub>8</sub>?
+
+    [4-3-isomorph-6-hsjxgi]
+    &wrong_answer&
+
+     [4-3-isomorph-7-di0mac]
+     Remember: d<sub>n</sub> is the n<sup>th</sup> term of a
+     sequence.  For example, d<sub>2</sub> is the 2nd term,
+     so d<sub>2</sub> means that n = 2. What is the value of
+     n that corresponds to the 8th term?
+
+  [4-3-isomorph-8-z06g50]
+  &wrong_answer&
+
+   [4-3-isomorph-9-wvgapo]
+   To find d<sub>8</sub>, we should plug in n = 8 to
+   d<sub>n</sub> = 20 + 4(n - 1).
+
+    [4-3-isomorph-10-6troa6]
+    d<sub>n</sub> = 20 + 4(n - 1) d<sub>8</sub> = 20 + 4(8
+    - 1) ⬅ Plug in 8 for n on both sides. d<sub>8</sub> =
+    20 + 4(7) d<sub>8</sub> = 48 So, the 8th term is 48.
+
+     [4-3-isomorph-11-w7vfet]
+     Let me know when you're ready to move forward!
+
+
+
+===[4-3]===
+[4-3-1-2oxyjo]
+✍️ The explicit formula of a sequence is b<sub>n</sub>
+= 4 + 3(n - 1). What is b<sub>11</sub>?
+
+  [4-3-1-sm5wsy]
+  We are indeed looking for the 11th term, but the 11th
+  term isn't 11!
+
+  [4-3-2-ihzw75]
+  Hmm... think about the value of n that corresponds to
+  b<sub>11</sub>, the 11th term. Then, plug in that value
+  of n to b<sub>n</sub> = 4 + 3(n - 1).
+
+  [4-3-3-oxw2rw]
+  Hmm... what value of n corresponds to the 11th term?
+
+    [4-3-4-zsg5sh]
+    &correct_answer&
+
+     [4-3-5-3jwplv]
+     Try plugging in in n = 11 to b<sub>n</sub> = 4 + 3(n -
+     1). What do you get for b<sub>11</sub>?
+
+    [4-3-6-6ohyy4]
+    &wrong_answer&
+
+     [4-3-7-74oz7t]
+     Remember: b<sub>n</sub> is the n<sup>th</sup> term of a
+     sequence.  For example, b<sub>2</sub> is the 2nd term,
+     so b<sub>2</sub> means that n = 2. What is the value of
+     n that corresponds to the 11th term?
+
+  [4-3-8-6ou8af]
+  &wrong_answer&
+
+   [4-3-9-5uzo2d]
+   To find b<sub>11</sub>, we should plug in n = 11 to
+   b<sub>n</sub> = 4 + 3(n - 1).
+
+    [4-3-10-c1fqmu]
+    b<sub>n</sub> = 4 + 3(n - 1) b<sub>11</sub> = 4 + 3(11
+    - 1) ⬅ Plug in 11 for n on both sides. b<sub>11</sub> =
+    4 + 3(10) b<sub>11</sub> = 34 So, the 11th term is 34.
+
+     [4-3-11-lhlxbo]
+     Let me know when you're ready to move forward!
+
+
+
+===[explicit-1-reflection]===
+[explicit-1-reflection-1-cay9ai]
+💭 How would you describe the difference between a
+recursive formula and an explicit formula?
+
+  [explicit-1-reflection-1-hmf4ma]
+  RANDOM FEEDBACK/RESPONSE?
+
+   [explicit-1-reflection-2-81e9lo]
+   Here's my take: By plugging in a value of n, we can
+   quickly find any term from an explicit formula. To use
+   a recursive formula, we have to build up the sequence
+   using the common difference and 1st term given by the
+   formula.
+
+
+
+===[explicit-2]===
+[explicit-2-1-o1y5a2]
+💡The standard way to write an explicit formula for an
+arithmetic sequence is <b>a(n) = A + B(n-1)</b>.  A is
+the 1st term. B is the common difference.
+
+ [explicit-2-1-nycrbw]
+ Let me know when you're ready to learn how to find the
+ explicit formula for 2, 9, 16, 23, ...
+
+   [explicit-2-2-xv4i8f]
+   The 1st term of the sequence is 2, so <b>A = 2</b>. The
+   common difference of the sequence is 7, so <b>B =
+   7</b>. We can find the explicit formula by plugging in
+   our values of A and B to <b>a(n) = A + B(n - 1)</b>.
+   So, the explicit formula for 2, 9, 16, 23, ... is
+   <b>a(n) = 2 + 7(n - 1)</b>.
+
+    [explicit-2-3-qggrbj]
+    Let me know when you're ready to move forward!
+
+
+
+===[4-4-isomorph]===
+[4-4-isomorph-1-iynum1]
+✍️️ What is the explicit formula for the sequence -10,
+-2, 6, 14 ...? Write your answer in the form in the
+form a(n) = A + B(n - 1).
+
+  [4-4-isomorph-1-77h0g5]
+  You're really close! The sequence a(n) = -10 - 8(n - 1)
+  starts with -10, and we subtract 8 to get the next
+  term. For -10, -2, 6, 14 ... we start with -10, and we
+  <b>add</b> 8 to get the next term.
+
+  [4-4-isomorph-2-h735l4]
+  Hmm... A is the 1st term and B is the common
+  difference. Try finding the values of A and B for the
+  sequence -10, -2, 6, 14 ..., then plug them in a(n) = A
+  + B(n - 1).
+
+  [4-4-isomorph-3-0vi1qy]
+  Hmm... what's the value of A in -10, -2, 6, 14 ...?
+
+    [4-4-isomorph-4-f7vo4p]
+    &correct_answer&
+
+     [4-4-isomorph-5-w51b3a]
+     What's the value of B in -10, -2, 6, 14 ...?
+
+       [4-4-isomorph-6-0z3o2p]
+       &correct_answer&
+
+        [4-4-isomorph-7-q55jo3]
+        Plug in <b>A = -10</b> and <b>B = 8</b> to <b>a(n) = A
+        + B(n - 1)</b> to get the answer!
+
+       [4-4-isomorph-8-sx6j8f]
+       Almost. We add 8 to get the next term, so the common
+       difference is 8 and B = 8. Plug in <b>A = -10</b> and
+       <b>B = 8</b> to <b>a(n) = A + B(n - 1)</b> to get the
+       answer!
+
+  [4-4-isomorph-9-mt8hdj]
+  &wrong_answer&
+
+   [4-4-isomorph-10-vcvk4y]
+   The 1st term is -10, so <b>A = -10</b>. The common
+   difference is 8, so <b>B = 8</b>. Plugging in A and B
+   to <b>a(n) = A + B(n - 1)</b> gives us <b>a(n) = -10 +
+   8(n - 1)</b>.
+
+    [4-4-isomorph-11-m16mkz]
+    Let me know when you're ready for the next question!
+
+
+
+===[4-4]===
+[4-4-1-dv8mul]
+✍️️ What is the explicit formula for the sequence 16,
+10, 4, -2, ...? Write your answer in the form in the
+form a(n) = A + B(n - 1).
+
+  [4-4-1-892j6n]
+  You're really close! The sequence a(n) = 16 + 6(n - 1)
+  starts with 16, and we add 6 to get the next term. For
+  16, 10, 4, -2, ... we start with 16, and we
+  <b>subtract</b> 6 to get the next term.
+
+  [4-4-2-3cp6u0]
+  Hmm... A is the 1st term and B is the common
+  difference. Try finding the values of A and B for the
+  sequence 16, 10, 4, -2, ..., then plug them in a(n) = A
+  + B(n - 1).
+
+  [4-4-3-macdip]
+  Hmm... what's the value of A in 16, 10, 4, -2, ...?
+
+    [4-4-4-3og82s]
+    &correct_answer&
+
+     [4-4-5-v6mkx0]
+     What's the value of B in 16, 10, 4, -2, ...?
+
+       [4-4-6-w3z3u4]
+       &correct_answer&
+
+        [4-4-7-ejohjz]
+        Plug in <b>A = 16</b> and <b>B = -6</b> to <b>a(n) = A
+        + B(n - 1)</b> to get the answer!
+
+       [4-4-8-49nxcb]
+       Almost. We subtract 6 to get the next term, so the
+       common difference is -6 and B = -6. Plug in <b>A =
+       16</b> and <b>B = -6</b> to <b>a(n) = A + B(n - 1)</b>
+       to get the answer!
+
+  [4-4-9-znf119]
+  &wrong_answer&
+
+   [4-4-10-nai86t]
+   The 1st term is 16, so <b>A = 16</b>. The common
+   difference is -6, so <b>B = -6</b>. Plugging in A and B
+   to <b>a(n) = A + B(n - 1)</b> gives us <b>a(n) = 16 -
+   6(n - 1)</b>.
+
+    [4-4-11-y99ef6]
+    Let me know when you're ready for the next topic!
+
+
+
+===[explicit-2-reflection]===
+[explicit-2-reflection-1-an1xtf]
+💭 What are the similarities between a recursive formula
+and an explicit formula?
+
+  [explicit-2-reflection-1-bpb7xj]
+  RANDOM FEEDBACK/RESPONSE?
+
+   [explicit-2-reflection-2-4qh3ro]
+   Here's a key similarity: We can always find the 1st
+   term and common difference by looking at the recursive
+   formula. We can also find the 1st term A and common
+   difference B from the explicit formula as long as the
+   formula is in the form a(n) = A + B(n - 1).
+
+
+
+===[end5]===
+[end5-1-yy7voq]
+Last topic: <b>6. Equivalent formulas<b>
+
+
+
+===[equivalent]===
+[equivalent-1-fcju6e]
+💡Different explicit formulas that describe the same
+sequence are called <b>equivalent formulas</b>.
+
+ [equivalent-1-852uyb]
+ For example, you can distribute the 6 in <b>a(n) = 2 +
+ 6(n - 1)</b> to show that it is equivalent to <b>a(n) =
+ 6n - 4</b>. a(n) = 2 + 6(n - 1) a(n) = 2 + 6n - 6 ⬅
+ Distribute the 6 to n and -1 a(n) = 6n - 4
+
+  [equivalent-2-h2ijbh]
+  Let me know when you're ready to hear more.
+
+    [equivalent-3-2pcrqy]
+    You can also plug in any value of n to both formulas to
+    check that they are equivalent.
+
+     [equivalent-4-hwsxm9]
+     For example, let's plug in n = 5 to each formula and
+     see if we get the same result. What is a(5) for a(n) =
+     2 + 6(n - 1)?
+
+       [equivalent-5-9dv70a]
+       &correct_answer&
+
+        [equivalent-6-k6bqvi]
+        What is a(5) for the second formula, a(n) = 6n - 4?
+
+          [equivalent-7-wg01eq]
+          &correct_answer&
+
+           [equivalent-8-g8ei6c]
+           Looks like both formulas tell us that a(5) = 26.
+           <b>Equivalent formulas will always have the same value
+           of a(n) for every value of n.</b>
+
+          [equivalent-9-8owg0n]
+          Hmm... here's how to find a(5): a(n) = 6n - 4 a(5) =
+          6(5) - 4 ⬅ Plug in 5 for n on both sides. a(5) = 30 - 4
+          a(5) = 26 So, both formulas tell us that a(5) = 26.
+          <b>Equivalent formulas will always have the same value
+          of a(n) for every value of n.</b>
+
+           [equivalent-10-lozm3w]
+           Let me know when you're ready for another question.
+
+       [equivalent-11-krw0mn]
+       Hmm... here's how to find a(5): a(n) = 2 + 6(n - 1)
+       a(5) = 2 + 6(5 - 1) ⬅ Plug in 5 for n on both sides.
+       a(5) = 2 + 6(4) a(5) = 2 + 24 a(5) = 26
+
+        [equivalent-12-4uir0a]
+        Let me know when you're ready to find a(5) for the
+        other formula, a(n) = 6n - 4.
+
+          [equivalent-13-futucf]
+          What is a(5) for the second formula, a(n) = 6n - 4?
+
+            [equivalent-14-ashkrm]
+            &correct_answer&
+
+             [equivalent-15-70w3f1]
+             Looks like both formulas tell us that a(5) = 26.
+             <b>Equivalent formulas will always have the same value
+             of a(n) for every value of n.</b>
+
+            [equivalent-16-791hf4]
+            Hmm... here's how to find a(5): a(n) = 6n - 4 a(5) =
+            6(5) - 4 ⬅ Plug in 5 for n on both sides. a(5) = 30 - 4
+            a(5) = 26 So, both formulas tell us that a(5) = 26.
+            <b>Equivalent formulas will always have the same value
+            of a(n) for every value of n.</b>
+
+             [equivalent-17-ulsp2s]
+             Let me know when you're ready for another question.
+
+
+
+===[4-5-isomorph]===
+[4-5-isomorph-1-cbareu]
+✍️ What is the explicit formula of -30, -20, -10 ... in
+the form a(n) = A + B(n - 1)?
+
+  [4-5-isomorph-1-u0sdp8]
+  You're really close! The sequence a(n) = -30 - 10(n -
+  1) starts with -30, and we subtract 10 to get the next
+  term.  For -30, -20, -10, ... we start with -30, and we
+  <b>add</b> 10 to get the next term.
+
+  [4-5-isomorph-2-iqdy1r]
+  Hmm... A is the 1st term and B is the common
+  difference.  Try finding the values of A and B for the
+  sequence -30, -20, -10 ..., then plug them in a(n) = A
+  + B(n - 1).
+
+  [4-5-isomorph-3-oqu963]
+  Hmm... what is the value of A for -30, -20, -10 ...?
+
+    [4-5-isomorph-4-h2xk8d]
+    &correct_answer&
+
+     [4-5-isomorph-5-o5ybpf]
+     What is B for -30, -20, -10 ...?
+
+       [4-5-isomorph-6-tgli3a]
+       &correct_answer&
+
+        [4-5-isomorph-7-x81h8p]
+        Plug in <b>A = -30</b> and <b>B = 10</b> to <b>a(n) = A
+        + B(n - 1)</b> to get closer to the correct answer!
+
+       [4-5-isomorph-8-6srz25]
+       &wrong_answer&
+
+        [4-5-isomorph-9-dk8wmp]
+        -30, -20, -10 ... is increasing, so B = 10.  Plug in
+        <b>A = -30</b> and <b>B = 10</b> to <b>a(n) = A + B(n -
+        1)</b> to get closer to the correct answer!
+
+  [4-5-isomorph-10-jotjl0]
+  &wrong_answer&
+
+   [4-5-isomorph-11-q9blo1]
+   The 1st term is -30, so <b>A = -30</b>. The common
+   difference is 10, so <b>B = 10</b>. Plugging in A and B
+   to <b>a(n) = A + B(n - 1)</b> gives us <b>a(n) = -30 +
+   10(n - 1)</b>.
+
+
+
+===[4-5b-isomorph]===
+[4-5b-isomorph-1-kp0ikp]
+✍️ What is an equivalent explicit formula of a(n) = -30
++ 10(n - 1)?
+
+  [4-5b-isomorph-1-8tb4md]
+  &correct_answer&
+
+   [4-5b-isomorph-2-1ky7yn]
+   So, a(n) = -30 + 10(n - 1) and a(n) = -40 + 10n are
+   equivalent formulas.
+
+  [4-5b-isomorph-3-y986gi]
+  Hmm... what do you get if you distribute the 10 in a(n)
+  = -30 + 10(n - 1) and simplify?
+
+    [4-5b-isomorph-4-f9afap]
+    &correct_answer&
+
+    [4-5b-isomorph-5-z3r1wz]
+    Here's how to distribute the 10: a(n) = -30 + 10(n - 1)
+    a(n) = -30 + 10n - 10 ⬅ Distribute the 10 to n and -1
+    a(n) = -40 + 10n
+
+     [4-5b-isomorph-6-qekpnc]
+     So, a(n) = -40 + 10n is an equivalent formula of a(n) =
+     -30 + 10(n - 1).
+
+      [4-5b-isomorph-7-d7e3p3]
+      Let me know when you're ready to check that the
+      formulas are equivalent by plugging in a sample value
+      of n.
+
+        [4-5b-isomorph-8-i7sajw]
+        Let's try plugging in n = 5. What is a(5) for <b>a(n) =
+        -30 + 10(n - 1)</b> and <b>a(n) = -40 + 10n</b>?
+
+          [4-5b-isomorph-9-wxt7qi]
+          &correct_answer&
+
+          [4-5b-isomorph-10-b5mzv5]
+          Hmm... here's how to plug in n = 5 to both formulas.
+          a(n) = -30 + 10(n - 1) a(5) = -30 - 10(5 - 1) = 10
+          a(n) = -40 + 10n a(5) = -40 + 10(5) = 10 Looks like
+          a(5) = 10 for both formulas. <b>Equivalent formulas
+          will always have the same value of a(n) for every value
+          of n.</b>
+
+
+
+===[4-5]===
+[4-5-1-t3i5sv]
+✍️ What is the explicit formula of 12, 7, 2, ... in the
+form a(n) = A + B(n - 1)?
+
+  [4-5-1-wyzz7t]
+  You're really close! The sequence a(n) = 12 + 5(n - 1)
+  starts with 12, and we add 5 to get the next term. For
+  12, 7, 2, ... we start with 12, and we <b>subtract</b>
+  5 to get the next term.
+
+  [4-5-2-pm2nq7]
+  Hmm... A is the 1st term and B is the common
+  difference.  Try finding the values of A and B for the
+  sequence, then plug them in a(n) = A + B(n - 1).
+
+  [4-5-3-k7i897]
+  What is the value of A for 12, 7, 2, ...?
+
+    [4-5-4-5vq2t4]
+    &correct_answer&
+
+     [4-5-5-8dmq4e]
+     What is B for 12, 7, 2, ...?
+
+       [4-5-6-bmgqan]
+       &correct_answer&
+
+        [4-5-7-llxrab]
+        Plug in <b>A = 12</b> and <b>B = -5</b> to <b>a(n) = A
+        + B(n - 1)</b> to get closer to the correct answer!
+
+       [4-5-8-bktpz6]
+       &wrong_answer&
+
+        [4-5-9-xwf2hb]
+        We subtract 5 to get the next term of 12, 7, 2, ... so
+        the common difference is -5 and B = -5.  Plug in <b>A =
+        12</b> and <b>B = -5</b> to <b>a(n) = A + B(n - 1)</b>
+        to get closer to the correct answer!
+
+  [4-5-10-la9rwn]
+  &wrong_answer&
+
+   [4-5-11-ymull6]
+   The 1st term is 12, so <b>A = 12</b>. The common
+   difference is -5, so <b>B = -5</b>. Plugging in A and B
+   to <b>a(n) = A + B(n - 1)</b> gives us <b>a(n) = 12 -
+   5(n - 1)</b>.
+
+
+
+===[4-5b]===
+[4-5b-1-j71oad]
+✍️ What is an equivalent explicit formula of a(n) = 12
+- 5(n - 1)?
+
+  [4-5b-1-2ci7f1]
+  &correct_answer&
+
+   [4-5b-2-tvmdvi]
+   Since we can get a(n) = 17 - 5n by expanding a(n) = 12
+   - 5(n - 1), they are equivalent formulas.
+
+    [4-5b-3-ur65vr]
+    &good_bye&
+
+  [4-5b-4-e4kg7q]
+  Hmm... what do you get if you distribute the -5 in a(n)
+  = 12 - 5(n - 1) and simplify?
+
+    [4-5b-5-0z31k1]
+    &correct_answer&
+
+     [4-5b-6-ihhl5s]
+     &good_bye&
+
+    [4-5b-7-g2qrhw]
+    Here's how to distribute the -5: a(n) = 12 - 5(n - 1)
+    a(n) = 12 - 5n + 5 ⬅ Distribute the -5 to n and -1 a(n)
+    = 17 - 5n
+
+     [4-5b-8-79eaca]
+     So, a(n) = 17 - 5n is an equivalent formula of a(n) =
+     12 - 5(n - 1).
+
+      [4-5b-9-ih1y5b]
+      Let me know when you're ready to check that the
+      formulas are equivalent by plugging in a sample value
+      of n.
+
+        [4-5b-10-uifzod]
+        Let's try plugging in n = 5. What is a(5) for <b>a(n) =
+        12 - 5(n - 1)</b> and <b>a(n) = 17 - 5n</b>?
+
+          [4-5b-11-n1bdzi]
+          &correct_answer&
+
+           [4-5b-12-0t1z9d]
+           &good_bye&
+
+          [4-5b-13-39j0in]
+          Hmm... here's how to plug in n = 5 to both formulas.
+          a(n) = 12 - 5(n - 1) a(5) = 12 - 5(5 - 1) = -8  a(n) =
+          17 - 5n a(5) = 17 - 5(5) = -8 Looks like a(5) = -8 for
+          both formulas. <b>Equivalent formulas will always have
+          the same value of a(n) for every value of n.</b>
+
+           [4-5b-14-kf5srq]
+           &good_bye&
+
+
+
+===[equivalent-reflection]===
+[equivalent-reflection-1-nzad8e]
+💭 Why might it be helpful to use an explicit formula in
+the form a(n) = A + B(n - 1) instead of an equivalent
+formula?
+
+  [equivalent-reflection-1-asjj7i]
+  RANDOM FEEDBACK/RESPONSE?
+
+   [equivalent-reflection-2-hvaujv]
+   Here's what I'm thinking: Explicit formulas in the form
+   a(n) = A + B(n - 1) give us the 1st term, A, and the
+   common difference, B.  It may be easier to plug in
+   values of n to an equivalent formula, but the 1st term
+   and common difference won't be given by the formula.
+
+
+

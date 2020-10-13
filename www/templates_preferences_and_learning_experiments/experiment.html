@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="../static/resources/css/experiment.css">
+</head>
+<body>
+<!-- Experiments Mathbot-->
+<!-- page 1: instruction before experiment page -->
+<div id="exp-instruction-1" class="instruction" style="display:none">
+    <div class="card card-body">
+        <strong>You are eligible for the full study!</strong>
+        <div class="panel-body">
+            <br>
+            You will now have a conversation with a computer program that teaches 6 short lessons about arithmetic
+            sequences. <br>
+            <br>
+            After the conversation, you will complete another 10-question quiz about arithmetic sequences.
+            <ul>
+                <li>Your performance on the quiz determines your bonus payment of up to $6.</li>
+                <li>To learn the material on the quiz, you must finish all 6 lessons in the conversation.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- page 2: experiment page -->
+<div id="experiment-1" class="experiment" style="display:none">
+    <!-- confirmation -->
+    <div class="modal" id="confirmation-1" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel1"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel1">Warning</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    You must complete all 6 lessons in the conversation to learn the material on the quiz. Your quiz
+                    performance determines your bonus payment.<br>
+                    <br>
+                    Are you sure you want to start the quiz without enough
+                    preparation?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Go back</button>
+                    <button type="button" class="btn btn-primary" onclick="nextPage()" data-dismiss="modal">Start quiz
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- additional instruction -->
+    <div id="exp-additional-instruction-1">
+        Use the chat window below to have a conversation with a computer program that teaches 6 short lessons about arithmetic sequences.<br>
+        <br>
+        <strong>You must finish all 6 lessons to learn the material on the quiz.</strong><br>
+        <br>
+    </div>
+
+    <div class="row">
+        <!-- mathbot navigation list -->
+        <div id="mathbot-list" class="col-3">
+            <table class="table table-sm">
+                <thead>
+                <tr>
+                    <th scope="col">Lesson</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td id="mathbot-row-1" class="mathbot-row table-primary">1. Extending sequences</td>
+                </tr>
+                <tr>
+                    <td id="mathbot-row-2" class="mathbot-row">2. Defining arithmetic sequences</td>
+                </tr>
+                <tr>
+                    <td id="mathbot-row-3" class="mathbot-row">3. Common difference</td>
+                </tr>
+                <tr>
+                    <td id="mathbot-row-4" class="mathbot-row">4. Recursive formulas</td>
+                </tr>
+                <tr>
+                    <td id="mathbot-row-5" class="mathbot-row">5. Explicit formulas</td>
+                </tr>
+                <tr>
+                    <td id="mathbot-row-6" class="mathbot-row">6. Equivalent formulas</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- mathbot iframe -->
+        <div class="col-9" align="center">
+            <br>
+            <iframe id="expFrame-1" type="text/html" frameborder="0" height="600px" width="800px"
+                    src=""></iframe>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Experiments Khan Video-->
+<!-- page 1: instruction before experiment page -->
+<div id="exp-instruction-2" class="instruction" style="display:none">
+    <div class="card card-body">
+        <strong>You are eligible for the full study!</strong>
+        <div class="panel-body">
+            <br>
+            You will now watch 7 short videos and/or complete 4 interactive tutorials about arithmetic sequences.<br>
+            <br>
+            Afterwards, you will complete another 10-question quiz about arithmetic sequences.
+            <ul>
+                <li>Your performance on the quiz determines your bonus payment of up to $6.</li>
+                <li>To learn the material on the quiz, you must watch all 7 videos <b>OR</b> complete all 4 interactive tutorials.
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- page 2: experiment page -->
+<div id="experiment-2" class="experiment" style="display:none">
+    <!-- confirmation -->
+    <div class="modal" id="confirmation-2" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel2"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel2">Warning</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    You must watch all 7 videos or complete all 4 interactive tutorials to learn the material on the quiz. Your quiz
+                    performance determines your bonus payment.<br>
+                    <br>
+                    Are you sure you want to start the quiz without enough
+                    preparation?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Go back</button>
+                    <button type="button" class="btn btn-primary" onclick="nextPage()" data-dismiss="modal">Start quiz
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- additional instruction -->
+    <div id="exp-additional-instruction-2">
+        Click on any video or interactive tutorial to start. You may need to wait a few seconds before a video appears.<br>
+        <br>
+        <strong>You must watch all 7 videos <u>OR</u> complete all 4 interactive tutorials to learn the material on the quiz.</strong><br>
+        <br>
+    </div>
+
+    <div class="row">
+
+        <!-- navigation list -->
+        <div id="video-list" class="experiment-sideNav col-4">
+            <br>
+            <!-- video navigation list -->
+            <table class="table table-sm table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th scope="col" style="display:none">#</th>
+                    <th scope="col">Video</th>
+                    <th scope="col">Length</th>
+                    <th scope="col">Watched?</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr id="video-row-1" class="video-row" onclick="moveToVideo(1)">
+                    <th scope="row" style="display: none;">1</th>
+                    <td>Sequences intro</td>
+                    <td>8:18</td>
+                    <td style="color: red">No</td>
+                </tr>
+                <tr id="video-row-2" class="video-row" onclick="moveToVideo(2)">
+                    <th scope="row" style="display:none">2</th>
+                    <td>Intro to arithmetic sequences</td>
+                    <td>7:05</td>
+                    <td style="color: red">No</td>
+                </tr>
+                <tr id="video-row-3" class="video-row" onclick="moveToVideo(3)">
+                    <th scope="row" style="display:none">3</th>
+                    <td>Extending arithmetic sequences</td>
+                    <td>1:06</td>
+                    <td style="color: red">No</td>
+                </tr>
+                <tr id="video-row-4" class="video-row" onclick="moveToVideo(4)">
+                    <th scope="row" style="display:none">4</th>
+                    <td>Using arithmetic sequences formulas</td>
+                    <td>3:37</td>
+                    <td style="color: red">No</td>
+                </tr>
+                <tr id="video-row-5" class="video-row" onclick="moveToVideo(5)">
+                    <th scope="row" style="display:none">5</th>
+                    <td>Worked example: using recursive formula for arithmetic sequence</td>
+                    <td>2:52</td>
+                    <td style="color: red">No</td>
+                </tr>
+                <tr id="video-row-6" class="video-row" onclick="moveToVideo(6)">
+                    <th scope="row" style="display:none">6</th>
+                    <td>Recursive formulas for arithmetic sequences</td>
+                    <td>3:05</td>
+                    <td style="color: red">No</td>
+                </tr>
+                <tr id="video-row-7" class="video-row" onclick="moveToVideo(7)">
+                    <th scope="row" style="display:none">7</th>
+                    <td>Explicit formulas for arithmetic sequences</td>
+                    <td>6:16</td>
+                    <td style="color: red">No</td>
+                </tr>
+                </tbody>
+            </table>
+            <br>
+
+            <!-- text lesson navigation list -->
+            <table class="table table-sm table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th scope="col">Interactive Tutorial</th>
+                    <th scope="col">Done?</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr id="text-row-1" class="text-row" onclick="showTextLesson(1)">
+                    <td>Intro to arithmetic sequences</td>
+                    <td style="color: red">No</td>
+                </tr>
+                <tr id="text-row-2" class="text-row" onclick="showTextLesson(2)">
+                    <td>Intro to arithmetic sequence formulas</td>
+                    <td style="color: red">No</td>
+                </tr>
+                <tr id="text-row-3" class="text-row" onclick="showTextLesson(3)">
+                    <td>Recursive formulas for arithmetic sequences</td>
+                    <td style="color: red">No</td>
+                </tr>
+                <tr id="text-row-4" class="text-row" onclick="showTextLesson(4)">
+                    <td>Explicit formulas for arithmetic sequences</td>
+                    <td style="color: red">No</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- video iframe -->
+        <div class="experiment-main col-8" align="center">
+            <div id="video-tips" style="display:none" align="left">
+                Video tips
+                <ul>
+                    <li>To turn off the captions, click the CC button in the bottom right of any video.</li>
+                    <li>To increase the playback speed, click the gear button in the bottom right of any video.</li>
+                </ul>
+            </div>
+
+
+            <div id="text-tips" align="left" style="display:none">
+                Interactive tutorial instructions
+                <ul>
+                    <li>When you click the link below, the interactive tutorial will open in a new tab.
+                    </li>
+                    <li> Do not click the green "Next video" button at the bottom right of the tutorial.
+                    </li>
+                    <li>When you are done with the tutorial, return to the experiment to start another tutorial or
+                        video.
+                    </li>
+                    <li>If you mistakenly close or exit the tutorial, return to the experiment to open it again.</li>
+
+                </ul>
+                <span class="links" id="text-url" onclick="toKhan()"> </span>
+                <br>
+                <br>
+            </div>
+            <div align="center">
+                <iframe id="expFrame-2" type="text/html" frameborder="0" height="620px" width="810px"></iframe>
+                <img id="expScreen" style="display:none" src="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- experiment navigation bar -->
+<div id="navBar" align="center">
+    <ul class="pagination pagination-lg justify-content-center">
+        <!-- 
+        <li class="page-item expNavBar" id="previousVideo">
+            <a class="page-link" id="previousVideoButton" onclick="previousVideo()">Previous video</a>
+        </li>
+        <li class="page-item expNavBar" id="nextVideo">
+            <a class="page-link" id="nextVideoButton" onclick="nextVideo()">Next video</a>
+        </li> 
+        -->
+        <li class="page-item expNavBar" id="startQuiz">
+            <a class="page-link" id="startQuizButton" onclick="submitExperiment(userGroup)">Start
+                Quiz</a>
+        </li>
+        <li class="page-item expNavBar" id="startExp">
+            <a class="page-link" id="startExpButton" onclick="loadExperiment(userGroup)">Next</a>
+        </li>
+    </ul>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+
+<script>
+    var currentVideo;
+    var currentText;
+    var currentMathbotSection;
+    var mathbotProgressInterval;
+
+    var VIDEO = 7;
+    var VIDEO_ID = [
+        'KRFiAlo7t1E',
+        '_cooC3yG_p0',
+        'EU0c6qrrevA',
+        '8eSUbi_aYL4',
+        'v1ucHH06AxM',
+        'lBtb30SjU2Q',
+        'ViLt2WI0XSg',
+    ];
+    var TEXT = 4;
+
+    var watched = [0, 0, 0, 0, 0, 0, 0];
+    var read = [0, 0, 0, 0];
+    var watchedIds = [];
+    var watchedTimestamps = [];
+    var readIds = [];
+    var readTimestamps = [];
+
+
+    TEXT_URL = [
+        'https://www.khanacademy.org/math/algebra/sequences/modal/a/introduction-to-arithmetic-sequences',
+        'https://www.khanacademy.org/math/algebra/sequences/modal/a/using-formulas-of-arithmetic-sequences',
+        'https://www.khanacademy.org/math/algebra/sequences/modal/a/writing-recursive-formulas-for-arithmetic-sequences',
+        'https://www.khanacademy.org/math/algebra/sequences/modal/a/writing-explicit-formulas-for-arithmetic-sequences',
+    ];
+    SCREEN_URL = [
+        '../static/resources/image/lesson-1.png',
+        '../static/resources/image/lesson-2.png',
+        '../static/resources/image/lesson-3.png',
+        '../static/resources/image/lesson-4.png',
+    ];
+
+    var VIDEO_CONFIG = '?&&cc_load_policy=1';
+    var VIDEO_URL = [];
+    for (var i = 0; i < VIDEO; i++) {
+        url = '/video?';         //base
+        url += 'embed=' + VIDEO_ID[i];
+        VIDEO_URL.push(url)
+    }
+
+    function updateRead() {
+        for (var i = 0; i < TEXT; i++) {
+            if (read[i]) {
+                $('#text-row-' + (i + 1).toString()).children()[1].innerText = 'Yes';
+                $('#text-row-' + (i + 1).toString()).children()[1].style.color = 'green'
+
+            }
+        }
+    }
+
+    function updateWatched() {
+        for (var i = 0; i < VIDEO; i++) {
+            if (watched[i]) {
+                $('#video-row-' + (i + 1).toString()).children()[3].innerText = 'Yes';
+                $('#video-row-' + (i + 1).toString()).children()[3].style.color = 'green'
+            }
+        }
+    }
+
+    function submitExperiment(group) {
+        switch (group) {
+            case 'MathBot':
+                if (CHECKPOINTS.indexOf(currentPage + 1) >= 0) {
+                    $('#confirmation-1').modal('show');
+                    console.log('show confirmation of group 1')
+                } else {
+                    nextPage()
+                }
+                break;
+            case 'Khan Video':
+                var allVideoWatched = true;
+                var allTextRead = true;
+                for (var i = 0; i < TEXT; i++) {
+                    if (!read[i]) {
+                        allTextRead = false
+                    }
+                }
+
+                for (var j = 0; j < VIDEO; j++) {
+                    if (!watched[j]) {
+                        allVideoWatched = false
+                    }
+                }
+                if ((allTextRead || allVideoWatched) === false) {
+                    $('#confirmation-2').modal('show');
+                    console.log('show confirmation of group 2')
+                }
+                else {
+                    nextWithConfirmation()
+                }
+        }
+    }
+
+    function toKhan() {
+        var readTime = (new Date()) * 1;
+        read[currentText - 1] = readTime;
+        readIds.push(currentText);
+        readTimestamps.push(readTime);
+        window.open(TEXT_URL[currentText - 1]);
+        updateRead()
+    }
+
+    function moveToVideo(id) {
+        $('#text-tips').hide();
+        $('#expScreen').hide();
+        currentVideo = id;
+        $('.video-row').removeClass('table-primary');
+        $('.text-row').removeClass('table-primary');
+        var watchTime = (new Date()) * 1;
+        watched[id - 1] = watchTime;
+        watchedIds.push(id);
+        watchedTimestamps.push(watchTime);
+        console.log('Move to video: ' + id);
+        $('#video-row-' + id.toString()).addClass('table-primary');
+        $('#expFrame-2').attr('src', VIDEO_URL[id - 1]);
+        $('#expFrame-2').show();
+        $('#video-tips').show();
+        if (currentVideo === VIDEO) {
+            $('#startQuiz').show();
+            $('#nextVideo').addClass('disabled')
+        } else {
+            $('#nextVideo').removeClass('disabled')
+
+        }
+
+        if (currentVideo === 1) {
+            $('#previousVideo').addClass('disabled')
+        } else {
+            $('#previousVideo').removeClass('disabled')
+        }
+        updateWatched()
+    }
+
+    function showTextLesson(id) {
+        currentText = id;
+        $('#expFrame-2').hide();
+        $('#video-tips').hide();
+        $('.video-row').removeClass('table-primary');
+        $('.text-row').removeClass('table-primary');
+
+        $('#text-row-' + id.toString()).addClass('table-primary');
+
+        $('#expScreen').attr('src', SCREEN_URL[id - 1]);
+        $('#text-url').text('Click here to view Interactive Tutorial ' + (id).toString() + ' on Khan Academy');
+        $('#expScreen').show();
+        $('#text-tips').show()
+    }
+
+    function loadInstruction(group) {
+        $('.experiment').hide();
+        $('.instruction').hide();
+        $('.expNavBar').hide();
+
+        $('#startExp').show();
+
+        switch (group) {
+            case 'MathBot':
+                $('#exp-instruction-1').show();
+                break;
+            case 'Khan Video':
+                $('#exp-instruction-2').show()
+        }
+    }
+
+    function loadExperiment(group) {
+        $('.experiment').hide();
+        $('.instruction').hide();
+        $('.expNavBar').hide();
+
+        console.log('Show experiment group:' + group);
+        switch (group) {
+            case 'MathBot':
+                $('#previousVideo').hide();
+                $('#nextVideo').hide();
+                $('#startQuiz').show();
+                $('#startQuizButton').show();
+                $('#experiment-1').show();
+                $('#expFrame-1').attr('src', '/mathbot');
+                currentMathbotSection = 1;
+                mathbotProgressInterval = setInterval(
+                    function () {
+                        var currNodeId = $('#expFrame-1')[0].contentWindow.bubble.mathbotFsm.getLastSectionCheckpoint();
+                        if (currNodeId === 'welcome') {
+                            $('.mathbot-row').removeClass('table-primary');
+                            $('#mathbot-row-1').addClass('table-primary')
+                        }
+                        if (currNodeId === 'arithmetic') {
+                            $('.mathbot-row').removeClass('table-primary');
+                            $('#mathbot-row-2').addClass('table-primary')
+                        }
+                        if (currNodeId === 'difference') {
+                            $('.mathbot-row').removeClass('table-primary');
+                            $('#mathbot-row-3').addClass('table-primary')
+                        }
+                        if (currNodeId === 'formula') {
+                            $('.mathbot-row').removeClass('table-primary');
+                            $('#mathbot-row-4').addClass('table-primary')
+                        }
+                        if (currNodeId === 'explicit-1') {
+                            $('.mathbot-row').removeClass('table-primary');
+                            $('#mathbot-row-5').addClass('table-primary')
+                        }
+                        if (currNodeId === 'explicit-3') {
+                            $('.mathbot-row').removeClass('table-primary');
+                            $('#mathbot-row-6').addClass('table-primary')
+                        }
+                    },
+                    500
+                );
+                break;
+            case 'Khan Video':
+                $('#previousVideo').show();
+                $('#nextVideo').show();
+                $('#startQuiz').show();
+                $('#experiment-2').show();
+                currentVideo = 0;
+                break;
+            default:
+                $('.experiment').hide();
+                $('iframe').attr('src', '')
+        }
+    }
+
+    function nextVideo() {
+        if (currentVideo < VIDEO) {
+            currentVideo += 1;
+            moveToVideo(currentVideo)
+        }
+    }
+
+    function previousVideo() {
+        if (currentVideo > 1) {
+            currentVideo -= 1;
+            moveToVideo(currentVideo)
+        }
+    }
+
+    $(document).ready(function () {
+        $('#experiment-1').hide();
+        $('#experiment-2').hide()
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+{
+  "_comment": "Json file of quiz questions. The questions will be rendered to our quiz question template. For inputs, if the label is not None then the block will be rendered as radio button, otherwise text input block.",
+  "_author": "Hao Sheng <haosheng@stanford.edu>",
+  "_last_update": "08/30/2018",
+  "prerequisiteQuiz": [
+    {
+      "id": 1,
+      "description": "Subtract.",
+      "inputs": [
+        {
+          "prompt": "4 - 3 ¾ =",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "description": "f(x) = 1 - 3(x - 1)",
+      "inputs": [
+        {
+          "prompt": "f(2) =",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "description": "f(x) = 3 - 2(x - 1)",
+      "inputs": [
+        {
+          "prompt": "f(3) =",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "description": "Given a(n) = A + B(n - 1), find A and B for the arithmetic sequence 3, 5, 7, 9 ...",
+      "inputs": [
+        {
+          "prompt": "A =",
+          "placeholder": ""
+        },
+        {
+          "prompt": "B =",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "description": "Complete the recursive formula of the arithmetic sequence 4, 6, 8, 10 ...",
+      "inputs": [
+        {
+          "prompt": "a(1) =",
+          "placeholder": ""
+        },
+        {
+          "prompt": "a(n) = a(n - 1) +",
+          "placeholder": ""
+        }
+      ]
+    }
+  ],
+  "preQuiz": [
+    {
+      "id": 1,
+      "description": "Find the 4<sup>th</sup> term in the sequence with this recursive formula:<br>d(1) = 13<br>d(n) = d(n - 1) + 17",
+      "inputs": [
+        {
+          "prompt": "",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "description": "Find the 3<sup>rd</sup> term in the sequence with this recursive formula:<br>c(1) = 6<br>c(n) = c(n - 1) - 16",
+      "inputs": [
+        {
+          "prompt": "",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "description": "Complete the recursive formula of the arithmetic sequence 0, 11, 22, 33, ...",
+      "inputs": [
+        {
+          "prompt": "c(1) =",
+          "placeholder": ""
+        },
+        {
+          "prompt": "c(n) = c(n - 1) +",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "description": "Complete the recursive formula of the arithmetic sequence -17, -8, 1, 10, ...",
+      "inputs": [
+        {
+          "prompt": "a(1) =",
+          "placeholder": ""
+        },
+        {
+          "prompt": "a(n) = a(n - 1) +",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "description": "Find the 8<sup>th</sup> term in the sequence with this explicit formula:<br>c(n) = -6 + 5(n - 1)",
+      "inputs": [
+        {
+          "prompt": "",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "description": "Find the 6<sup>th</sup> term in the sequence with this explicit formula:<br>d(n) = 8 - 6(n - 1)",
+      "inputs": [
+        {
+          "prompt": "",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "description": "The explicit formula of a sequence is a(n) = -1 + 3(n - 1). This question checks that you read carefully.<br>What is the 10<sup>th</sup> term in the sequence? The answer is 26.",
+      "inputs": [
+        {
+          "prompt": "",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "description": "Find an explicit formula for the arithmetic sequence 12, 5, -2, -9, ...",
+      "inputs": [
+        {
+          "prompt": "a(n) =",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "description": "Find an explicit formula for the arithmetic sequence -45, -30, -15, 0, ...",
+      "inputs": [
+        {
+          "prompt": "a(n) =",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "description": "Ivy and Andrey were asked to find an explicit formula for the sequence -100, -50, 0, 50, ...<br>Ivy said the formula is f(n) = -100 + 50(n - 1).<br>Andrey said the formula is f(n) = -150 + 50n.<br>Which one of them is right?",
+      "inputs": [
+        {
+          "label": "Only Ivy",
+          "prompt": "",
+          "placeholder": ""
+        },
+        {
+          "label": "Only Andrey",
+          "prompt": "",
+          "placeholder": ""
+        },
+        {
+          "label": "Both Ivy and Andrey",
+          "prompt": "",
+          "placeholder": ""
+        },
+        {
+          "label": "Neither Ivy nor Andrey",
+          "prompt": "",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "description": "Imran and Aubrey were asked to find an explicit formula for the sequence 14, 5, -4, -13, ...<br>Imran said the formula is g(n) = 14 - 9(n - 1).<br>Aubrey said the formula is g(n) = 14 - 9n.<br>Which one of them is right?",
+      "inputs": [
+        {
+          "label": "Only Imran",
+          "prompt": "",
+          "placeholder": ""
+        },
+        {
+          "label": "Only Aubrey",
+          "prompt": "",
+          "placeholder": ""
+        },
+        {
+          "label": "Both Imran and Aubrey",
+          "prompt": "",
+          "placeholder": ""
+        },
+        {
+          "label": "Neither Imran nor Aubrey",
+          "prompt": "",
+          "placeholder": ""
+        }
+      ]
+    }
+  ],
+  "postQuiz": [
+    {
+      "id": 1,
+      "description": "Find the 9<sup>th</sup> term in the sequence with this explicit formula:<br>b(n) = -8 - 2(n - 1)",
+      "inputs": [
+        {
+          "prompt": "",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "description": "Find the 4<sup>th</sup> term in the sequence with this explicit formula:<br>c(n) = -7 + 6(n - 1)",
+      "inputs": [
+        {
+          "prompt": "",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "description": "Find an explicit formula for the arithmetic sequence -5, 13, 31, 49 ...",
+      "inputs": [
+        {
+          "prompt": "b(n) =",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "description": "Find an explicit formula for the arithmetic sequence -2, -14, -26, -38 ...",
+      "inputs": [
+        {
+          "prompt": "d(n) =",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "description": "Carlos and Ana were asked to find an explicit formula for the sequence -10, -4, 2, 8, ...<br>Carlos said the formula is f(n) = -10 + 6n.<br>Ana said the formula is f(n) = -10 + 6(n - 1).<br>Which one of them is right?",
+      "inputs": [
+        {
+          "label": "Only Carlos",
+          "prompt": "",
+          "placeholder": ""
+        },
+        {
+          "label": "Only Ana",
+          "prompt": "",
+          "placeholder": ""
+        },
+        {
+          "label": "Both Carlos and Ana",
+          "prompt": "",
+          "placeholder": ""
+        },
+        {
+          "label": "Neither Carlos nor Ana",
+          "prompt": "",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "description": "Emeka and Maricel were asked to find an explicit formula for the sequence 79, 71, 63, 55, ...<br>Emeka said the formula is h(n) = 79 - 8(n - 1).<br>Maricel said the formula is h(n) = 87 - 8n.<br>Which one of them is right?",
+      "inputs": [
+        {
+          "label": "Only Emeka",
+          "prompt": "",
+          "placeholder": ""
+        },
+        {
+          "label": "Only Maricel",
+          "prompt": "",
+          "placeholder": ""
+        },
+        {
+          "label": "Both Emeka and Maricel",
+          "prompt": "",
+          "placeholder": ""
+        },
+        {
+          "label": "Neither Emeka nor Maricel",
+          "prompt": "",
+          "placeholder": ""
+        }
+      ]
+    }
+  ]
+}

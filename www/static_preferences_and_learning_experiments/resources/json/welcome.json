@@ -1,0 +1,12 @@
+{
+  "ice": {
+    "says": [
+      "Hi, this is Ada, I'm a chatbot.",
+      "I\"m going to help you understand mathematical concept called \"sequences\".",
+      "Why don't we start from an example?",
+      "By the way, feel free to ask for a hint if you need some help!"
+    ],
+    "branch": [],
+    "skip": "1-1"
+  }
+}

@@ -1,0 +1,1770 @@
+{
+  "title": "Online Learning Experience Study",
+  "pages": {
+    "pre-page-demographics": {
+      "title": "Pre-learning survey - Demographics",
+      "description": "If you do not wish to answer a particular question, select \"Prefer not to disclose\" or enter \"N/A\".",
+      "questions": [
+        {
+          "id": "gender",
+          "type": "radio",
+          "description": "What is your gender?",
+          "choice": [
+            {
+              "id": "f",
+              "description": "Female"
+            },
+            {
+              "id": "m",
+              "description": "Male"
+            },
+            {
+              "id": "o",
+              "description": "Other"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "age",
+          "description": "What is your age?",
+          "type": "input"
+        },
+        {
+          "id": "degree",
+          "description": "What is your highest level of education?",
+          "type": "dropdown",
+          "choice": [
+            {
+              "id": "Less than middle school",
+              "description": "Less than middle school"
+            },
+            {
+              "id": "Middle school",
+              "description": "Middle school"
+            },
+            {
+              "id": "High school",
+              "description": "High school"
+            },
+            {
+              "id": "Associate degree",
+              "description": "Associate's degree"
+            },
+            {
+              "id": "Bachelor degree",
+              "description": "Bachelor's degree"
+            },
+            {
+              "id": "Master degree",
+              "description": "Master's degree"
+            },
+            {
+              "id": "Doctoral degree",
+              "description": "Doctoral degree"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "time-on-internet",
+          "type": "likert",
+          "description": "Compared to the average person, how often do you think you use the Internet?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "A lot less"
+            },
+            {
+              "id": "2",
+              "description": "Less"
+            },
+            {
+              "id": "3",
+              "description": "About the same"
+            },
+            {
+              "id": "4",
+              "description": "More"
+            },
+            {
+              "id": "5",
+              "description": "A lot more"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "texting-proficiency",
+          "type": "likert",
+          "description": "Compared to the average person, how often do you think you use text/chat interfaces (text messaging on a cell phone, iMessage, Facebook Messenger, WhatsApp, etc.)?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "A lot less"
+            },
+            {
+              "id": "2",
+              "description": "Less"
+            },
+            {
+              "id": "3",
+              "description": "About the same"
+            },
+            {
+              "id": "4",
+              "description": "More"
+            },
+            {
+              "id": "5",
+              "description": "A lot more"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        }
+      ]
+    },
+    "pre-page-mooc": {
+      "title": "Pre-learning survey - Online courses",
+      "description": "",
+      "questions": [
+        {
+          "id": "mooc-no",
+          "description": "How many online courses (Khan Academy, Coursera, Udacity, etc.) have you started?",
+          "type": "dropdown",
+          "choice": [
+            {
+              "id": "I have never started an online course",
+              "description": "I have never started an online course"
+            },
+            {
+              "id": "1 course",
+              "description": "1 course"
+            },
+            {
+              "id": "2 courses",
+              "description": "2 courses"
+            },
+            {
+              "id": "3 to 5 courses",
+              "description": "3 – 5 courses"
+            },
+            {
+              "id": "More than 5 courses",
+              "description": "More than 5 courses"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "mooc-comments",
+          "description": "What is your opinion of online courses? For example:<ul><li>Do you like the way they teach?</li><li>How engaged and focused are you while working on online courses?</li><li>Have the courses you've taken adapted to your learning habits and performance?</li></ul>",
+          "type": "text"
+        }
+      ]
+    },
+    "pre-page-learning-preference-a": {
+      "title": "Pre-learning survey - Learning preferences",
+      "description": "",
+      "questions": [
+        {
+          "id": "learning-preference-pre",
+          "type": "likert",
+          "description": "If you were learning a new math concept, which of these 2 options would you prefer?<br><br>1. Read online lessons about the concept and learn the concept on your own<br>2. Have a tutor teach you the concept through text/picture messaging on your phone or in an online chat window<br><br>",
+          "choice": [
+            {
+              "id": "1a",
+              "description": "Strongly prefer 1"
+            },
+            {
+              "id": "2a",
+              "description": "Prefer 1"
+            },
+            {
+              "id": "3a",
+              "description": "Somewhat prefer 1"
+            },
+            {
+              "id": "4a",
+              "description": "No preference"
+            },
+            {
+              "id": "5a",
+              "description": "Somewhat prefer 2"
+            },
+            {
+              "id": "6a",
+              "description": "Prefer 2"
+            },
+            {
+              "id": "7a",
+              "description": "Strongly prefer 2"
+            },
+            {
+              "id": "a",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        }
+      ]
+    },
+    "pre-page-learning-preference-b": {
+      "title": "Pre-learning survey - Learning preferences",
+      "description": "",
+      "questions": [
+        {
+          "id": "learning-preference-pre",
+          "type": "likert",
+          "description": "If you were learning a new math concept, which of these 2 options would you prefer?<br><br>1. Have a tutor teach you the concept through text/picture messaging on your phone or in an online chat window<br>2. Read online lessons about the concept and learn the concept on your own<br><br>",
+          "choice": [
+            {
+              "id": "7b",
+              "description": "Strongly prefer 1"
+            },
+            {
+              "id": "6b",
+              "description": "Prefer 1"
+            },
+            {
+              "id": "5b",
+              "description": "Somewhat prefer 1"
+            },
+            {
+              "id": "4b",
+              "description": "No preference"
+            },
+            {
+              "id": "3b",
+              "description": "Somewhat prefer 2"
+            },
+            {
+              "id": "2b",
+              "description": "Prefer 2"
+            },
+            {
+              "id": "1b",
+              "description": "Strongly prefer 2"
+            },
+            {
+              "id": "b",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        }
+      ]
+    },
+    "pre-page-math-background-1": {
+      "title": "Pre-learning survey - Math background",
+      "description": "",
+      "questions": [
+        {
+          "id": "math-class",
+          "description": "What is the most advanced math class you have completed?",
+          "type": "dropdown",
+          "choice": [
+            {
+              "id": "Less than pre-algebra",
+              "description": "Less than pre-algebra"
+            },
+            {
+              "id": "Pre-algebra",
+              "description": "Pre-algebra"
+            },
+            {
+              "id": "Algebra 1",
+              "description": "Algebra 1"
+            },
+            {
+              "id": "Geometry",
+              "description": "Geometry"
+            },
+            {
+              "id": "Algebra 2",
+              "description": "Algebra 2"
+            },
+            {
+              "id": "Trigonometry",
+              "description": "Trigonometry"
+            },
+            {
+              "id": "Precalculus",
+              "description": "Precalculus"
+            },
+            {
+              "id": "Calculus",
+              "description": "Calculus"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "math-age",
+          "description": "How old were you when you completed the math class selected in the previous question?",
+          "type": "input"
+        },
+        {
+          "id": "sequences-familiarity",
+          "description": "How familiar are you with arithmetic sequences and formulas?<ul><li>20, 50, 80, 110, ... is an example arithmetic sequence.</li><li>a(n) = 10 + 5(n - 1) is an example arithmetic sequence formula.</li></ul>",
+          "type": "radio",
+          "choice": [
+            {
+              "id": "3",
+              "description": "I clearly understand arithmetic sequences and formulas."
+            },
+            {
+              "id": "2",
+              "description": "I somewhat understand arithmetic sequences and formulas."
+            },
+            {
+              "id": "1",
+              "description": "I have worked with arithmetic sequences and formulas in the past, but I don't remember how to use them."
+            },
+            {
+              "id": "0",
+              "description": "I have not heard of arithmetic sequences or formulas."
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "sequences-knowledge-pre",
+          "description": "How would you rate your overall knowledge of arithmetic sequences and formulas?",
+          "type": "likert",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Know absolutely nothing"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Understand perfectly"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        }
+      ]
+    },
+    "pre-page-math-background-2": {
+      "title": "Pre-learning survey - Math background",
+      "description": "To help us determine your math background, please answer the following questions to the best of your ability.",
+      "questions": [
+        {
+          "id": "algebra-1",
+          "description": "6s - 4 = 8(2 + 0.25s)<br>What is the value of s?",
+          "type": "input"
+        },
+        {
+          "id": "algebra-2",
+          "description": "-3x + 7y = 5x + 2y<br>If x = 5, what is the value of y?",
+          "type": "input"
+        },
+        {
+          "id": "algebra-3",
+          "description": "Jessica watches 15 videos every day. Each video is 8 minutes long.<br>For how many days does Jessica need to watch videos to watch 9000 minutes of videos?",
+          "type": "input"
+        },
+        {
+          "id": "algebra-4",
+          "description": "Harry owes the bank money. To repay the bank, he paid the bank $150 each month. After 10 months, he still owed the bank $6900.<br><br>How many more months will it take for Harry to finish paying back the bank?",
+          "type": "input"
+        },
+        {
+          "id": "algebra-5",
+          "description": "What was the total amount that Harry originally owed the bank?",
+          "type": "input"
+        }
+      ]
+    },
+    "post-page-rate-mathbot": {
+      "title": "Post-learning survey - Overall experience",
+      "description": "",
+      "questions": [
+        {
+          "id": "overall-experience-mathbot",
+          "type": "likert",
+          "description": "Please rate your overall experience with the conversational computer program.",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very negative"
+            },
+            {
+              "id": "2",
+              "description": "Negative"
+            },
+            {
+              "id": "3",
+              "description": "Somewhat negative"
+            },
+            {
+              "id": "4",
+              "description": "Neutral"
+            },
+            {
+              "id": "5",
+              "description": "Somewhat positive"
+            },
+            {
+              "id": "6",
+              "description": "Positive"
+            },
+            {
+              "id": "7",
+              "description": "Very positive"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "learned-mathbot",
+          "description": "How much new information about arithmetic sequences and formulas did you learn from the conversational computer program?",
+          "type": "likert",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Nothing at all"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "A tremendous amount"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "sequences-knowledge-mathbot",
+          "description": "How would you rate your overall knowledge of arithmetic sequences and formulas?",
+          "type": "likert",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Know absolutely nothing"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Understand perfectly"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        }
+      ]
+    },
+    "post-page-rate-video": {
+      "title": "Post-learning survey - Overall experience",
+      "description": "",
+      "questions": [  
+        {
+          "id": "overall-experience-video",
+          "type": "likert",
+          "description": "Please rate your overall experience with the video.",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very negative"
+            },
+            {
+              "id": "2",
+              "description": "Negative"
+            },
+            {
+              "id": "3",
+              "description": "Somewhat negative"
+            },
+            {
+              "id": "4",
+              "description": "Neutral"
+            },
+            {
+              "id": "5",
+              "description": "Somewhat positive"
+            },
+            {
+              "id": "6",
+              "description": "Positive"
+            },
+            {
+              "id": "7",
+              "description": "Very positive"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "learned-video",
+          "description": "How much new information about arithmetic sequences and formulas did you learn from the video?",
+          "type": "likert",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Nothing at all"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "A tremendous amount"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "sequences-knowledge-video",
+          "description": "How would you rate your overall knowledge of arithmetic sequences and formulas?",
+          "type": "likert",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Know absolutely nothing"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Understand perfectly"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        }
+      ]
+    }, 
+    "post-page-rate-tutorial": {
+      "title": "Post-learning survey - Overall experience",
+      "description": "",
+      "questions": [  
+        {
+          "id": "overall-experience-tutorial",
+          "type": "likert",
+          "description": "Please rate your overall experience with the interactive tutorial.",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very negative"
+            },
+            {
+              "id": "2",
+              "description": "Negative"
+            },
+            {
+              "id": "3",
+              "description": "Somewhat negative"
+            },
+            {
+              "id": "4",
+              "description": "Neutral"
+            },
+            {
+              "id": "5",
+              "description": "Somewhat positive"
+            },
+            {
+              "id": "6",
+              "description": "Positive"
+            },
+            {
+              "id": "7",
+              "description": "Very positive"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "learned-tutorial",
+          "description": "How much new information about arithmetic sequences and formulas did you learn from the interactive tutorial?",
+          "type": "likert",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Nothing at all"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "A tremendous amount"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "sequences-knowledge-tutorial",
+          "description": "How would you rate your overall knowledge of arithmetic sequences and formulas?",
+          "type": "likert",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Know absolutely nothing"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Understand perfectly"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        }
+      ]
+    }, 
+    "post-page-describe-video": {
+      "title": "Post-learning survey",
+      "description": "",
+      "questions": [
+        {
+          "id": "video-like-dislike",
+          "description": "What did you like or dislike about the video?",
+          "type": "text"
+        },
+        {
+          "id": "video-helpful",
+          "description": "Describe how a video could be helpful or unhelpful for learning other math concepts. For example, consider these scenarios:<ul><li>Easier concept / Harder concept</li><li>Tired / Fully alert</li><li>First time seeing the concept / Familiar with the concept</li><li>You have lots of time to learn / You don't have a lot of time to learn</li></ul>",
+          "type": "text"
+        },
+        {
+          "id": "video-make-better",
+          "description": "How could we make the video better?",
+          "type": "text"
+        },
+        {
+          "id": "video-buggy",
+          "description": "Did anything in the video seem buggy or broken?",
+          "type": "text"
+        }
+      ]
+    },
+    "post-page-describe-tutorial": {
+      "title": "Post-learning survey",
+      "description": "",
+      "questions": [
+        {
+          "id": "tutorial-like-dislike",
+          "description": "What did you like or dislike about the interactive tutorial?",
+          "type": "text"
+        },
+        {
+          "id": "tutorial-helpful",
+          "description": "Describe how an interactive tutorial could be helpful or unhelpful for learning other math concepts. For example, consider these scenarios:<ul><li>Easier concept / Harder concept</li><li>Tired / Fully alert</li><li>First time seeing the concept / Familiar with the concept</li><li>You have lots of time to learn / You don't have a lot of time to learn</li></ul>",
+          "type": "text"
+        },
+        {
+          "id": "tutorial-make-better",
+          "description": "How could we make the interactive tutorial better?",
+          "type": "text"
+        },
+        {
+          "id": "tutorial-buggy",
+          "description": "Did anything in the interactive tutorial seem buggy or broken?",
+          "type": "text"
+        }
+      ]
+    },
+    "post-page-describe-mathbot": {
+      "title": "Post-learning survey",
+      "description": "",
+      "questions": [
+        {
+          "id": "mathbot-like-dislike",
+          "description": "What did you like or dislike about the conversational computer program?",
+          "type": "text"
+        },
+        {
+          "id": "mathbot-helpful",
+          "description": "Describe how the computer program could be helpful or unhelpful for learning other math concepts. For example, consider these scenarios:<ul><li>Easier concept / Harder concept</li><li>Tired / Fully alert</li><li>First time seeing the concept / Familiar with the concept</li><li>You have lots of time to learn / You don't have a lot of time to learn</li></ul>",
+          "type": "text"
+        },
+        {
+          "id": "mathbot-make-better",
+          "description": "How could we make the conversational computer program better?",
+          "type": "text"
+        },
+        {
+          "id": "mathbot-buggy",
+          "description": "Did anything about the conversational computer program seem buggy or broken?",
+          "type": "text"
+        }
+      ]
+    },
+    "post-page-specific-mathbot": {
+      "title": "Post-learning survey",
+      "description": "",
+      "questions": [
+        {
+          "id": "emoji",
+          "type": "likert",
+          "description": "How did the emoji (🤔, ✅, etc.) used in the conversational computer program impact your experience?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Strong negative impact"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": "No impact"
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Strong positive impact"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "speed",
+          "type": "likert",
+          "description": "How did you feel about the pace of the conversational computer program?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very slow"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": "Just right"
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Very fast"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "tone",
+          "type": "likert",
+          "description": "How did you feel about the tone of the conversational computer program?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very casual"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": "Just right"
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Very formal"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "elaborate",
+          "description": "Please explain your answers to the questions on this page.",
+          "type": "text"
+        }
+      ]
+    },
+    "post-page-video-or-mathbot-a": {
+      "title": "Post-learning survey - Learning preference",
+      "description": "",
+      "questions": [
+        {
+          "id": "video-or-mathbot",
+          "type": "likert",
+          "description": "If you had 60 minutes to learn more about arithmetic sequences and then take a quiz for a large bonus payment, which of these 2 scenarios would you prefer?<br><br>1. Watch more videos about arithmetic sequences, then take the quiz.<br>2. Interact with an expanded version of the conversational computer program, then take the quiz.<br><br>",
+          "choice": [
+            {
+              "id": "1a",
+              "description": "Strongly prefer 1"
+            },
+            {
+              "id": "2a",
+              "description": "Prefer 1"
+            },
+            {
+              "id": "3a",
+              "description": "Somewhat prefer 1"
+            },
+            {
+              "id": "4a",
+              "description": "No preference"
+            },
+            {
+              "id": "5a",
+              "description": "Somewhat prefer 2"
+            },
+            {
+              "id": "6a",
+              "description": "Prefer 2"
+            },
+            {
+              "id": "7a",
+              "description": "Strongly prefer 2"
+            },
+            {
+              "id": "a",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        }
+      ]
+    },
+    "post-page-video-or-mathbot-b": {
+      "title": "Post-learning survey - Learning preference",
+      "description": "",
+      "questions": [
+        {
+          "id": "video-or-mathbot",
+          "type": "likert",
+          "description": "If you had 60 minutes to learn more about arithmetic sequences and then take a quiz for a large bonus payment, which of these 2 scenarios would you prefer?<br><br>1. Interact with an expanded version of the conversational computer program, then take the quiz.<br>2. Watch more videos about arithmetic sequences, then take the quiz.<br><br>",
+          "choice": [
+            {
+              "id": "7b",
+              "description": "Strongly prefer 1"
+            },
+            {
+              "id": "6b",
+              "description": "Prefer 1"
+            },
+            {
+              "id": "5b",
+              "description": "Somewhat prefer 1"
+            },
+            {
+              "id": "4b",
+              "description": "No preference"
+            },
+            {
+              "id": "3b",
+              "description": "Somewhat prefer 2"
+            },
+            {
+              "id": "2b",
+              "description": "Prefer 2"
+            },
+            {
+              "id": "1b",
+              "description": "Strongly prefer 2"
+            },
+            {
+              "id": "b",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        }
+      ]
+    },
+    "post-page-tutorial-or-mathbot-a": {
+      "title": "Post-learning survey - Learning preference",
+      "description": "",
+      "questions": [
+        {
+          "id": "tutorial-or-mathbot",
+          "type": "likert",
+          "description": "If you had 60 minutes to learn more about arithmetic sequences and then take a quiz for a large bonus payment, which of these 2 scenarios would you prefer?<br><br>1. Complete more interactive tutorials about arithmetic sequences, then take the quiz.<br>2. Interact with an expanded version of the conversational computer program, then take the quiz.<br><br>",
+          "choice": [
+            {
+              "id": "1a",
+              "description": "Strongly prefer 1"
+            },
+            {
+              "id": "2a",
+              "description": "Prefer 1"
+            },
+            {
+              "id": "3a",
+              "description": "Somewhat prefer 1"
+            },
+            {
+              "id": "4a",
+              "description": "No preference"
+            },
+            {
+              "id": "5a",
+              "description": "Somewhat prefer 2"
+            },
+            {
+              "id": "6a",
+              "description": "Prefer 2"
+            },
+            {
+              "id": "7a",
+              "description": "Strongly prefer 2"
+            },
+            {
+              "id": "a",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        }
+      ]
+    },
+    "post-page-tutorial-or-mathbot-b": {
+      "title": "Post-learning survey - Learning preference",
+      "description": "",
+      "questions": [
+        {
+          "id": "tutorial-or-mathbot",
+          "type": "likert",
+          "description": "If you had 60 minutes to learn more about arithmetic sequences and then take a quiz for a large bonus payment, which of these 2 scenarios would you prefer?<br><br>1. Interact with an expanded version of the conversational computer program, then take the quiz.<br>2. Complete more interactive tutorials about arithmetic sequences, then take the quiz.<br><br>",
+          "choice": [
+            {
+              "id": "7b",
+              "description": "Strongly prefer 1"
+            },
+            {
+              "id": "6b",
+              "description": "Prefer 1"
+            },
+            {
+              "id": "5b",
+              "description": "Somewhat prefer 1"
+            },
+            {
+              "id": "4b",
+              "description": "No preference"
+            },
+            {
+              "id": "3b",
+              "description": "Somewhat prefer 2"
+            },
+            {
+              "id": "2b",
+              "description": "Prefer 2"
+            },
+            {
+              "id": "1b",
+              "description": "Strongly prefer 2"
+            },
+            {
+              "id": "b",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        }
+      ]
+    },
+    "post-page-learning-preference-a": {
+      "title": "Post-learning survey - Learning preferences",
+      "description": "",
+      "questions": [
+        {
+          "id": "learning-preference-post",
+          "type": "likert",
+          "description": "If you were learning a new math concept, which of these 2 options would you prefer?<br><br>1. Read online lessons about the concept and learn the concept on your own<br>2. Have a tutor teach you the concept through text/picture messaging on your phone or in an online chat window<br><br>",
+          "choice": [
+            {
+              "id": "1a",
+              "description": "Strongly prefer 1"
+            },
+            {
+              "id": "2a",
+              "description": "Prefer 1"
+            },
+            {
+              "id": "3a",
+              "description": "Somewhat prefer 1"
+            },
+            {
+              "id": "4a",
+              "description": "No preference"
+            },
+            {
+              "id": "5a",
+              "description": "Somewhat prefer 2"
+            },
+            {
+              "id": "6a",
+              "description": "Prefer 2"
+            },
+            {
+              "id": "7a",
+              "description": "Strongly prefer 2"
+            },
+            {
+              "id": "a",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        }
+      ]
+    },
+    "post-page-learning-preference-b": {
+      "title": "Post-learning survey - Learning preferences",
+      "description": "",
+      "questions": [
+        {
+          "id": "learning-preference-post",
+          "type": "likert",
+          "description": "If you were learning a new math concept, which of these 2 options would you prefer?<br><br>1. Have a tutor teach you the concept through text/picture messaging on your phone or in an online chat window<br>2. Read online lessons about the concept and learn the concept on your own<br><br>",
+          "choice": [
+            {
+              "id": "7b",
+              "description": "Strongly prefer 1"
+            },
+            {
+              "id": "6b",
+              "description": "Prefer 1"
+            },
+            {
+              "id": "5b",
+              "description": "Somewhat prefer 1"
+            },
+            {
+              "id": "4b",
+              "description": "No preference"
+            },
+            {
+              "id": "3b",
+              "description": "Somewhat prefer 2"
+            },
+            {
+              "id": "2b",
+              "description": "Prefer 2"
+            },
+            {
+              "id": "1b",
+              "description": "Strongly prefer 2"
+            },
+            {
+              "id": "b",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        }
+      ]
+    },
+    "post-page-compare": {
+      "title": "Post-learning survey",
+      "description": "",
+      "questions": [
+        {
+          "id": "compare",
+          "description": "Please compare your experience with the conversational computer program and the interactive tutorial. In what scenarios could one learning method be more effective or less effective than the other?",
+          "type": "text"
+        }
+      ]
+    },
+    "post-page-likert-1": {
+      "title": "Post-learning survey",
+      "description": "",
+      "questions": [
+        {
+          "id": "mental-demand-mathbot",
+          "type": "likert",
+          "description": "How mentally demanding was the conversational computer program?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very low"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Very high"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "mental-demand-tutorial",
+          "type": "likert",
+          "description": "How mentally demanding was the interactive tutorial?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very low"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Very high"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "physical-demand-mathbot",
+          "type": "likert",
+          "description": "How physically demanding was the conversational computer program?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very low"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Very high"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "physical-demand-tutorial",
+          "type": "likert",
+          "description": "How physically demanding was the interactive tutorial?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very low"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Very high"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "temporal-demand-mathbot",
+          "type": "likert",
+          "description": "How hurried or rushed was the pace of the conversational computer program?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very low"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Very high"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "temporal-demand-tutorial",
+          "type": "likert",
+          "description": "How hurried or rushed was the pace of the interactive tutorial?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very low"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Very high"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        }
+      ]
+    },
+    "post-page-likert-2": {
+      "title": "Post-learning survey",
+      "description": "",
+      "questions": [
+        {
+          "id": "success-level-mathbot",
+          "type": "likert",
+          "description": "How successful were you in accomplishing what you were asked to do during the conversational computer program?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Failure"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Perfect"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "success-level-tutorial",
+          "type": "likert",
+          "description": "How successful were you in accomplishing what you were asked to do during the interactive tutorial?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Failure"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Perfect"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "effort-mathbot",
+          "type": "likert",
+          "description": "How hard did you have to work to complete the conversational computer program?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very low"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Very high"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "effort-tutorial",
+          "type": "likert",
+          "description": "How hard did you have to work to complete the interactive tutorial?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very low"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Very high"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "frustration-mathbot",
+          "type": "likert",
+          "description": "How insecure, discouraged, irritated, stressed, and annoyed were you during the conversational computer program?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very low"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Very high"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        },
+        {
+          "id": "frustration-tutorial",
+          "type": "likert",
+          "description": "How insecure, discouraged, irritated, stressed, and annoyed were you during the interactive tutorial?",
+          "choice": [
+            {
+              "id": "1",
+              "description": "Very low"
+            },
+            {
+              "id": "2",
+              "description": ""
+            },
+            {
+              "id": "3",
+              "description": ""
+            },
+            {
+              "id": "4",
+              "description": ""
+            },
+            {
+              "id": "5",
+              "description": ""
+            },
+            {
+              "id": "6",
+              "description": ""
+            },
+            {
+              "id": "7",
+              "description": "Very high"
+            },
+            {
+              "id": "",
+              "description": "Prefer not to disclose"
+            }
+          ]
+        }
+      ]
+    },
+    "post-page-misc": {
+      "title": "Post-learning survey",
+      "description": "",
+      "questions": [
+        {
+          "id": "misc",
+          "description": "Do you have any additional comments or questions about the experiment?",
+          "type": "text"
+        }
+      ]
+    }
+  }
+}

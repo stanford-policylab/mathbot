@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="../static/resources/css/experiment.css">
+</head>
+<body>
+<!-- Experiments Mathbot-->
+<!-- page 1: instruction before experiment page -->
+<div id="exp-instruction-1" class="instruction" style="display:none">
+    <div class="card card-body">
+        <strong>You are eligible for the full study!</strong>
+        <div class="panel-body">
+            <br>
+            You will now have a conversation with a computer program that teaches several short lessons about arithmetic
+            sequences. <br>
+            <br>
+            After the conversation, you will complete another quiz about arithmetic sequences.
+            <ul>
+                <li>Your performance on the quiz determines your bonus payment of up to $2.</li>
+                <li>To learn the material on the quiz, you must finish the conversation.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- page 2: experiment page -->
+<div id="experiment-1" class="experiment" style="display:none">
+    <!-- confirmation -->
+    <div class="modal" id="confirmation-1" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel1"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel1">Warning</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    You must complete the conversation to learn the material on the quiz. Your quiz
+                    performance determines your bonus payment.<br>
+                    <br>
+                    Are you sure you want to start the quiz?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Go back</button>
+                    <button type="button" class="btn btn-primary" onclick="nextPage()" data-dismiss="modal">Start quiz
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- additional instruction -->
+    <div id="exp-additional-instruction-1">
+        Use the chat window below to have a conversation with a computer program that teaches several short lessons
+        about arithmetic sequences.<br>
+        <br>
+        <strong>You must finish the conversation to learn the material on the quiz.</strong><br>
+        <br>
+    </div>
+
+    <div class="row">
+        <!-- mathbot iframe -->
+        <div class="col-12" align="center">
+            <br>
+            <iframe id="expFrame-1" type="text/html" frameborder="0" height="600px" width="800px"
+                    src=""></iframe>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- experiment navigation bar -->
+<div id="navBar" align="center">
+    <ul class="pagination pagination-lg justify-content-center">
+
+        <li class="page-item expNavBar" id="startQuiz">
+            <a class="page-link" id="startQuizButton" onclick="submitExperiment()">Start Quiz
+            </a>
+        </li>
+        <li class="page-item expNavBar" id="startExp">
+            <a class="page-link" id="startExpButton" onclick="loadExperiment('MathBot')">Next</a>
+        </li>
+    </ul>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+
+<script>
+    var currentMathbotSection
+    var mathbotProgressInterval
+
+    function submitExperiment () {
+        $('#confirmation-1').modal('show')
+    }
+
+    function loadInstruction (group) {
+        $('.experiment').hide()
+        $('.instruction').hide()
+        $('.expNavBar').hide()
+
+        $('#startExp').show()
+
+        switch (group) {
+            case 'MathBot':
+                $('#exp-instruction-1').show()
+                break
+            case 'Khan Video':
+                $('#exp-instruction-2').show()
+        }
+    }
+
+    function loadExperiment () {
+        $('.experiment').hide()
+        $('.instruction').hide()
+        $('.expNavBar').hide()
+
+        $('#previousVideo').hide()
+        $('#nextVideo').hide()
+        $('#startQuiz').show()
+        $('#startQuizButton').show()
+        $('#experiment-1').show()
+        $('#expFrame-1').attr('src', '/mathbot?bandit')
+        currentMathbotSection = 1
+        mathbotProgressInterval = setInterval(
+            function () {
+                var currNodeId = $('#expFrame-1')[0].contentWindow.bubble.mathbotFsm.getLastSectionCheckpoint()
+                if (currNodeId === 'welcome') {
+                    $('.mathbot-row').removeClass('table-primary')
+                    $('#mathbot-row-1').addClass('table-primary')
+                }
+                if (currNodeId === 'arithmetic') {
+                    $('.mathbot-row').removeClass('table-primary')
+                    $('#mathbot-row-2').addClass('table-primary')
+                }
+                if (currNodeId === 'difference') {
+                    $('.mathbot-row').removeClass('table-primary')
+                    $('#mathbot-row-3').addClass('table-primary')
+                }
+                if (currNodeId === 'formula') {
+                    $('.mathbot-row').removeClass('table-primary')
+                    $('#mathbot-row-4').addClass('table-primary')
+                }
+                if (currNodeId === 'explicit-1') {
+                    $('.mathbot-row').removeClass('table-primary')
+                    $('#mathbot-row-5').addClass('table-primary')
+                }
+                if (currNodeId === 'explicit-3') {
+                    $('.mathbot-row').removeClass('table-primary')
+                    $('#mathbot-row-6').addClass('table-primary')
+                }
+            },
+            500,
+        )
+    }
+
+    $(document).ready(function () {
+        $('#experiment-1').hide()
+        $('#experiment-2').hide()
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+{
+  "wrong_answer_but_new_concept": [
+    [
+      "No worries! Let’s check out this concept:"
+    ]
+  ],
+  "wrong_answer_but_new_question": [
+    [
+      "No worries! Let’s try a new question:"
+    ]
+  ],
+  "another_concept": [
+    [
+      "Let's move forward ⏩"
+    ],
+    [
+      "Let's check out something new:"
+    ],
+    [
+      "Looks like that was a piece of cake 🍰", 
+      "Here’s something new:"
+    ],
+    [
+      "Let’s push forward:"
+    ]
+  ],
+  "another_question": [
+    [
+      "Let’s move on to a new question:"
+    ],
+    [
+      "Let me get you a new question:"
+    ],
+    [
+      "Here's your new challenge:"
+    ]
+  ],
+  "previously_failed_concept": [
+    [
+      "Let’s revisit this concept 🔎:"
+    ],
+    [
+      "Let’s take a look at this concept again 🔎:"
+    ],
+    [
+      "Let’s come back to this concept 🔎:"
+    ]
+  ],
+  "previously_failed_question": [
+    [
+      "Let’s try this question again:"
+    ],
+    [
+      "Let’s retry this question:"
+    ],
+    [
+      "I think you should try this question again:"
+    ]
+  ],
+  "try_easier_question": [
+    [
+      "Let’s try this question first:"
+    ],
+    [
+      "Let’s try this question instead:"
+    ]
+  ],
+  "try_easier_concept": [
+    [
+      "Let’s revisit a concept 🔎:"
+    ],
+    [
+      "Let’s review a concept 🔎:"
+    ]
+  ],
+  "try_again_the_same_concept": [
+    [
+      "Let’s revisit the concept 🔎:"
+    ]
+  ],
+  "try_again_the_same_question": [
+    [
+      "Let’s try the question again:"
+    ],
+    [
+      "Try answering the question again. You got this 👊"
+    ],
+    [
+      "I think you should try answering the question again:"
+    ],
+    [
+      "Let's try the question again:"
+    ],
+    [
+      "Let’s see if you can do the original question:"
+    ]
+  ],
+  "correct_answer": [
+    [
+      "Exactly! 👌"
+    ],
+    [
+      "That’s correct! ✅"
+    ],
+    [
+      "That's the correct answer! ✅"
+    ],
+    [
+      "That’s right! 😀"
+    ],
+    [
+      "Bingo! 🏆"
+    ],
+    [
+      "Good work! 🥇"
+    ],
+    [
+      "That’s exactly right! 🎯"
+    ],
+    [
+      "That’s the right answer! ✅"
+    ]
+  ],
+  "wrong_answer": [
+    [
+      "Hmm... that’s not quite the right answer. 🤔"
+    ],
+    [
+      "Hmm… that’s not quite right. 🤔"
+    ],
+    [
+      "Hmm… that’s not quite correct. 🤔"
+    ],
+    [
+      "Not quite!"
+    ]
+  ],
+  "good_bye": [
+    [
+      "That’s all for today!",
+      "You’ve done a great job. 🏆",
+      "Feel free to scroll up and review any concepts or questions.",
+      "When you're ready for the quiz, click \"Next\" below."
+    ]
+  ]
+}
