@@ -10,7 +10,7 @@ This repo is for the [Mathbot](https://mathbot.stanford.edu) interactive UI and 
  |   ├-- static/ 
  |   |      └-- resources/js/mathbot.js  # mathbot FSM logic  
  |   └-- templates/
- ├-- run.sh                              # start the mathbo server
+ ├-- run.sh                              # start the mathbot server
  └-- README.md 
 ``` 
 
