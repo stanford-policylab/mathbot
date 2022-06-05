@@ -61,8 +61,8 @@ class BaseConfig:
     EXP_SCHEMA = read_txt("exp_form_fields.txt")
 
     # User list
-    BLACKLIST = set(read_txt("user_blocklist.txt"))
-    WHITELIST = set(read_txt("user_allowlist.txt"))
+    BLACKLIST = set()#read_txt("user_blocklist.txt"))
+    WHITELIST = set()#read_txt("user_allowlist.txt"))
 
 
 class TestConfig(BaseConfig):
@@ -117,8 +117,8 @@ class TestConfig(BaseConfig):
     EXP_SCHEMA = read_txt("exp_form_fields.txt")
 
     # User list
-    BLACKLIST = set(read_txt("user_blocklist.txt"))
-    WHITELIST = set(read_txt("user_allowlist.txt"))
+    BLACKLIST = set()#(read_txt("user_blocklist.txt"))
+    WHITELIST = set()#(read_txt("user_allowlist.txt"))
 
 
 # Debug purpose
